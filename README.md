@@ -8,7 +8,7 @@
 ## Català
 ### Descripció
 
-Es realiztzarà l'anàlisi exploratori (EDA) del dataset https://archive.ics.uci.edu/ml/datasets/HCC+Survival on es recopila informació demogràfica i analítica de pacients amb carcinoma hepatocelullar i la seva supervivència a l'any a l'Hospital Universitari de Coimbra (Portugal).
+Es realitzarà l'anàlisi exploratori (EDA) del dataset https://archive.ics.uci.edu/ml/datasets/HCC+Survival on es recopila informació demogràfica i analítica de pacients amb carcinoma hepatocelullar i la seva supervivència a l'any a l'Hospital Universitari de Coimbra (Portugal).
 Aquesta tasca es realitzarà amb R mitjançant RStudio.
 
 ### Fitxers
