@@ -16,3 +16,42 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+******
+# Detalls de l'activitat
+******
+## Presentació
+En aquesta pràctica s’elabora un cas pràctic orientat a aprendre a identificar les dades rellevants
+per un projecte analític i usar les eines d’integració, neteja, validació i anàlisi de les mateixes
+
+## Competències
+En aquesta pràctica es desenvolupen les següents competències del Màster de Data Science:
+
+* Capacitat d'analitzar un problema en el nivell d'abstracció adequat a cada situació i aplicar les habilitats i coneixements adquirits per abordar-lo i resoldre'l.
+* Capacitat per aplicar les tècniques específiques de tractament de dades (integració,transformació, neteja i validació) per al seu posterior anàlisi.
+
+## Objectius
+Els objectius concrets d’aquesta pràctica són:
+
+* Aprendre a aplicar els coneixements adquirits i la seva capacitat de resolució de problemes en entorns nous o poc coneguts dintre de contextos més amplis o multidisciplinaris.
+* Saber identificar les dades rellevants i els tractaments necessaris (integració, neteja i validació) per dur a terme un projecte analític.
+* Aprendre a analitzar les dades adequadament per abordar la informació continguda en les dades.
+* Identificar la millor representació dels resultats per tal d’aportar conclusions sobre el problema plantejat en el procés analític.
+* Actuar amb els principis ètics i legals relacionats amb la manipulació de dades en funció de l'àmbit d'aplicació.
+* Desenvolupar les habilitats d'aprenentatge que els permetin continuar estudiant d'una manera que haurà de ser en gran manera autodirigida o autònoma.
+* Desenvolupar la capacitat de cerca, gestió i ús d'informació i recursos en l'àmbit de la ciència de dades.
+
+
+******
+# Resolució
+******
+## Descripció del dataset
+Es realitzarà l'anàlisi exploratori (EDA) del dataset https://archive.ics.uci.edu/ml/datasets/HCC+Survival on es recopila informació de pacients amb carcinoma hepatocelullar (HCC) i la seva supervivència a l'any. 
+
+L'HCC és el tumor hepàtic més comú en els pacients amb hepatopatia crónica. La supervivència d'aquests pacients no només depen de l'estadi tumoral si no que també depen de l'estat funcional del fetge. 
+
+El conjunt de dades HCC es va obtenir en l´'Hospital Universitari de Coïmbra (Portugal) i contenia diversos factors demogràfics, de risc, de laboratori i de supervivència global de 165 pacients reals diagnosticats de HCC. El conjunt de dades conté 49 funcions seleccionades segons les directrius de pràctica clínica EASL-EORTC (Associació Europea per a l’Estudi del Fetge - Organització Europea per a la Recerca i el Tractament del Càncer), que són els habituals en la gestió de HCC.
+
+Es tracta d’un conjunt de dades heterogeni, amb 23 variables quantitatives i 26 variables qualitatives. La variable objectiu és la supervivència a 1 any i es va codificar com a variable binària: 0 (mor) i 1 (viu).
+
+Les variables del dataset són:
+
