@@ -201,9 +201,12 @@ hcc_header_cortos<-c("Gen", "Sym", "Alc", "HBS", "HBe", "HBC","HCV",  "Cir",
                "Crea","Nod",  "DiN", "BiD", "Iro", "OxS", "Fer", "Class"   )
 
 colnames(hcc)<-hcc_header
+str(hcc)
 ```
 
 ### Descripció del dataset
+
+El dataset està compost de 165 observacions de 49 atributs de pacients amb una variable de classe que registra la supervivència a l'any del diagnóstic. Dels atributs dels pacients, existeixen 26 categorics, 3 dels quals són ordinals ( _Performance Status_, _Encephalopathy degree_, _Ascites degree_), sent la resta numérics. És pot veure que existeixen valors nuls codificats com _NA_.
 
 
 
