@@ -397,6 +397,13 @@ summary {
 <li><a href="#resolucio"><span class="toc-section-number">2</span> Resolució</a>
 <ul>
 <li><a href="#descripcio-del-dataset"><span class="toc-section-number">2.1</span> Descripció del dataset</a></li>
+<li><a href="#importancia-i-objectius-de-lanalisi"><span class="toc-section-number">2.2</span> Importància i objectius de l’anàlisi</a></li>
+<li><a href="#neteja-de-les-dades"><span class="toc-section-number">2.3</span> Neteja de les dades</a>
+<ul>
+<li><a href="#preparacio-del-dataset"><span class="toc-section-number">2.3.1</span> Preparació del dataset</a></li>
+<li><a href="#descripcio-del-dataset-1"><span class="toc-section-number">2.3.2</span> Descripció del dataset</a></li>
+<li><a href="#valors-nuls"><span class="toc-section-number">2.3.3</span> Valors nuls</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </div>
@@ -494,6 +501,61 @@ summary {
 <li><p><strong>Ferritin (ng/mL) (Fer)</strong>: Nivells de ferritina en sang</p></li>
 <li><p><strong>Class Attribute (Class)</strong>:[0=Mort; 1=Viu] Supervivent a l’any del diagnóstic d’HCC</p></li>
 </ul>
+</div>
+<div id="importancia-i-objectius-de-lanalisi" class="section level2" number="2.2">
+<h2 number="2.2"><span class="header-section-number">2.2</span> Importància i objectius de l’anàlisi</h2>
+<p>Amb les dades recopilades al dataset podem intentar saber quines variables estan més relacionades amb la supervivència a l’any. Podem conèixer el grau de correlació entre les variables independents per finalment definir un model de regressió logística per tal d’intentar predir la mortalitat a l’any amb les variables seleccionades.</p>
+<p>Poder conèixer la probabilitat de supervivència d’un pacient amb diagnóstic recent d’HCC podrà fer que s’adaptin millors les opcions de tractament, sent més agressius en pacients amb alta probilitat de sobreviure, i en canvi, optant per terapies pal·liatives o de confort per pacients amb pitjor prosnóstic.</p>
+</div>
+<div id="neteja-de-les-dades" class="section level2" number="2.3">
+<h2 number="2.3"><span class="header-section-number">2.3</span> Neteja de les dades</h2>
+<div id="preparacio-del-dataset" class="section level3" number="2.3.1">
+<h3 number="2.3.1"><span class="header-section-number">2.3.1</span> Preparació del dataset</h3>
+<pre class="r"><code># Importació del dataset
+download.file(&quot;https://archive.ics.uci.edu/ml/machine-learning-databases/00423/hcc-survival.zip&quot;,&quot;mydata.zip&quot;)
+unzip(&quot;mydata.zip&quot;)
+hcc&lt;-read.csv (&quot;hcc-survival/hcc-data.txt&quot;,header = F, dec = &quot;.&quot;, stringsAsFactors = F, na.strings = &quot;?&quot;)
+
+# Noms de les variables
+hcc_header&lt;-c(&quot;Gender&quot;, &quot;Symptoms&quot;, &quot;Alcohol&quot;, &quot;Hepatitis B Surface Antigen&quot;,
+              &quot;Hepatitis B e Antigen&quot;, &quot;Hepatitis B Core Antibody&quot;,
+              &quot;Hepatitis C Virus Antibody&quot;,  &quot;Cirrhosis&quot;, 
+              &quot;Endemic Countries&quot;,&quot;Smoking&quot;,  &quot;Diabetes&quot;, &quot;Obesity&quot;,
+              &quot;Hemochromatosis&quot;, &quot;Arterial Hypertension&quot;, 
+              &quot;Chronic Renal Insufficiency&quot;, &quot;Human Immunodeficiency Virus&quot;,
+              &quot;Nonalcoholic Steatohepatitis&quot;,&quot;Esophageal Varices&quot;,
+              &quot;Splenomegaly&quot;,  &quot;Portal Hypertension&quot;, 
+              &quot;Portal Vein Thrombosis&quot;, &quot;Liver Metastasis&quot;, 
+              &quot;Radiological Hallmark&quot;, &quot;Age at diagnosis&quot;, 
+              &quot;Grams of Alcohol per day&quot;, &quot;Packs of cigarets per year&quot;,
+              &quot;Performance Status&quot;, &quot;Encephalopathy degree&quot;, &quot;Ascites degree&quot;,
+              &quot;International Normalised Ratio&quot;, &quot;Alpha-Fetoprotein (ng/mL)&quot;,
+              &quot;Haemoglobin (g/dL)&quot;, &quot;Mean Corpuscular Volume&quot;,
+              &quot;Leukocytes(G/L)&quot;, &quot;Platelets&quot;, &quot;Albumin (mg/dL)&quot;,
+              &quot;Total Bilirubin(mg/dL)&quot;,  &quot;Alanine transaminase (U/L)&quot;
+              , &quot;Aspartate transaminase (U/L)&quot;,
+              &quot;Gamma glutamyl transferase (U/L)&quot;, 
+              &quot;Alkaline phosphatase (U/L)&quot;,&quot;Total Proteins (g/dL)&quot;,
+              &quot;Creatinine (mg/dL)&quot;,&quot;Number of Nodules&quot;,
+              &quot;Major dimension of nodule (cm)&quot;, 
+              &quot;Direct Bilirubin (mg/dL)&quot;, &quot;Iron&quot;, &quot;Oxygen Saturation (%)&quot;,
+              &quot;Ferritin (ng/mL)&quot;, &quot;Class Attribute&quot;   )
+
+hcc_header_cortos&lt;-c(&quot;Gen&quot;, &quot;Sym&quot;, &quot;Alc&quot;, &quot;HBS&quot;, &quot;HBe&quot;, &quot;HBC&quot;,&quot;HCV&quot;,  &quot;Cir&quot;,
+               &quot;End&quot;,&quot;Smo&quot;,  &quot;Dia&quot;, &quot;Obe&quot;, &quot;Hem&quot;, &quot;HyA&quot;, &quot;CRI&quot;, &quot;HIV&quot;,
+               &quot;Ste&quot;,&quot;Eso&quot;, &quot;Spl&quot;,  &quot;PHT&quot;, &quot;PVT&quot;, &quot;Met&quot;, &quot;Rad&quot;, &quot;Age&quot;, &quot;gAl&quot;,
+               &quot;PCi&quot;, &quot;PSt&quot;, &quot;Enc&quot;, &quot;Asc&quot;, &quot;INR&quot;, &quot;AFe&quot;, &quot;Hae&quot;, &quot;MCV&quot;,  &quot;Leu&quot;,
+               &quot;Pla&quot;, &quot;Alb&quot;,&quot;BiT&quot;,  &quot;ALT&quot;, &quot;AST&quot;,&quot;GGT&quot;, &quot;ALP&quot;,&quot;Pro&quot;,
+               &quot;Crea&quot;,&quot;Nod&quot;,  &quot;DiN&quot;, &quot;BiD&quot;, &quot;Iro&quot;, &quot;OxS&quot;, &quot;Fer&quot;, &quot;Class&quot;   )
+
+colnames(hcc)&lt;-hcc_header</code></pre>
+</div>
+<div id="descripcio-del-dataset-1" class="section level3" number="2.3.2">
+<h3 number="2.3.2"><span class="header-section-number">2.3.2</span> Descripció del dataset</h3>
+</div>
+<div id="valors-nuls" class="section level3" number="2.3.3">
+<h3 number="2.3.3"><span class="header-section-number">2.3.3</span> Valors nuls</h3>
+</div>
 </div>
 </div>
 

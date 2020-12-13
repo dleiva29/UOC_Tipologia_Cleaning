@@ -8,7 +8,7 @@ output:
     number_sections: yes
     theme: cosmo
     toc: yes
-    toc_depth: 2
+    toc_depth: 3
 
 ---
 
@@ -154,5 +154,60 @@ Les variables del dataset són:
 * **Ferritin (ng/mL) (Fer)**: Nivells de ferritina en sang
 
 * **Class Attribute (Class)**:[0=Mort; 1=Viu] Supervivent a l'any del diagnóstic d'HCC
+
+## Importància i objectius de l'anàlisi
+Amb les dades recopilades al dataset podem intentar saber quines variables estan més relacionades amb la supervivència a l'any. Podem conèixer el grau de correlació entre les variables independents per finalment definir un model de regressió logística per tal d'intentar predir la mortalitat a l'any amb les variables seleccionades.
+
+Poder conèixer la probabilitat de supervivència d'un pacient amb diagnóstic recent d'HCC podrà fer que s'adaptin millors les opcions de tractament, sent més agressius en pacients amb alta probilitat de sobreviure, i en canvi, optant per terapies pal·liatives o de confort per pacients amb pitjor prosnóstic.
+
+## Neteja de les dades
+### Preparació del dataset
+```{r message= FALSE, warning=FALSE}
+# Importació del dataset
+download.file("https://archive.ics.uci.edu/ml/machine-learning-databases/00423/hcc-survival.zip","mydata.zip")
+unzip("mydata.zip")
+hcc<-read.csv ("hcc-survival/hcc-data.txt",header = F, dec = ".", stringsAsFactors = F, na.strings = "?")
+
+# Noms de les variables
+hcc_header<-c("Gender", "Symptoms", "Alcohol", "Hepatitis B Surface Antigen",
+              "Hepatitis B e Antigen", "Hepatitis B Core Antibody",
+              "Hepatitis C Virus Antibody",  "Cirrhosis", 
+              "Endemic Countries","Smoking",  "Diabetes", "Obesity",
+              "Hemochromatosis", "Arterial Hypertension", 
+              "Chronic Renal Insufficiency", "Human Immunodeficiency Virus",
+              "Nonalcoholic Steatohepatitis","Esophageal Varices",
+              "Splenomegaly",  "Portal Hypertension", 
+              "Portal Vein Thrombosis", "Liver Metastasis", 
+              "Radiological Hallmark", "Age at diagnosis", 
+              "Grams of Alcohol per day", "Packs of cigarets per year",
+              "Performance Status", "Encephalopathy degree", "Ascites degree",
+              "International Normalised Ratio", "Alpha-Fetoprotein (ng/mL)",
+              "Haemoglobin (g/dL)", "Mean Corpuscular Volume",
+              "Leukocytes(G/L)", "Platelets", "Albumin (mg/dL)",
+              "Total Bilirubin(mg/dL)",  "Alanine transaminase (U/L)"
+              , "Aspartate transaminase (U/L)",
+              "Gamma glutamyl transferase (U/L)", 
+              "Alkaline phosphatase (U/L)","Total Proteins (g/dL)",
+              "Creatinine (mg/dL)","Number of Nodules",
+              "Major dimension of nodule (cm)", 
+              "Direct Bilirubin (mg/dL)", "Iron", "Oxygen Saturation (%)",
+              "Ferritin (ng/mL)", "Class Attribute"   )
+
+hcc_header_cortos<-c("Gen", "Sym", "Alc", "HBS", "HBe", "HBC","HCV",  "Cir",
+               "End","Smo",  "Dia", "Obe", "Hem", "HyA", "CRI", "HIV",
+               "Ste","Eso", "Spl",  "PHT", "PVT", "Met", "Rad", "Age", "gAl",
+               "PCi", "PSt", "Enc", "Asc", "INR", "AFe", "Hae", "MCV",	"Leu",
+               "Pla", "Alb","BiT",  "ALT", "AST","GGT", "ALP","Pro",
+               "Crea","Nod",  "DiN", "BiD", "Iro", "OxS", "Fer", "Class"   )
+
+colnames(hcc)<-hcc_header
+```
+
+### Descripció del dataset
+
+
+
+### Valors nuls
+
 
 
