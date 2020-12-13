@@ -442,6 +442,58 @@ summary {
 <p>El conjunt de dades HCC es va obtenir en l´’Hospital Universitari de Coïmbra (Portugal) i contenia diversos factors demogràfics, de risc, de laboratori i de supervivència global de 165 pacients reals diagnosticats de HCC. El conjunt de dades conté 49 funcions seleccionades segons les directrius de pràctica clínica EASL-EORTC (Associació Europea per a l’Estudi del Fetge - Organització Europea per a la Recerca i el Tractament del Càncer), que són els habituals en la gestió de HCC.</p>
 <p>Es tracta d’un conjunt de dades heterogeni, amb 23 variables quantitatives i 26 variables qualitatives. La variable objectiu és la supervivència a 1 any i es va codificar com a variable binària: 0 (mor) i 1 (viu).</p>
 <p>Les variables del dataset són:</p>
+<ul>
+<li><p><strong>Gender (Gen)</strong>: [1=Home;0=Dona] Sexe del pacient</p></li>
+<li><p><strong>Symptoms (Sym)</strong>:[1=Si;0=No] Sintomàtic</p></li>
+<li><p><strong>Alcohol (Alc)</strong>: [1=Si;0=No] Hepatopatia alcohòlica</p></li>
+<li><p><strong>Hepatitis B Surface Antigen (HBS)</strong>: [1=Si;0=No] Antigen de superfície de l’hepatitis B present a la sang</p></li>
+<li><p><strong>Hepatitis B e Antigen (HBe)</strong>:[1=Si;0=No] Antigen e de l’hepatitis B present a la sang</p></li>
+<li><p><strong>Hepatitis B Core Antibody (HBC)</strong>: [1=Si;0=No] Anticòs per l’hepatitis B present a la sang</p></li>
+<li><p><strong>Hepatitis C Virus Antibody (HCV)</strong>: [1=Si;0=No] Anticòs per l’hepatitis C present a la sang</p></li>
+<li><p><strong>Cirrhosis (Cir)</strong>: [1=Si;0=No] Estadio avançat d’hepatopatia crónica</p></li>
+<li><p><strong>Endemic Countries (End)</strong>: [1=Si;0=No] Pacient procedent de països amb alta prevalença d’hepatitis vírica</p></li>
+<li><p><strong>Smoking (Smo)</strong>: [1=Si;0=No] Fumador</p></li>
+<li><p><strong>Diabetes (Dia)</strong>: [1=Si;0=No] Diabètic</p></li>
+<li><p><strong>Obesity (Obe)</strong>: [1=Si;0=No] Obesitat</p></li>
+<li><p><strong>Hemochromatosis (Hem)</strong>:[1=Si;0=No] Hemocromatosi</p></li>
+<li><p><strong>Arterial Hypertension (HyA)</strong>: [1=Si;0=No] Hipertensió arterial</p></li>
+<li><p><strong>Chronic Renal Insufficiency(CRI)</strong>: [1=Si;0=No] Insuficiència renal</p></li>
+<li><p><strong>Human Immunodeficiency Virus (HIV)</strong>: [1=Si;0=No] Infecció per HIV</p></li>
+<li><p><strong>Nonalcoholic Steatohepatitis (Ste)</strong>: [1=Si;0=No] Esteatosis hepàtica de origen no alcohòlic</p></li>
+<li><p><strong>Esophageal Varices (Eso)</strong>: [1=Si;0=No] Presència de varius esofàgiges com indicador d’hipertensió portal</p></li>
+<li><p><strong>Splenomegaly (Spl)</strong>: [1=Si;0=No] Augment del tamany de la melsa com indicador d’hipertensió portal</p></li>
+<li><p><strong>Portal Hypertension (PHT)</strong>: [1=Si;0=No] Pacient amb hipertensió arterial coneguda</p></li>
+<li><p><strong>Portal Vein Thrombosis (PVT)</strong>: [1=Si;0=No] Presència de trombosi venosa portal</p></li>
+<li><p><strong>Liver Metastasis (Met)</strong>: [1=Si;0=No] Metàstasi hepàtica</p></li>
+<li><p><strong>Radiological Hallmark (Rad)</strong>: [1=Si;0=No]Comportament radiològic típic per HCC</p></li>
+<li><p><strong>Age at diagnosis (Age)</strong>: Anys d’edat al moment del diagnóstic de HCC</p></li>
+<li><p><strong>Grams of Alcohol per day (gAl)</strong>: Grams d’alcohol ingerit de mitjana al dia</p></li>
+<li><p><strong>Packs of cigarets per year (PCi)</strong>: Número de paquets de cigarrets consumits per any</p></li>
+<li><p><strong>Performance Status (PSt)</strong>: [0=Activo;1=Restringit;2=Asistencia ocasional;3=Asistencia parcial;4=Asistencia total;5=Mort] Escala de l’estat general del pacient oncològic</p></li>
+<li><p><strong>Encephalopathy degree (Enc)</strong>: [1=Cap;2=Grau I/II; 3=Grau III/IV] Grau d’afectació mental de l’hepatopatia</p></li>
+<li><p><strong>Ascites degree (Asc)</strong>: [1=Cap;2=Lleu;3=Moderada a Severa] Grau d’ascitis com a indicador indirecte d’hipertensió portal</p></li>
+<li><p><strong>International Normalised Ratio (INR)</strong>: Temps de protrombina</p></li>
+<li><p><strong>Alpha-Fetoprotein (ng/mL) (AFe)</strong>: Nivells del marcador tumoral a la sang</p></li>
+<li><p><strong>Haemoglobin (g/dL) (Hae)</strong>: Nivells de Hemoglobina a la sang</p></li>
+<li><p><strong>Mean Corpuscular Volume (MCV)</strong>: Volum corpuscular mig dels eritrocits</p></li>
+<li><p><strong>Leukocytes(G/L) (Leu)</strong>: Concentració de cél.lules blanques en sang</p></li>
+<li><p><strong>Platelets (Pla)</strong>: Concentració de plaquestes en sang</p></li>
+<li><p><strong>Albumin (mg/dL) (Alb)</strong>: Nivelss d’albumina en sang</p></li>
+<li><p><strong>Total Bilirubin(mg/dL) (BiT)</strong>: Nivells de Bilirrubina Total en sang</p></li>
+<li><p><strong>Alanine transaminase (U/L) (ALT)</strong>: Nivells d’ALT en sang</p></li>
+<li><p><strong>Aspartate transaminase (U/L) (AST)</strong>: Nivells d’ASP en sang</p></li>
+<li><p><strong>Gamma glutamyl transferase (U/L) (GGT)</strong>: Nivells gamma-GT en sang</p></li>
+<li><p><strong>Alkaline phosphatase (U/L) (ALP)</strong>: Nivelss de fosfatasa alcalina en sang</p></li>
+<li><p><strong>Total Proteins (g/dL) (Pro)</strong>: Concentració total de proteïnes en sang</p></li>
+<li><p><strong>Creatinine (mg/dL) (Crea)</strong>: Concentració de creatinina en sang</p></li>
+<li><p><strong>Number of Nodules (Nod)</strong>: Número de nóduls d’HCC visualitzats</p></li>
+<li><p><strong>Major dimension of nodule (cm) (DiN)</strong>: Tamany major dels nóduls d’HCC</p></li>
+<li><p><strong>Direct Bilirubin (mg/dL) (BiD)</strong>: Nivells de Bilirrubina Directe en sang</p></li>
+<li><p><strong>Iron (Iro)</strong>: Concentració de ferro en sang</p></li>
+<li><p><strong>Oxygen Saturation (%) (OxS)</strong>: Saturació d’oxigen de la sang</p></li>
+<li><p><strong>Ferritin (ng/mL) (Fer)</strong>: Nivells de ferritina en sang</p></li>
+<li><p><strong>Class Attribute (Class)</strong>:[0=Mort; 1=Viu] Supervivent a l’any del diagnóstic d’HCC</p></li>
+</ul>
 </div>
 </div>
 

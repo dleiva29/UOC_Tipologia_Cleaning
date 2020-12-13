@@ -55,3 +55,104 @@ Es tracta d’un conjunt de dades heterogeni, amb 23 variables quantitatives i 2
 
 Les variables del dataset són:
 
+* **Gender (Gen)**: [1=Home;0=Dona] Sexe del pacient
+
+* **Symptoms (Sym)**:[1=Si;0=No] Sintomàtic
+
+* **Alcohol (Alc)**: [1=Si;0=No] Hepatopatia alcohòlica
+
+* **Hepatitis B Surface Antigen (HBS)**: [1=Si;0=No] Antigen de superfície de l'hepatitis B present a la sang
+
+* **Hepatitis B e Antigen (HBe)**:[1=Si;0=No] Antigen e de l'hepatitis B present a la sang
+
+* **Hepatitis B Core Antibody (HBC)**: [1=Si;0=No] Anticòs per l'hepatitis B present a la sang
+
+* **Hepatitis C Virus Antibody (HCV)**: [1=Si;0=No] Anticòs per l'hepatitis C present a la sang
+
+* **Cirrhosis (Cir)**: [1=Si;0=No] Estadio avançat d'hepatopatia crónica
+
+* **Endemic Countries (End)**: [1=Si;0=No] Pacient procedent de països amb alta prevalença d'hepatitis vírica
+
+* **Smoking (Smo)**: [1=Si;0=No] Fumador
+
+* **Diabetes (Dia)**: [1=Si;0=No] Diabètic
+
+* **Obesity (Obe)**: [1=Si;0=No] Obesitat
+
+* **Hemochromatosis (Hem)**:[1=Si;0=No] Hemocromatosi
+
+* **Arterial Hypertension (HyA)**: [1=Si;0=No] Hipertensió arterial
+
+* **Chronic Renal Insufficiency(CRI)**: [1=Si;0=No] Insuficiència renal
+
+* **Human Immunodeficiency Virus (HIV)**: [1=Si;0=No] Infecció per HIV
+
+* **Nonalcoholic Steatohepatitis (Ste)**: [1=Si;0=No] Esteatosis hepàtica de origen no alcohòlic
+
+* **Esophageal Varices (Eso)**: [1=Si;0=No] Presència de varius esofàgiges com indicador d'hipertensió portal
+
+* **Splenomegaly (Spl)**: [1=Si;0=No] Augment del tamany de la melsa com indicador d'hipertensió portal
+
+* **Portal Hypertension (PHT)**: [1=Si;0=No] Pacient amb hipertensió arterial coneguda
+
+* **Portal Vein Thrombosis (PVT)**: [1=Si;0=No] Presència de trombosi venosa portal
+
+* **Liver Metastasis (Met)**: [1=Si;0=No] Metàstasi hepàtica
+
+* **Radiological Hallmark (Rad)**: [1=Si;0=No]Comportament radiològic típic per HCC
+
+* **Age at diagnosis (Age)**: Anys d'edat al moment del diagnóstic de HCC
+
+* **Grams of Alcohol per day (gAl)**: Grams d'alcohol ingerit de mitjana al dia
+
+* **Packs of cigarets per year (PCi)**: Número de paquets de cigarrets consumits per any
+
+* **Performance Status (PSt)**: [0=Activo;1=Restringit;2=Asistencia ocasional;3=Asistencia parcial;4=Asistencia total;5=Mort] Escala de l'estat general del pacient oncològic
+
+* **Encephalopathy degree (Enc)**: [1=Cap;2=Grau I/II; 3=Grau III/IV] Grau d'afectació mental de l'hepatopatia
+
+* **Ascites degree (Asc)**: [1=Cap;2=Lleu;3=Moderada a Severa] Grau d'ascitis com a indicador indirecte d'hipertensió  portal
+
+* **International Normalised Ratio (INR)**: Temps de protrombina
+
+* **Alpha-Fetoprotein (ng/mL) (AFe)**: Nivells del marcador tumoral a la sang
+
+* **Haemoglobin (g/dL) (Hae)**: Nivells de Hemoglobina a la sang
+
+* **Mean Corpuscular Volume (MCV)**: Volum corpuscular mig dels eritrocits
+
+* **Leukocytes(G/L) (Leu)**: Concentració de cél.lules blanques en sang
+
+* **Platelets (Pla)**: Concentració de plaquestes en sang
+
+* **Albumin (mg/dL) (Alb)**: Nivelss d'albumina en sang
+
+* **Total Bilirubin(mg/dL) (BiT)**: Nivells de Bilirrubina Total en sang
+
+* **Alanine transaminase (U/L) (ALT)**: Nivells d'ALT en sang
+
+* **Aspartate transaminase (U/L) (AST)**: Nivells d'ASP en sang
+
+* **Gamma glutamyl transferase (U/L) (GGT)**: Nivells gamma-GT en sang
+
+* **Alkaline phosphatase (U/L) (ALP)**: Nivelss de fosfatasa alcalina en sang
+
+* **Total Proteins (g/dL) (Pro)**: Concentració total de proteïnes en sang
+
+* **Creatinine (mg/dL) (Crea)**: Concentració de creatinina en sang
+
+* **Number of Nodules (Nod)**: Número de nóduls d'HCC visualitzats
+
+* **Major dimension of nodule (cm) (DiN)**: Tamany major dels nóduls d'HCC
+
+* **Direct Bilirubin (mg/dL) (BiD)**: Nivells de Bilirrubina Directe en sang
+
+* **Iron (Iro)**: Concentració de ferro en sang
+
+* **Oxygen Saturation (%) (OxS)**: Saturació d'oxigen de la sang
+
+* **Ferritin (ng/mL) (Fer)**: Nivells de ferritina en sang
+
+* **Class Attribute (Class)**:[0=Mort; 1=Viu] Supervivent a l'any del diagnóstic d'HCC
+
+
