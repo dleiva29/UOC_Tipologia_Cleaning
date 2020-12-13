@@ -1,0 +1,34 @@
+
+
+download.file("https://archive.ics.uci.edu/ml/machine-learning-databases/00423/hcc-survival.zip","mydata.zip")
+unzip("mydata.zip")
+
+
+hcc<-read.csv ("hcc-survival/hcc-data.txt",header = F, dec = ".", stringsAsFactors = F, na.strings = "?")
+
+hcc_header<-c("Gender", "Symptoms", "Alcohol", "Hepatitis B Surface Antigen",
+              "Hepatitis B e Antigen", "Hepatitis B Core Antibody",
+              "Hepatitis C Virus Antibody",  "Cirrhosis", 
+              "Endemic Countries","Smoking",  "Diabetes", "Obesity",
+              "Hemochromatosis", "Arterial Hypertension", 
+              "Chronic Renal Insufficiency", "Human Immunodeficiency Virus",
+              "Nonalcoholic Steatohepatitis","Esophageal Varices",
+              "Splenomegaly",  "Portal Hypertension", 
+              "Portal Vein Thrombosis", "Liver Metastasis", 
+              "Radiological Hallmark", "Age at diagnosis", 
+              "Grams of Alcohol per day", "Packs of cigarets per year",
+              "Performance Status", "Encephalopathy degree", "Ascites degree",
+              "International Normalised Ratio", "Alpha-Fetoprotein (ng/mL)",
+              "Haemoglobin (g/dL)", "Mean Corpuscular Volume",
+              "Leukocytes(G/L)", "Platelets", "Albumin (mg/dL)",
+              "Total Bilirubin(mg/dL)",  "Alanine transaminase (U/L)"
+              , "Aspartate transaminase (U/L)",
+              "Gamma glutamyl transferase (U/L)", 
+              "Alkaline phosphatase (U/L)","Total Proteins (g/dL)",
+              "Creatinine (mg/dL)","Number of Nodules",
+              "Major dimension of nodule (cm)", 
+              "Direct Bilirubin (mg/dL)", "Iron", "Oxygen Saturation (%)",
+              "Ferritin (ng/mL)", "Class Attribute"   )
+
+colnames(hcc)<-hcc_header
+str(hcc)

@@ -1,0 +1,18 @@
+---
+title: "PRA 2: Neteja, validació i anàlisi de les dades"
+author: "Álvaro Díaz i David Leiva"
+date: "13/12/2020"
+output:
+  html_document:
+    highlight: default
+    number_sections: yes
+    theme: cosmo
+    toc: yes
+    toc_depth: 2
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
