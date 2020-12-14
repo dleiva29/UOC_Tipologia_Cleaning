@@ -511,7 +511,9 @@ summary {
 <h2 number="2.3"><span class="header-section-number">2.3</span> Neteja de les dades</h2>
 <div id="preparacio-del-dataset" class="section level3" number="2.3.1">
 <h3 number="2.3.1"><span class="header-section-number">2.3.1</span> Preparació del dataset</h3>
-<pre class="r"><code># Importació del dataset
+<pre class="r"><code>library(knitr)
+
+# Importació del dataset
 download.file(&quot;https://archive.ics.uci.edu/ml/machine-learning-databases/00423/hcc-survival.zip&quot;,&quot;mydata.zip&quot;)
 unzip(&quot;mydata.zip&quot;)
 hcc&lt;-read.csv (&quot;hcc-survival/hcc-data.txt&quot;,header = F, dec = &quot;.&quot;, stringsAsFactors = F, na.strings = &quot;?&quot;)
@@ -605,9 +607,248 @@ str(hcc)</code></pre>
 <div id="descripcio-del-dataset-1" class="section level3" number="2.3.2">
 <h3 number="2.3.2"><span class="header-section-number">2.3.2</span> Descripció del dataset</h3>
 <p>El dataset està compost de 165 observacions de 49 atributs de pacients amb una variable de classe que registra la supervivència a l’any del diagnóstic. Dels atributs dels pacients, existeixen 26 categorics, 3 dels quals són ordinals ( <em>Performance Status</em>, <em>Encephalopathy degree</em>, <em>Ascites degree</em>), sent la resta numérics. És pot veure que existeixen valors nuls codificats com <em>NA</em>.</p>
+<pre class="r"><code># Definició de tipus de dades per columna
+hcc_factor &lt;-c(1:23,50)
+hcc_order &lt;- c(27:29)
+hcc_factorT&lt;-c(1:23,27:29,50)
+hcc_num&lt;-c(24:26,30:49)
+
+# Factorització de les columnes categóriques
+hcc[hcc_factor]&lt;-lapply(hcc[hcc_factor], as.factor)
+hcc[hcc_order]&lt;-lapply(hcc[hcc_order], factor,ordered=T)</code></pre>
 </div>
 <div id="valors-nuls" class="section level3" number="2.3.3">
 <h3 number="2.3.3"><span class="header-section-number">2.3.3</span> Valors nuls</h3>
+<pre class="r"><code>## NA
+
+### Distribució de valors desconeguts per pacient
+print(&quot;Distribució de valors desconeguts per pacient&quot;)</code></pre>
+<pre><code>## [1] &quot;Distribució de valors desconeguts per pacient&quot;</code></pre>
+<pre class="r"><code>table(apply(hcc, 1, function(x) sum(is.na(x))))</code></pre>
+<pre><code>## 
+##  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 16 18 22 23 
+##  8 16 15 28 19 21 15  7 11 12  4  2  1  1  1  1  1  1  1</code></pre>
+<pre class="r"><code># Valores NA por variable
+print(&quot;Distribució de valors desconeguts per variable&quot;)</code></pre>
+<pre><code>## [1] &quot;Distribució de valors desconeguts per variable&quot;</code></pre>
+<pre class="r"><code>table(colSums(is.na(hcc)))</code></pre>
+<pre><code>## 
+##  0  1  2  3  4  5  6  7  8  9 10 11 14 15 17 18 20 22 23 24 39 41 44 48 52 
+##  6  1  4 10  3  1  1  1  1  1  1  2  1  1  1  1  1  1  1  1  2  1  1  1  1 
+## 53 79 80 
+##  1  1  2</code></pre>
+<pre class="r"><code>kable(sort (colSums(is.na(hcc)), decreasing = TRUE), caption = &quot;Numero de valors desconeguts per variable&quot;)</code></pre>
+<table>
+<caption>Numero de valors desconeguts per variable</caption>
+<thead>
+<tr class="header">
+<th></th>
+<th align="right">x</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Oxygen Saturation (%)</td>
+<td align="right">80</td>
+</tr>
+<tr class="even">
+<td>Ferritin (ng/mL)</td>
+<td align="right">80</td>
+</tr>
+<tr class="odd">
+<td>Iron</td>
+<td align="right">79</td>
+</tr>
+<tr class="even">
+<td>Packs of cigarets per year</td>
+<td align="right">53</td>
+</tr>
+<tr class="odd">
+<td>Esophageal Varices</td>
+<td align="right">52</td>
+</tr>
+<tr class="even">
+<td>Grams of Alcohol per day</td>
+<td align="right">48</td>
+</tr>
+<tr class="odd">
+<td>Direct Bilirubin (mg/dL)</td>
+<td align="right">44</td>
+</tr>
+<tr class="even">
+<td>Smoking</td>
+<td align="right">41</td>
+</tr>
+<tr class="odd">
+<td>Hepatitis B e Antigen</td>
+<td align="right">39</td>
+</tr>
+<tr class="even">
+<td>Endemic Countries</td>
+<td align="right">39</td>
+</tr>
+<tr class="odd">
+<td>Hepatitis B Core Antibody</td>
+<td align="right">24</td>
+</tr>
+<tr class="even">
+<td>Hemochromatosis</td>
+<td align="right">23</td>
+</tr>
+<tr class="odd">
+<td>Nonalcoholic Steatohepatitis</td>
+<td align="right">22</td>
+</tr>
+<tr class="even">
+<td>Major dimension of nodule (cm)</td>
+<td align="right">20</td>
+</tr>
+<tr class="odd">
+<td>Symptoms</td>
+<td align="right">18</td>
+</tr>
+<tr class="even">
+<td>Hepatitis B Surface Antigen</td>
+<td align="right">17</td>
+</tr>
+<tr class="odd">
+<td>Splenomegaly</td>
+<td align="right">15</td>
+</tr>
+<tr class="even">
+<td>Human Immunodeficiency Virus</td>
+<td align="right">14</td>
+</tr>
+<tr class="odd">
+<td>Portal Hypertension</td>
+<td align="right">11</td>
+</tr>
+<tr class="even">
+<td>Total Proteins (g/dL)</td>
+<td align="right">11</td>
+</tr>
+<tr class="odd">
+<td>Obesity</td>
+<td align="right">10</td>
+</tr>
+<tr class="even">
+<td>Hepatitis C Virus Antibody</td>
+<td align="right">9</td>
+</tr>
+<tr class="odd">
+<td>Alpha-Fetoprotein (ng/mL)</td>
+<td align="right">8</td>
+</tr>
+<tr class="even">
+<td>Creatinine (mg/dL)</td>
+<td align="right">7</td>
+</tr>
+<tr class="odd">
+<td>Albumin (mg/dL)</td>
+<td align="right">6</td>
+</tr>
+<tr class="even">
+<td>Total Bilirubin(mg/dL)</td>
+<td align="right">5</td>
+</tr>
+<tr class="odd">
+<td>Liver Metastasis</td>
+<td align="right">4</td>
+</tr>
+<tr class="even">
+<td>International Normalised Ratio</td>
+<td align="right">4</td>
+</tr>
+<tr class="odd">
+<td>Alanine transaminase (U/L)</td>
+<td align="right">4</td>
+</tr>
+<tr class="even">
+<td>Diabetes</td>
+<td align="right">3</td>
+</tr>
+<tr class="odd">
+<td>Arterial Hypertension</td>
+<td align="right">3</td>
+</tr>
+<tr class="even">
+<td>Portal Vein Thrombosis</td>
+<td align="right">3</td>
+</tr>
+<tr class="odd">
+<td>Haemoglobin (g/dL)</td>
+<td align="right">3</td>
+</tr>
+<tr class="even">
+<td>Mean Corpuscular Volume</td>
+<td align="right">3</td>
+</tr>
+<tr class="odd">
+<td>Leukocytes(G/L)</td>
+<td align="right">3</td>
+</tr>
+<tr class="even">
+<td>Platelets</td>
+<td align="right">3</td>
+</tr>
+<tr class="odd">
+<td>Aspartate transaminase (U/L)</td>
+<td align="right">3</td>
+</tr>
+<tr class="even">
+<td>Gamma glutamyl transferase (U/L)</td>
+<td align="right">3</td>
+</tr>
+<tr class="odd">
+<td>Alkaline phosphatase (U/L)</td>
+<td align="right">3</td>
+</tr>
+<tr class="even">
+<td>Chronic Renal Insufficiency</td>
+<td align="right">2</td>
+</tr>
+<tr class="odd">
+<td>Radiological Hallmark</td>
+<td align="right">2</td>
+</tr>
+<tr class="even">
+<td>Ascites degree</td>
+<td align="right">2</td>
+</tr>
+<tr class="odd">
+<td>Number of Nodules</td>
+<td align="right">2</td>
+</tr>
+<tr class="even">
+<td>Encephalopathy degree</td>
+<td align="right">1</td>
+</tr>
+<tr class="odd">
+<td>Gender</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td>Alcohol</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td>Cirrhosis</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td>Age at diagnosis</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td>Performance Status</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td>Class Attribute</td>
+<td align="right">0</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
