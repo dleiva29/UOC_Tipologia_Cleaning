@@ -247,20 +247,22 @@ Estudiant la distribució dels valors desconeguts per variable veiem que només 
 ```{r message= FALSE, warning=FALSE}
 # Valoració de la distribució dels NA a les variables amb >10% de NA amb
 # respecte la variable classe 
-hcc_colNA<-names(hcc[,colSums(is.na(hcc))>15])
+hcc_colNA<-names(hcc[hcc_factor][colSums(is.na(hcc[hcc_factor]))>15])
 hcc_colNA20<-c()
 
 
 for (i in hcc_colNA)
   {
     print (i)
-    aa<-table(hcc$`Class Attribute`[is.na(hcc[,i])])[1]/sum(is.na(hcc[,i]))-(59/156)
-    if (abs(aa)>0.2){
+    aa<-prop.test(table(hcc[,i],hcc$`Class Attribute`))
+    
+    if (aa[["p.value"]]<0.05){
       hcc_colNA20<-append(hcc_colNA20,i)
     }
-    print (aa)
+    print(table(hcc[,i],hcc$`Class Attribute`))
+    print (aa[["p.value"]])
   }
 
-cat("\nVariables con >20% de diferencia de NA con lo esperado\n",hcc_colNA20)
+cat("\nVariables amb una difència significativa de NA entre els grups de la classe\n",hcc_colNA20)
 
 ```
