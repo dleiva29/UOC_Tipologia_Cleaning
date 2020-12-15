@@ -164,6 +164,7 @@ Poder conèixer la probabilitat de supervivència d'un pacient amb diagnóstic r
 ### Preparació del dataset
 ```{r message= FALSE, warning=FALSE}
 library(knitr)
+library(tidyverse)
 
 # Importació del dataset
 download.file("https://archive.ics.uci.edu/ml/machine-learning-databases/00423/hcc-survival.zip","mydata.zip")
