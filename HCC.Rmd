@@ -205,6 +205,7 @@ hcc_header_cortos<-c("Gen", "Sym", "Alc", "HBS", "HBe", "HBC","HCV",  "Cir",
 
 colnames(hcc)<-hcc_header
 str(hcc)
+summary(hcc)
 ```
 
 ### Descripció del dataset
@@ -244,9 +245,11 @@ sort (colSums(is.na(hcc)), decreasing = TRUE)
 
 Només hi ha 8 pacients amb les dades completes, faltant a la majoria de pacients entre 2 i 9 dades. Fins i tot hi ha pacients 13 pacients amb més de 10 dades desconegudes, el que podria fer-nos desconfiar de les dades d'aquests pacients, de manera que s'elimaran les dades d'aquests 13 pacients amb més de 10 o més valors desconeguts.
 
-Estudiant la distribució dels valors desconeguts per variable veiem que només hi ha 13 columnes amb totes les dades íntegres. Amb més de l'10% de dades desconegudes hi ha 15 de les 50 varibles (un 30%), destacant 9 columnes amb entre el 20 i el 50% de les seves dades desconegudes, com són la saturació d'oxigen o els nivells de ferritina en sang. Els valors NA poden seguir una distribució a l'atzar de manera que la proporció dels esperats en cada classe hauria de ser similar. En cas contrari, la correcció dels valors desconeguts podria provocar un biaix cap a un dels dos grups. Vegem com es distribueixen en les variables amb més d'un 10% de valors missing i si alguna presenta una diferència més gran de l'20% del que s'esperava.
+Estudiant la distribució dels valors desconeguts per variable veiem que només hi ha 13 columnes amb totes les dades íntegres. Amb més de l'10% de dades desconegudes hi ha 15 de les 50 varibles (un 30%), destacant 9 columnes amb entre el 20 i el 50% de les seves dades desconegudes, com són la saturació d'oxigen o els nivells de ferritina en sang. Els valors NA poden seguir una distribució a l'atzar de manera que la proporció dels esperats en cada classe hauria de ser similar. En cas contrari, la correcció dels valors desconeguts podria provocar un biaix cap a un dels dos grups. Vegem com es distribueixen en les variables els valors missing i si hi ha difrències significatives depenent de la clase.
 
 ```{r message= FALSE, warning=FALSE}
+## REVISAR: Creo que así miramos si hay diferencias de la propia variable no de los valores NA de la variable. Añado después otro código a ver qué te parece
+
 # Valoració de la distribució dels NA a les variables amb >10% de NA amb
 # respecte la variable classe 
 hcc_colNA<-names(hcc[hcc_factor][colSums(is.na(hcc[hcc_factor]))>10])
@@ -266,3 +269,83 @@ for (i in totFactor){
 cat("\nVariables amb una difència significativa de NA entre els grups de la classe\n",testSig$Clase)
 
 ```
+```{r message= FALSE, warning=FALSE}
+# Valoració de la distribució dels NA a les variables amb respecte la variable classe 
+cero<-hcc[hcc$`Class Attribute`==0,]
+uno<-hcc[hcc$`Class Attribute`==1,]
+
+testSig <- tibble()
+
+for (i in names(hcc[,hcc_factorT]))
+{
+  if (sum(is.na(hcc[,i]))>0){
+    casos<-c(sum(is.na(cero[,i])),sum(is.na(uno[,i])))
+    long<-c(length(cero[,i]),length(uno[,i]))
+    test<-prop.test(x=casos,n=long)
+    if(test$p.value<0.05){
+      testSig <- testSig %>% bind_rows(c(Clase = i, p_value = test$p.value, prob_0=(casos/long)[1], prob_1=(casos/long)[2],numNA_0=casos[1], numNA_1=casos[2]))
+      
+    }
+  }
+}
+  
+cat("\nVariables amb una difència significativa de NA entre els grups de la classe\n",testSig$Clase)
+
+testSig
+  
+```
+A la variable `Symptoms` s'observen molts NA entre els pacients que sobreviuen. Els pacients que no sobreviuen solen presentar molta simptomatologia i aquesta es registra. En canvi, els pacients que no presenten símptomes, poden no registrar-se com a negatiu a aquesta variable, existint un biaix d'informació. 
+
+Igualment succeix a les variables `Hemochromatosis` i `Esophageal Varices`. Els pacients afectats es registren i probablement presenten tases mes altes de mortalitat. En canvi, molts pacients es desconeixerà si presenten hemocromatosis o varius, però probablement no la patiran, i tindran tases de supervivència superiors. 
+
+Corregir aquest valors desconeguts cap a la moda condicionarà un biaix. Per tant, per corregir els valors NA es farà:
+
+* A les variable qualitatives sense diferències significatives en el valor desconeguts, s'asignarà el valor més freqüent a cada variable.
+
+* A les variables qualitatives amb diferències significatives entre els valors deconeguts, s'asignarà el valor més pròxim utilitzant l'algoritme kNN.
+
+* A les variables quantitatives s'asignarà la mitjana de la variable. Per tal de tenir una mitjana condicionada per valors erronis extrems, es corregiran abans de l'asignació del valor mitjà als valors desconguts.
+
+### Correcció valors nuls de variables categòriques
+
+```{r message= FALSE, warning=FALSE}
+## NOTA: Faltaría hacer kNN de las tres variable no significativas. Ahora corrige todos los categ con la moda
+
+# Correcció de NA de variables categóriques amb la moda
+
+# Funció moda
+my_mode <- function(x) {                     
+  unique_x <- unique(x)
+  tabulate_x <- tabulate(match(x, unique_x))
+  unique_x[tabulate_x == max(tabulate_x)]
+}
+ 
+# Correcció NA categórics moda
+for (i in hcc_factorT)
+  {
+    hcc[is.na(hcc[,i]),i]<-(my_mode(hcc[,i]))
+  }
+```
+
+### Correcció valors nuls de variables quantitatives
+Existeixen dues variables amb valors extranys, incompatibles amb la vida; son `Leukocytes` i `Platelets`
+La gran majoria dels valors a la variable `Leukocytes` esgan per sota de 100, que és l'esperat. Valors majors son pràcticament impossibles. Els valors d'aquesta variable es solen expressar sobre mm3 pel que solen tenir valors múltiples de 1000, d'aquí la probable confusió amb els valors extrems trobats. Es corregiran modificant les unitats d'aquest valors.
+
+Amb respecte `Platelets`, l'error és similar al trobat a l'anterior variable.
+
+Es corregeix els errors i s'assigna la mitjana als valors desconeguts
+
+```{r message= FALSE, warning=FALSE}
+# Correcció valors leucocitosi i plaquetes
+hcc$`Leukocytes(G/L)`[!is.na(hcc$`Leukocytes(G/L)`)&hcc$`Leukocytes(G/L)`>100]<-hcc$`Leukocytes(G/L)`[!is.na(hcc$`Leukocytes(G/L)`)&hcc$`Leukocytes(G/L)`>100]/1000 
+
+hcc$Platelets[!is.na(hcc$Platelets)&hcc$Platelets<1000]<-hcc$Platelets[!is.na(hcc$Platelets)&hcc$Platelets<1000]*1000
+
+# Correcció NA amb mitjana
+for (i in hcc_num){
+  hcc[is.na(hcc[,i]),i]<-median(hcc[,i],na.rm = TRUE)
+}
+```
+
+
+
