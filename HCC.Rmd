@@ -347,5 +347,14 @@ for (i in hcc_num){
 }
 ```
 
+## Anàlisi de les dades
+```{r message= FALSE, warning=FALSE}
+# Estudio distribución variables Numericas
+for (i in hcc_num) {
+  
+  a1<-ggplot(hcc, aes(x=hcc[,i], fill=hcc$`Class Attribute`))+xlab(names(hcc)[i])+labs(fill="Clase")+geom_histogram()
+  a2<-ggplot(hcc, aes(x=hcc$`Class Attribute`,y=hcc[,i]))+ylab(names(hcc)[i])+xlab("Clase")+geom_boxplot()
 
-
+  grid.arrange(a1,a2,nrow=1)
+}
+```
