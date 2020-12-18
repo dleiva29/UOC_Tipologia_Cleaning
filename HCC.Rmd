@@ -455,6 +455,55 @@ Per tal de valorar quines variables es comporten diferents entre en que sobreviu
 
 * Per les variables quantititatives, donada les seves distribucións majoritària diferent a la normalitat, es realitzara el test no paramètric de Mann–Whitney–Wilcoxon
 
-* 
+* Per les variables qualitatives es realitzarà un test chi-quadrat.
+
+```{r message= FALSE, warning=FALSE}
+testSig <- tibble()
 
 
+cat("Variables categóriques amb p<0.10 entre la classe:\n")
+for (i in hcc_factorT) {
+  tabla=table(hcc[,i], hcc$`Class Attribute`)
+  chi=chisq.test(tabla)
+  if (chi$p.value<0.1){
+    cat(names(hcc)[i],":\n")
+    cat("p=",chi$p.value, "\n")
+    testSig <- testSig %>% bind_rows(c(Clase = i, Name=names(hcc[i]),Categorica="1",p_value = chi$p.value))
+    }
+}
+
+cat("\n")
+cat("Variables numériques amb p<0.10 entre la classe:\n")
+for (i in hcc_num) {
+  wil=wilcox.test(hcc[hcc$`Class Attribute`==1,i],hcc[hcc$`Class Attribute`==0,i], mu = 0,paired = FALSE, conf.int = 0.95)
+  
+  if (wil$p.value<0.1){
+    cat(names(hcc)[i],":\n")
+    cat("p=",wil$p.value, "\n")
+    testSig <- testSig %>% bind_rows(c(Clase = i, Name=names(hcc[i]),Categorica="0",p_value = wil$p.value))
+    }
+  }
+````
+
+Aquestes variables seran les que es seleccionarà per a la creació d'un model de regressió logística, però abans, valorarem les correlacions entre elles per tal de seleccionar variables que estiguin poc relacionades entre elles.
+
+
+### Correlació entre les variables seleccionades
+
+Amb respecte a la corrrelació entre les variables seleccionades, veiem la seva matriu de correlacions. Donada l'existència de variables categóriques, aquestes es consideradan numériques i usarem la correlació no paramétrica de Spearman per a la seva valoració. Previament es normalitzaran totes les variables quantitatives.
+
+
+```{r message= FALSE, warning=FALSE}
+# Correlación variables independientes.
+library(corrplot)
+hcc_norm<- hcc
+atr<-names(hcc)  
+hcc_norm[,hcc_num]<-scale(hcc_norm[,hcc_num])
+
+hcc2<-as.data.frame(lapply(hcc_norm,as.numeric))
+
+names(hcc2)<-atr
+
+hcc_cor<-cor(hcc2[,testSig$Name], method = "spearman")
+corrplot(hcc_cor, cl.pos='n',tl.srt = 45, tl.cex = 0.5, type="upper",method = "circle", order="FPC", diag=FALSE)
+```
