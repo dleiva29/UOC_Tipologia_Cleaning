@@ -507,3 +507,45 @@ names(hcc2)<-atr
 hcc_cor<-cor(hcc2[,testSig$Name], method = "spearman")
 corrplot(hcc_cor, cl.pos='n',tl.srt = 45, tl.cex = 0.5, type="upper",method = "circle", order="FPC", diag=FALSE)
 ```
+
+
+Per intentar reduïr el número de variables del model, d'entre les que han tingut difències significatives entre els que sobreviuen i els que no, seleccionarem les que tingin poca correlació amb altres variables, i amb les que tenen molta correlació amb d'altres, només seleccionarem una com a representiva.
+
+
+### MELD
+
+Hi ha un valor extès per a valorar la probabilitat de mort als tres mesos de pacients amb hepatopatia que depend de la creatinina, la bilirrubina total i del INR, amb un valor calculat denominat [MELD](https://es.wikipedia.org/wiki/Escala_MELD). Aquest valor és una estimació de probabilitat de fallida hepàtica. A majors valors major probabilitat de mort. Aquest valor està validat pels 3 mesos, no per a l'any, com es el nostre cas. 
+
+```{r message= FALSE, warning=FALSE}
+
+# MELC calculat vs clase
+meld<-3.78*hcc$`log_Total Bilirubin(mg/dL)`+ 11.2*log(hcc$`International Normalised Ratio`)+9.57*hcc$`log_Creatinine (mg/dL)`+6.43
+
+hcc$MELD<-meld
+
+plot(hcc$`Class Attribute`, meld)
+
+# Ho no hi ha diferències en la supervivència depenent del MELD
+wilcox.test(meld[hcc$`Class Attribute`==1],meld[hcc$`Class Attribute`==0], mu = 0,paired = FALSE, conf.int = 0.95)
+
+```
+
+És pot veure que els valors de MELD són significativament diferents entre el grup de pacients que sobreviuen i els que no.  Amb aquesta combinació lineal agrupem en una única varible la bilirrubina total, l'INR i la creatinina.
+
+Per tant, les variables seleccionades per estudiar amb regressió logística seran:
+
+* Symptoms
+* Portal Vein Thrombosis
+* Liver Metastasis
+* Age at diagnosis
+* Encephalopathy degree
+* Ascites degree
+* log_Alpha-Fetoprotein (ng/mL)
+* Haemoglobin (g/dL)
+* log_Aspartate transaminase (U/L)
+* log_Gamma glutamyl transferase (U/L)
+* Major dimension of nodule (cm)
+* Iron
+* Ferritin (ng/mL)
+* MELD
+
