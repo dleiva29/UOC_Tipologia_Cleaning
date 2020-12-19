@@ -549,3 +549,18 @@ Per tant, les variables seleccionades per estudiar amb regressió logística ser
 * Ferritin (ng/mL)
 * MELD
 
+
+## Model amb regressió logística
+
+```{r message= FALSE, warning=FALSE}
+selecc<-c(2, 21, 22, 24, 28, 29, 31, 32, 39, 40, 45, 47, 49, 51,50)
+
+hcc_sel<-hcc[selecc]
+
+#hcc_sel<-as.data.frame(lapply(hcc_sel,as.numeric))
+#names(hcc_sel)<-names(hcc[selecc])
+
+modelo <- glm(`Class Attribute` ~ ., data = hcc_sel, family = "binomial")
+summary(modelo)
+
+```
