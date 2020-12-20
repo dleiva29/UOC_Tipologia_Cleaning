@@ -337,8 +337,8 @@ Corregir aquest valors desconeguts cap a la moda condicionarà un biaix. Per tan
 #computem tots els valors NA de variables factor
 cn<- colnames(hcc[hcc_factorT,])
 
-hcc2 <- kNN(hcc, variable = cn) %>% subset(select = Gender:`Class Attribute`)
-summary(hcc2)
+hcc <- kNN(hcc, variable = cn) %>% subset(select = Gender:`Class Attribute`)
+summary(hcc)
 
 #Falta canviar el tex t d'abans, ja que no penso que imputar la moda en variables binaries sigui el mateix. Mira el cas d'Smooking i ho veuras clar.
 ```
@@ -456,6 +456,11 @@ for (i in 1:ncol(hcc)) {
 ```
 
 Com es pot veure, hi ha moltes variables numériques que es distancien significativament de la distribució normal, per el que s'usaran test no paramétrics (Mann–Whitney–Wilcoxon) per la comparativa en relació a la supervivència. 
+
+
+ATENCIÓN: NO TIENE MUCHO SENTIDO MIRAR HOMOCASTEIDAD DE LAS VARIABLES NO NORMALES!! 
+
+
 
 ## Proves estadístiques
 
