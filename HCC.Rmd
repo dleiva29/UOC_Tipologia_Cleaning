@@ -559,8 +559,7 @@ Per tant, les variables seleccionades per estudiar amb regressió logística ser
 * Portal Vein Thrombosis
 * Liver Metastasis
 * Age at diagnosis
-* Encephalopathy degree
-* Ascites degree
+* Performance Status
 * log_Alpha-Fetoprotein (ng/mL)
 * Haemoglobin (g/dL)
 * log_Aspartate transaminase (U/L)
@@ -573,15 +572,47 @@ Per tant, les variables seleccionades per estudiar amb regressió logística ser
 
 ## Model amb regressió logística
 
+Amb les variables seleccionades, es crearà un model de regressió logística per tal de predir la supervivència a l'any del diagnóstic d'HCC. La variable ordinal es considerarà numérica.  
+
 ```{r message= FALSE, warning=FALSE}
-selecc<-c(2, 21, 22, 24, 28, 29, 31, 32, 39, 40, 45, 47, 49, 51,50)
+selecc<-c(2, 21, 22, 24, 27, 31, 32, 39, 40, 45, 47, 49, 51,50)
 
 hcc_sel<-hcc[selecc]
 
-#hcc_sel<-as.data.frame(lapply(hcc_sel,as.numeric))
-#names(hcc_sel)<-names(hcc[selecc])
+hcc_sel$`Performance Status`<- as.numeric(hcc_sel$`Performance Status`)
+
 
 modelo <- glm(`Class Attribute` ~ ., data = hcc_sel, family = "binomial")
 summary(modelo)
 
 ```
+
+Per tal de seleccionar un model amb menys atributs sense disminuir excesivament l'error del model, es realitzarà un estudi iteratiu eliminant a cada pas la variable menys significativa ("backward").
+
+```{r message= FALSE, warning=FALSE}
+library(MASS)
+
+modback <- stepAIC(modelo, trace=FALSE, direction="backward")
+
+summary(modback)
+ 
+```
+
+
+
+```{r message= FALSE, warning=FALSE}
+library(vcd)
+predicciones <- ifelse(test = modback$fitted.values > 0.50, yes = 1, no = 0)
+matriz_confusion <- table(hcc_sel$`Class Attribute`, predicciones,
+                          dnn = c("observaciones", "predicciones"))
+matriz_confusion
+mosaic(matriz_confusion, shade = T, colorize = T,
+       gp = gpar(fill = matrix(c("green3", "red2", "red2", "green3"), 2, 2)))
+
+cat("\n")
+cat("Exactitut del model:\n")
+(matriz_confusion[1]+matriz_confusion[4])/nrow(hcc_sel)
+
+```
+
+El model generat te només 6 variables i obté un 82% de precisió en les prediccions. 
