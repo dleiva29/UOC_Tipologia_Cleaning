@@ -24,6 +24,7 @@ library(kableExtra)
 library(VIM)
 library(gridExtra)
 library(nortest)
+library(corrplot)
 ```
 
 ******
@@ -477,6 +478,7 @@ for (i in 1:ncols){
 }
 ```
 
+
 ```{r message= FALSE, warning=FALSE}
 # Distribució variables quantitatives
 hcc_factorT<-c(1:23,27:29)
@@ -531,11 +533,8 @@ for (i in 1:ncols) {
 
 ```
 
-
-FALTA DESCRIPCIÓN DE LAS VARIABLES!!!!
-
-
 ### Comprobació de la normalitat 
+
 ```{r message= FALSE, warning=FALSE}
 col.names = colnames(hcc)
 tNorm <- tibble()
@@ -546,13 +545,11 @@ for (i in 1:ncol(hcc)) {
   }
 }
 tau <- tNorm %>% filter(p_val < 0.05) %>% 
-   mutate_at(.vars = c("p_value"), as.numeric)
+  mutate_at(.vars = c("p_value"), as.numeric)
 tau <- cbind(tau[1:12,],tau[13:24,])
 
 tau[12,3 ] <- ""
 tau[12,4 ] <- 0
- 
-
 
 
 kable(x = tau, format = "latex", caption = "Variables que no segueixen una distribució normal",
@@ -566,8 +563,6 @@ Com es pot veure, hi ha moltes variables numériques que es distancien significa
 
 ATENCIÓN: NO TIENE MUCHO SENTIDO MIRAR HOMOCASTEIDAD DE LAS VARIABLES NO NORMALES!! 
 
-
-
 ## Proves estadístiques
 
 ### Comparació entre grups de la classe
@@ -579,31 +574,41 @@ Per tal de valorar quines variables es comporten diferents entre en que sobreviu
 * Per les variables qualitatives es realitzarà un test chi-quadrat.
 
 ```{r message= FALSE, warning=FALSE}
-testSig <- tibble()
+testChi <- tibble()
 
-
-cat("Variables categóriques amb p<0.10 entre la classe:\n")
 for (i in hcc_factorT) {
-tabla=table(hcc[,i], hcc$`Class Attribute`)
-chi=chisq.test(tabla)
-if (chi$p.value<0.1){
-cat(names(hcc)[i],":\n")
-cat("p=",chi$p.value, "\n")
-testSig <- testSig %>% bind_rows(c(Clase = i, Name=names(hcc[i]),Categorica="1",p_value = chi$p.value))
-}
+  tau=table(hcc[,i], hcc$`Class Attribute`)
+  chi=chisq.test(tau)
+  testChi <- testChi %>% bind_rows(c(Clase = i, Name=names(hcc[i]),Categorica="1",p_value = chi$p.value))
 }
 
-cat("\n")
-cat("Variables numériques amb p<0.10 entre la classe:\n")
+tau <- testChi %>% filter(p_value < 0.1) %>% 
+  mutate_at(.vars = c("p_value"), as.numeric)
+
+varSig <- tau
+
+kable(x = tau, format = "latex", caption = "Variables categóriques amb p<0.10 entre la classe",
+      booktabs = TRUE, digits = 4) %>% 
+  kable_styling(latex_options = c("HOLD_position", "scale_down"))
+
+
+testWil <- tibble()
 for (i in hcc_num) {
-wil=wilcox.test(hcc[hcc$`Class Attribute`==1,i],hcc[hcc$`Class Attribute`==0,i], mu = 0,paired = FALSE, conf.int = 0.95)
+  wil=wilcox.test(hcc[hcc$`Class Attribute`==1,i],hcc[hcc$`Class Attribute`==0,i], mu = 0,paired = FALSE, conf.int = 0.95)
+  testWil <- testWil %>% bind_rows(c(Clase = i, Name=names(hcc[i]),Categorica="0",p_value = wil$p.value))
+}
 
-if (wil$p.value<0.1){
-cat(names(hcc)[i],":\n")
-cat("p=",wil$p.value, "\n")
-testSig <- testSig %>% bind_rows(c(Clase = i, Name=names(hcc[i]),Categorica="0",p_value = wil$p.value))
-}
-}
+tau <- testWil %>% filter(p_value < 0.1) %>% 
+  mutate_at(.vars = c("p_value"), as.numeric)
+
+varSig <- varSig %>% bind_rows(tau)
+
+tau <- cbind(tau[1:6,],tau[7:12,])
+
+
+kable(x = tau, format = "latex", caption = "Variables numériques amb p<0.10 entre la classe",
+      booktabs = TRUE, digits = 4) %>% 
+  kable_styling(latex_options = c("HOLD_position", "scale_down"))
 ```
 
 Aquestes variables seran les que es seleccionarà per a la creació d'un model de regressió logística, però abans, valorarem les correlacions entre elles per tal de seleccionar variables que estiguin poc relacionades entre elles.
@@ -616,8 +621,7 @@ Amb respecte a la corrrelació entre les variables seleccionades, veiem la seva 
 
 ```{r message= FALSE, warning=FALSE}
 # Correlación variables independientes.
-library(corrplot)
-hcc_norm<- hcc
+hcc_norm <- hcc
 atr<-names(hcc)  
 hcc_norm[,hcc_num]<-scale(hcc_norm[,hcc_num])
 
@@ -625,30 +629,35 @@ hcc2<-as.data.frame(lapply(hcc_norm,as.numeric))
 
 names(hcc2)<-atr
 
-hcc_cor<-cor(hcc2[,testSig$Name], method = "spearman")
+hcc_cor<-cor(hcc2[,varSig$Name], method = "spearman")
 corrplot(hcc_cor, cl.pos='n',tl.srt = 45, tl.cex = 0.5, type="upper",method = "circle", order="FPC", diag=FALSE)
 ```
 
+Per intentar reduïr el número de variables del model, d'entre les que han tingut difències significatives entre els que sobreviuen i els que no, seleccionarem les que tingin poca correlació amb altres variables, i amb les que tenen molta correlació amb d'altres, només seleccionarem una com a representiva. 
 
-Per intentar reduïr el número de variables del model, d'entre les que han tingut difències significatives entre els que sobreviuen i els que no, seleccionarem les que tingin poca correlació amb altres variables, i amb les que tenen molta correlació amb d'altres, només seleccionarem una com a representiva.
+__QUINES?__ 
 
 
-### MELD
+### Creació de noves variables
 
 Hi ha un valor extès per a valorar la probabilitat de mort als tres mesos de pacients amb hepatopatia que depend de la creatinina, la bilirrubina total i del INR, amb un valor calculat denominat [MELD](https://es.wikipedia.org/wiki/Escala_MELD). Aquest valor és una estimació de probabilitat de fallida hepàtica. A majors valors major probabilitat de mort. Aquest valor està validat pels 3 mesos, no per a l'any, com es el nostre cas. 
 
 ```{r message= FALSE, warning=FALSE}
-
 # MELC calculat vs clase
-meld<-3.78*hcc$`log_Total Bilirubin(mg/dL)`+ 11.2*log(hcc$`International Normalised Ratio`)+9.57*hcc$`log_Creatinine (mg/dL)`+6.43
+hcc <- hcc %>%
+  mutate(MELD = 3.78*`log_Total Bilirubin(mg/dL)`+
+           11.2*log(`International Normalised Ratio`)+
+           9.57*hcc$`log_Creatinine (mg/dL)`+
+           6.43 )
+hcc %>%
+  ggplot(aes(x=`Class Attribute`,y=MELD)) +
+        geom_boxplot() +
+        labs(x = "Clase",  y = "MELD")
 
-
-hcc$MELD<-meld
-
-plot(hcc$`Class Attribute`, meld)
-
-# Ho no hi ha diferències en la supervivència depenent del MELD
-wilcox.test(meld[hcc$`Class Attribute`==1],meld[hcc$`Class Attribute`==0], mu = 0,paired = FALSE, conf.int = 0.95)
+#Hi ha diferències en la supervivència depenent del MELD
+x = hcc %>% filter(`Class Attribute`==1) %>% pull(MELD)
+y = hcc %>% filter(`Class Attribute`==0) %>% pull(MELD)
+wilcox.test(x,y, mu = 0,paired = FALSE, conf.int = 0.95)
 
 ```
 
@@ -677,6 +686,7 @@ Amb les variables seleccionades, es crearà un model de regressió logística pe
 
 ```{r message= FALSE, warning=FALSE}
 selecc<-c(2, 21, 22, 24, 27, 31, 32, 39, 40, 45, 47, 49, 51,50)
+
 
 hcc_sel<-hcc[selecc]
 
