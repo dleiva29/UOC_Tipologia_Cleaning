@@ -13,6 +13,9 @@ Aquesta tasca es realitzarà amb R mitjançant RStudio.
 
 ### Fitxers
 
+* HCC.pdf
+* HCC.Rmd
+
 ## English
 ### Description
 
@@ -20,3 +23,6 @@ The exploratory analysis (EDA) of the dataset https://archive.ics.uci.edu/ml/dat
 This task will be performed with R using RStudio.
 
 ### Files
+
+* HCC.pdf
+* HCC.Rmd
