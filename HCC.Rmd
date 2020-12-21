@@ -630,6 +630,23 @@ hcc2<-as.data.frame(lapply(hcc_norm,as.numeric))
 names(hcc2)<-atr
 
 hcc_cor<-cor(hcc2[,varSig$Name], method = "spearman")
+
+col.names <- colnames(hcc_cor)
+hcc_corTop <- as.tibble(hcc_cor) %>% melt()
+hcc_corTop$variable2 <- col.names
+hcc_corTop <- hcc_corTop %>%
+  select(variable, variable2, value) %>%
+  rename(corr = value) %>% 
+  filter(variable != variable2) %>% 
+  filter(abs(corr) >= 0.4) %>% 
+  arrange(-corr) %>% 
+  group_by(corr) %>% 
+  mutate(vars = paste(variable, collapse = '-')) %>% 
+  select(vars, corr) %>% 
+  unique()
+
+
+
 corrplot(hcc_cor, cl.pos='n',tl.srt = 45, tl.cex = 0.5, type="upper",method = "circle", order="FPC", diag=FALSE)
 ```
 
