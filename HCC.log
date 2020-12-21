@@ -1,28 +1,25 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.12.14)  20 DEC 2020 23:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6700 64-bit) (preloaded format=pdflatex 2018.6.10)  21 DEC 2020 19:42
 entering extended mode
- restricted \write18 enabled.
- %&-line parsing enabled.
-**HCC.tex
-(./HCC.tex
-LaTeX2e <2020-10-01> patch level 2
-L3 programming layer <2020-12-07> xparse <2020-03-03> (c:/Users/alvar/AppData/R
-oaming/TinyTeX/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+**./HCC.tex
+(HCC.tex
+LaTeX2e <2018-04-01> patch level 5
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size10.clo"
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
-\c@part=\count177
-\c@section=\count178
-\c@subsection=\count179
-\c@subsubsection=\count180
-\c@paragraph=\count181
-\c@subparagraph=\count182
-\c@figure=\count183
-\c@table=\count184
-\abovecaptionskip=\skip47
-\belowcaptionskip=\skip48
-\bibindent=\dimen138
-) (c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/lmodern.sty
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) ("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\lmodern.sty"
 Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
@@ -57,122 +54,693 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
 )
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/amssymb.s
-ty
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\amssymb.s
+ty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/amsfonts.
-sty
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.
+sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\@emptytoks=\toks15
+\@emptytoks=\toks14
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
-LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsmath.st
-y
-Package: amsmath 2020/09/23 v2.17i AMS math features
-\@mathmargin=\skip49
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsmath.st
+y"
+Package: amsmath 2017/09/02 v2.17a AMS math features
+\@mathmargin=\skip43
 For additional information on amsmath, use the `?' option.
 
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amstext.st
-y
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amstext.st
+y"
 Package: amstext 2000/06/29 v2.01 AMS text
-
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsgen.sty
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty
+"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks16
-\ex@=\dimen139
-))
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsbsy.sty
+\@emptytoks=\toks15
+\ex@=\dimen103
+)) ("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsbsy.
+sty"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen140
-)
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty
+\pmbraise@=\dimen104
+) ("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsopn.s
+ty"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count185
-LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count186
-\leftroot@=\count187
-LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count188
-\DOTSCASE@=\count189
-LaTeX Info: Redefining \ldots on input line 496.
-LaTeX Info: Redefining \dots on input line 499.
-LaTeX Info: Redefining \cdots on input line 620.
-\Mathstrutbox@=\box47
-\strutbox@=\box48
-\big@size=\dimen141
-LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count190
-\c@MaxMatrixCols=\count191
-\dotsspace@=\muskip16
-\c@parentequation=\count192
-\dspbrk@lvl=\count193
-\tag@help=\toks17
-\row@=\count194
-\column@=\count195
-\maxfields@=\count196
-\andhelp@=\toks18
-\eqnshift@=\dimen142
-\alignsep@=\dimen143
-\tagshift@=\dimen144
-\tagwidth@=\dimen145
-\totwidth@=\dimen146
-\lineht@=\dimen147
-\@envbody=\toks19
-\multlinegap=\skip50
-\multlinetaggap=\skip51
-\mathdisplay@stack=\toks20
-LaTeX Info: Redefining \[ on input line 2923.
-LaTeX Info: Redefining \] on input line 2924.
+\inf@bad=\count88
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count89
+\leftroot@=\count90
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count91
+\DOTSCASE@=\count92
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen105
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count93
+\c@MaxMatrixCols=\count94
+\dotsspace@=\muskip10
+\c@parentequation=\count95
+\dspbrk@lvl=\count96
+\tag@help=\toks16
+\row@=\count97
+\column@=\count98
+\maxfields@=\count99
+\andhelp@=\toks17
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks18
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks19
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
 )
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/ifxetex.st
-y
-Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty
-Package: iftex 2020/03/06 v1.0d TeX engine tests
-))
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/ifluatex.s
-ty
-Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
-) (c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
-2.
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/t1lmr.fd
-File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)) (c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/inputenc.s
-ty
-Package: inputenc 2020/08/01 v1.3d Input encoding file
-\inpenc@prehook=\toks21
-\inpenc@posthook=\toks22
-) (c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/textcomp.st
-y
-Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.
+sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/upquote/upquote.st
-y
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifluate
+x.sty"
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+) ("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\fixltx2e.st
+y"
+Package: fixltx2e 2016/12/29 v2.1a fixes to LaTeX (obsolete)
+Applying: [2015/01/01] Old fixltx2e package on input line 46.
+
+Package fixltx2e Warning: fixltx2e is not required with releases after 2015
+(fixltx2e)                All fixes are now in the LaTeX kernel.
+(fixltx2e)                See the latexrelease package for details.
+
+Already applied: [0000/00/00] Old fixltx2e package on input line 53.
+) ("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\fontenc.sty
+"
+Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1enc.def"
+File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+)) ("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\inputenc.s
+ty"
+Package: inputenc 2018/04/06 v1.3b Input encoding file
+\inpenc@prehook=\toks20
+\inpenc@posthook=\toks21
+)
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\upquote\upquote.st
+y"
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
-) (c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/xcolor/xcolor.st
-y
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\textcomp.sty"
+Package: textcomp 2017/04/05 v2.0i Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1enc.def"
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+Now handling font encoding TS1 ...
+... processing UTF-8 mapping file for font encoding TS1
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1enc.dfu"
+File: ts1enc.dfu 2018/04/05 v1.2c UTF-8 support for inputenc
+   defining Unicode char U+00A2 (decimal 162)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00A4 (decimal 164)
+   defining Unicode char U+00A5 (decimal 165)
+   defining Unicode char U+00A6 (decimal 166)
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00A8 (decimal 168)
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AC (decimal 172)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00AF (decimal 175)
+   defining Unicode char U+00B0 (decimal 176)
+   defining Unicode char U+00B1 (decimal 177)
+   defining Unicode char U+00B2 (decimal 178)
+   defining Unicode char U+00B3 (decimal 179)
+   defining Unicode char U+00B4 (decimal 180)
+   defining Unicode char U+00B5 (decimal 181)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+00B9 (decimal 185)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+00BC (decimal 188)
+   defining Unicode char U+00BD (decimal 189)
+   defining Unicode char U+00BE (decimal 190)
+   defining Unicode char U+00D7 (decimal 215)
+   defining Unicode char U+00F7 (decimal 247)
+   defining Unicode char U+0192 (decimal 402)
+   defining Unicode char U+02C7 (decimal 711)
+   defining Unicode char U+02D8 (decimal 728)
+   defining Unicode char U+02DD (decimal 733)
+   defining Unicode char U+0E3F (decimal 3647)
+   defining Unicode char U+2016 (decimal 8214)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+203B (decimal 8251)
+   defining Unicode char U+203D (decimal 8253)
+   defining Unicode char U+2044 (decimal 8260)
+   defining Unicode char U+204E (decimal 8270)
+   defining Unicode char U+2052 (decimal 8274)
+   defining Unicode char U+20A1 (decimal 8353)
+   defining Unicode char U+20A4 (decimal 8356)
+   defining Unicode char U+20A6 (decimal 8358)
+   defining Unicode char U+20A9 (decimal 8361)
+   defining Unicode char U+20AB (decimal 8363)
+   defining Unicode char U+20AC (decimal 8364)
+   defining Unicode char U+20B1 (decimal 8369)
+   defining Unicode char U+2103 (decimal 8451)
+   defining Unicode char U+2116 (decimal 8470)
+   defining Unicode char U+2117 (decimal 8471)
+   defining Unicode char U+211E (decimal 8478)
+   defining Unicode char U+2120 (decimal 8480)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2126 (decimal 8486)
+   defining Unicode char U+2127 (decimal 8487)
+   defining Unicode char U+212E (decimal 8494)
+   defining Unicode char U+2190 (decimal 8592)
+   defining Unicode char U+2191 (decimal 8593)
+   defining Unicode char U+2192 (decimal 8594)
+   defining Unicode char U+2193 (decimal 8595)
+   defining Unicode char U+2329 (decimal 9001)
+   defining Unicode char U+232A (decimal 9002)
+   defining Unicode char U+2422 (decimal 9250)
+   defining Unicode char U+25E6 (decimal 9702)
+   defining Unicode char U+25EF (decimal 9711)
+   defining Unicode char U+266A (decimal 9834)
+   defining Unicode char U+FEFF (decimal 65279)
+))
+LaTeX Info: Redefining \oldstylenums on input line 334.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 349.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 350.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 351.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 352.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 353.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 354.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 355.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 356.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 357.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 358.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 359.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 360.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 361.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 362.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 363.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 364.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 365.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 366.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 367.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 368.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 369.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 370.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 371.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 372.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 373.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 374.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 375.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 376.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 377.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 378.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 379.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 380.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 381.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 382.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 383.
+Package textcomp Info: Setting lmtt sub-encoding to TS1/0 on input line 384.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 385.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 386.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 387.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 388.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 389.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 390.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 391.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 392.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 393.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 394.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 395.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 396.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 397.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 398.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 399.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 400.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 401.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 402.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 403.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 404.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 405.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
+))
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\microtype\microtyp
+e.sty"
+Package: microtype 2018/01/14 v2.7a Micro-typographical refinements (RS)
+
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyval.st
+y"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks22
+)
+\MT@toks=\toks23
+\MT@count=\count100
+LaTeX Info: Redefining \textls on input line 793.
+\MT@outer@kern=\dimen112
+LaTeX Info: Redefining \textmicrotypecontext on input line 1339.
+\MT@listname@count=\count101
+
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\microtype\microtyp
+e-pdftex.def"
+File: microtype-pdftex.def 2018/01/14 v2.7a Definitions specific to pdftex (RS)
+
+LaTeX Info: Redefining \lsstyle on input line 913.
+LaTeX Info: Redefining \lslig on input line 913.
+\MT@outer@space=\skip46
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\microtype\microtyp
+e.cfg"
+File: microtype.cfg 2018/01/14 v2.7a microtype main configuration file (RS)
+))
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.
+sty"
+Package: geometry 2018/04/16 v5.8 Page Geometry
+
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.s
+ty"
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.
+sty"
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+\Gm@cnth=\count102
+\Gm@cntv=\count103
+\c@Gm@tempcnt=\count104
+\Gm@bindingoffset=\dimen113
+\Gm@wd@mp=\dimen114
+\Gm@odd@mp=\dimen115
+\Gm@even@mp=\dimen116
+\Gm@layoutwidth=\dimen117
+\Gm@layoutheight=\dimen118
+\Gm@layouthoffset=\dimen119
+\Gm@layoutvoffset=\dimen120
+\Gm@dimlist=\toks24
+
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.
+cfg"))
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\hyperref.
+sty"
+Package: hyperref 2018/02/06 v6.86b Hypertext links for LaTeX
+
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\hobsub-
+hyperref.sty"
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+
+
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\hobsub-
+generic.sty"
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+Package hobsub Info: Skipping package `ifluatex' (already loaded).
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+)
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\auxhook.s
+ty"
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\kvoptions
+.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+)
+\@linkdim=\dimen121
+\Hy@linkcounter=\count105
+\Hy@pagecounter=\count106
+
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\pd1enc.de
+f"
+File: pd1enc.def 2018/02/06 v6.86b Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+\Hy@SavedSpaceFactor=\count107
+
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\hyperref.
+cfg"
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4509.
+Package hyperref Info: Link nesting OFF on input line 4514.
+Package hyperref Info: Hyper index ON on input line 4517.
+Package hyperref Info: Plain pages OFF on input line 4524.
+Package hyperref Info: Backreferencing OFF on input line 4529.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4762.
+\c@Hy@tempcnt=\count108
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\url\url.sty"
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5115.
+\XeTeXLinkMargin=\dimen122
+\Fld@menulength=\count109
+\Field@Width=\dimen123
+\Fld@charsize=\dimen124
+Package hyperref Info: Hyper figures OFF on input line 6369.
+Package hyperref Info: Link nesting OFF on input line 6374.
+Package hyperref Info: Hyper index ON on input line 6377.
+Package hyperref Info: backreferencing OFF on input line 6384.
+Package hyperref Info: Link coloring OFF on input line 6389.
+Package hyperref Info: Link coloring with OCG OFF on input line 6394.
+Package hyperref Info: PDF/A mode OFF on input line 6399.
+LaTeX Info: Redefining \ref on input line 6439.
+LaTeX Info: Redefining \pageref on input line 6443.
+\Hy@abspage=\count110
+\c@Item=\count111
+\c@Hfootnote=\count112
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\hpdftex.d
+ef"
+File: hpdftex.def 2018/02/06 v6.86b Hyperref driver for pdfTeX
+\Fld@listcount=\count113
+\c@bookmark@seq@number=\count114
+
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\rerunfile
+check.sty"
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip47
+)
+Package hyperref Info: Option `unicode' set `true' on input line 30.
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\puenc.def
+"
+File: puenc.def 2018/02/06 v6.86b Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `breaklinks' set `true' on input line 30.
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\color.sty
+"
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\color
+.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-def\pdfte
+x.def"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fancyvrb\fancyvrb.
+sty"
+Package: fancyvrb 2008/02/07
+
+Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
+<2008/02/07> (tvz)
+\FV@CodeLineNo=\count115
+\FV@InFile=\read1
+\FV@TabBox=\box28
+\c@FancyVerbLine=\count116
+\FV@StepNumber=\count117
+\FV@OutFile=\write3
+) ("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\framed\framed.st
+y"
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip48
+\fb@frw=\dimen125
+\fb@frh=\dimen126
+\FrameRule=\dimen127
+\FrameSep=\dimen128
+)
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphicx.
+sty"
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphics.
+sty"
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\graph
+ics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+)
+\Gin@req@height=\dimen129
+\Gin@req@width=\dimen130
+)
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\grffile.s
+ty"
+Package: grffile 2017/06/30 v1.18 Extended file name support for graphics (HO)
+Package grffile Info: Option `multidot' is set to `true'.
+Package grffile Info: Option `extendedchars' is set to `false'.
+Package grffile Info: Option `space' is set to `true'.
+Package grffile Info: \Gin@ii of package `graphicx' fixed on input line 494.
+)
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\parskip\parskip.st
+y"
+Package: parskip 2001/04/09 non-zero parskip adjustments
+)
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\titling\titling.st
+y"
+Package: titling 2009/09/04 v2.1d maketitle typesetting
+\thanksmarkwidth=\skip49
+\thanksmargin=\skip50
+\droptitle=\skip51
+)
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\booktabs\booktabs.
+sty"
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen131
+\lightrulewidth=\dimen132
+\cmidrulewidth=\dimen133
+\belowrulesep=\dimen134
+\belowbottomsep=\dimen135
+\aboverulesep=\dimen136
+\abovetopsep=\dimen137
+\cmidrulesep=\dimen138
+\cmidrulekern=\dimen139
+\defaultaddspace=\dimen140
+\@cmidla=\count118
+\@cmidlb=\count119
+\@aboverulesep=\dimen141
+\@belowrulesep=\dimen142
+\@thisruleclass=\count120
+\@lastruleclass=\count121
+\@thisrulewidth=\dimen143
+)
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\longtable.st
+y"
+Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip52
+\LTright=\skip53
+\LTpre=\skip54
+\LTpost=\skip55
+\LTchunksize=\count122
+\LTcapwidth=\dimen144
+\LT@head=\box29
+\LT@firsthead=\box30
+\LT@foot=\box31
+\LT@lastfoot=\box32
+\LT@cols=\count123
+\LT@rows=\count124
+\c@LT@tables=\count125
+\c@LT@chunks=\count126
+\LT@p@ftn=\toks25
+) ("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\array.sty"
+Package: array 2018/04/30 v2.4h Tabular extension package (FMi)
+\col@sep=\dimen145
+\ar@mcellbox=\box33
+\extrarowheight=\dimen146
+\NC@list=\toks26
+\extratabsurround=\skip56
+\backup@length=\skip57
+\ar@cellbox=\box34
+)
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\multirow\multirow.
+sty"
+Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
+\multirow@colwidth=\skip58
+\multirow@cntb=\count127
+\multirow@dima=\skip59
+\bigstrutjot=\dimen147
+)
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.st
+y"
+\wrapoverhang=\dimen148
+\WF@size=\dimen149
+\c@WF@wrappedlines=\count128
+\WF@box=\box35
+\WF@everypar=\toks27
+Package: wrapfig 2003/01/31  v 3.6
+) ("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count129
+\float@exts=\toks28
+\float@box=\box36
+\@float@everytoks=\toks29
+\@floatcapt=\box37
+)
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\colortbl\colortbl.
+sty"
+Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
+\everycr=\toks30
+\minrowclearance=\skip60
+)
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\pdflscape
+.sty"
+Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
+
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\lscape.st
+y"
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+) ("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tabu\tabu.sty"
+Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed)
+
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\varwidth\varwidth.
+sty"
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box38
+\sift@deathcycles=\count130
+\@vwid@loff=\dimen150
+\@vwid@roff=\dimen151
+)
+\c@taburow=\count131
+\tabu@nbcols=\count132
+\tabu@cnt=\count133
+\tabu@Xcol=\count134
+\tabu@alloc=\count135
+\tabu@nested=\count136
+\tabu@target=\dimen152
+\tabu@spreadtarget=\dimen153
+\tabu@naturalX=\dimen154
+\tabucolX=\dimen155
+\tabu@Xsum=\dimen156
+\extrarowdepth=\dimen157
+\abovetabulinesep=\dimen158
+\belowtabulinesep=\dimen159
+\tabustrutrule=\dimen160
+\tabu@thebody=\toks31
+\tabu@footnotes=\toks32
+\tabu@box=\box39
+\tabu@arstrutbox=\box40
+\tabu@hleads=\box41
+\tabu@vleads=\box42
+\tabu@cellskip=\skip61
+)
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\threeparttable\thr
+eeparttable.sty"
+Package: threeparttable 2003/06/13  v 3.0
+\@tempboxb=\box43
+)
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\threeparttablex\th
+reeparttablex.sty"
+Package: threeparttablex 2013/07/23 v0.3 by daleif
+
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\environ\environ.st
+y"
+Package: environ 2014/05/04 v0.3 A new way to define environments
+
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\trimspaces\trimspa
+ces.sty"
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+\TPTL@width=\skip62
+) ("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ulem\ulem.sty"
+\UL@box=\box44
+\UL@hyphenbox=\box45
+\UL@skip=\skip63
+\UL@hook=\toks33
+\UL@height=\dimen161
+\UL@pe=\count137
+\UL@pixel=\dimen162
+\ULC@box=\box46
+Package: ulem 2019/11/18
+\ULdepth=\dimen163
+)
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\makecell\makecell.
+sty"
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+\rotheadsize=\dimen164
+\c@nlinenum=\count138
+\TeXr@lab=\toks34
+) ("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xcolor\xcolor.st
+y"
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color
-.cfg
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\color
+.cfg"
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
-
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-def/pdfte
-x.def
-File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
-)
+LaTeX Info: Redefining \color on input line 709.
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
 Package xcolor Info: Model `RGB' extended on input line 1364.
@@ -182,450 +750,56 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
-)
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.
-sty
-Package: hyperref 2020-05-15 v7.00e Hypertext links for LaTeX
+) (HCC.aux
 
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds.
-sty
-Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
-)
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pdftexcmds/pdfte
-xcmds.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/infwarerr/infwar
-err.sty
-Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-)
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/keyval.st
-y
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks23
-)
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/kvsetkeys/kvsetk
-eys.sty
-Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
-)
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/kvdefinekeys/kvd
-efinekeys.sty
-Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-)
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pdfescape/pdfesc
-ape.sty
-Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-)
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hycolor/hycolor.st
-y
-Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-)
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/letltxmacro/letltx
-macro.sty
-Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
-)
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/auxhook/auxhook.st
-y
-Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
-)
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/kvoptions/kvoption
-s.sty
-Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
-)
-\@linkdim=\dimen148
-\Hy@linkcounter=\count197
-\Hy@pagecounter=\count198
-
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.de
-f
-File: pd1enc.def 2020-05-15 v7.00e Hyperref: PDFDocEncoding definition (HO)
-Now handling font encoding PD1 ...
-... no UTF-8 mapping file for font encoding PD1
-)
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.
-sty
-Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
-)
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/etexcmds/etexcmd
-s.sty
-Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
-)
-\Hy@SavedSpaceFactor=\count199
-Package hyperref Info: Option `unicode' set `true' on input line 4338.
-
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
-File: puenc.def 2020-05-15 v7.00e Hyperref: PDF Unicode definition (HO)
-Now handling font encoding PU ...
-... no UTF-8 mapping file for font encoding PU
-)
-Package hyperref Info: Hyper figures OFF on input line 4464.
-Package hyperref Info: Link nesting OFF on input line 4469.
-Package hyperref Info: Hyper index ON on input line 4472.
-Package hyperref Info: Plain pages OFF on input line 4479.
-Package hyperref Info: Backreferencing OFF on input line 4484.
-Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4717.
-\c@Hy@tempcnt=\count266
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/url/url.sty
-\Urlmuskip=\muskip17
-Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-)
-LaTeX Info: Redefining \url on input line 5076.
-\XeTeXLinkMargin=\dimen149
-
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/bitset/bitset.st
-y
-Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
-
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/bigintcalc/bigin
-tcalc.sty
-Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
-)
-))
-\Fld@menulength=\count267
-\Field@Width=\dimen150
-\Fld@charsize=\dimen151
-Package hyperref Info: Hyper figures OFF on input line 6347.
-Package hyperref Info: Link nesting OFF on input line 6352.
-Package hyperref Info: Hyper index ON on input line 6355.
-Package hyperref Info: backreferencing OFF on input line 6362.
-Package hyperref Info: Link coloring OFF on input line 6367.
-Package hyperref Info: Link coloring with OCG OFF on input line 6372.
-Package hyperref Info: PDF/A mode OFF on input line 6377.
-LaTeX Info: Redefining \ref on input line 6417.
-LaTeX Info: Redefining \pageref on input line 6421.
-
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/atbegshi-ltx.
-sty
-Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
-ge
-with kernel methods
-)
-\Hy@abspage=\count268
-\c@Item=\count269
-\c@Hfootnote=\count270
-)
-Package hyperref Info: Driver (autodetected): hpdftex.
-
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hpdftex.d
-ef
-File: hpdftex.def 2020-05-15 v7.00e Hyperref driver for pdfTeX
-
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/atveryend-ltx
-.sty
-Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
-e
-with kernel methods
-)
-\Fld@listcount=\count271
-\c@bookmark@seq@number=\count272
-
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rer
-unfilecheck.sty
-Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
-
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/uniquecounter/un
-iquecounter.sty
-Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
-)
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
-86.
-)
-\Hy@SectionHShift=\skip52
-)
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/geometry/geometry.
-sty
-Package: geometry 2020/01/02 v5.9 Page Geometry
-
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/ifvtex.sty
-Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
-)
-\Gm@cnth=\count273
-\Gm@cntv=\count274
-\c@Gm@tempcnt=\count275
-\Gm@bindingoffset=\dimen152
-\Gm@wd@mp=\dimen153
-\Gm@odd@mp=\dimen154
-\Gm@even@mp=\dimen155
-\Gm@layoutwidth=\dimen156
-\Gm@layoutheight=\dimen157
-\Gm@layouthoffset=\dimen158
-\Gm@layoutvoffset=\dimen159
-\Gm@dimlist=\toks24
-)
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fancyvrb/fancyvrb.
-sty
-Package: fancyvrb 2020/05/03 v3.6 verbatim text (tvz,hv)
-\FV@CodeLineNo=\count276
-\FV@InFile=\read2
-\FV@TabBox=\box49
-\c@FancyVerbLine=\count277
-\FV@StepNumber=\count278
-\FV@OutFile=\write3
-) (c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/framed/framed.st
-y
-Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
-\OuterFrameSep=\skip53
-\fb@frw=\dimen160
-\fb@frh=\dimen161
-\FrameRule=\dimen162
-\FrameSep=\dimen163
-)
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/graphicx.
-sty
-Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
-
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/graphics.
-sty
-Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/trig.sty
-Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-)
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-cfg/graph
-ics.cfg
-File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
-)
-Package graphics Info: Driver file: pdftex.def on input line 105.
-)
-\Gin@req@height=\dimen164
-\Gin@req@width=\dimen165
-)
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/grffile/grffile.st
-y
-Package: grffile 2019/11/11 v2.1 Extended file name support for graphics (legac
-y)
-Package grffile Info: This package is an empty stub for compatibility on input 
-line 40.
-) (c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/float/float.sty
-Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count279
-\float@exts=\toks25
-\float@box=\box50
-\@float@everytoks=\toks26
-\@floatcapt=\box51
-)
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/booktabs/booktabs.
-sty
-Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen166
-\lightrulewidth=\dimen167
-\cmidrulewidth=\dimen168
-\belowrulesep=\dimen169
-\belowbottomsep=\dimen170
-\aboverulesep=\dimen171
-\abovetopsep=\dimen172
-\cmidrulesep=\dimen173
-\cmidrulekern=\dimen174
-\defaultaddspace=\dimen175
-\@cmidla=\count280
-\@cmidlb=\count281
-\@aboverulesep=\dimen176
-\@belowrulesep=\dimen177
-\@thisruleclass=\count282
-\@lastruleclass=\count283
-\@thisrulewidth=\dimen178
-)
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/longtable.st
-y
-Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
-\LTleft=\skip54
-\LTright=\skip55
-\LTpre=\skip56
-\LTpost=\skip57
-\LTchunksize=\count284
-\LTcapwidth=\dimen179
-\LT@head=\box52
-\LT@firsthead=\box53
-\LT@foot=\box54
-\LT@lastfoot=\box55
-\LT@cols=\count285
-\LT@rows=\count286
-\c@LT@tables=\count287
-\c@LT@chunks=\count288
-\LT@p@ftn=\toks27
-) (c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/array.sty
-Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
-\col@sep=\dimen180
-\ar@mcellbox=\box56
-\extrarowheight=\dimen181
-\NC@list=\toks28
-\extratabsurround=\skip58
-\backup@length=\skip59
-\ar@cellbox=\box57
-)
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/multirow/multirow.
-sty
-Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
-\multirow@colwidth=\skip60
-\multirow@cntb=\count289
-\multirow@dima=\skip61
-\bigstrutjot=\dimen182
-)
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/wrapfig/wrapfig.st
-y
-\wrapoverhang=\dimen183
-\WF@size=\dimen184
-\c@WF@wrappedlines=\count290
-\WF@box=\box58
-\WF@everypar=\toks29
-Package: wrapfig 2003/01/31  v 3.6
-)
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/colortbl/colortbl.
-sty
-Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
-\everycr=\toks30
-\minrowclearance=\skip62
-)
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pdflscape/pdflscap
-e.sty
-Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
-
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/lscape.st
-y
-Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
-)
-Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
-) (c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tabu/tabu.sty
-Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed)
-
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/varwidth/varwidth.
-sty
-Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box59
-\sift@deathcycles=\count291
-\@vwid@loff=\dimen185
-\@vwid@roff=\dimen186
-)
-\c@taburow=\count292
-\tabu@nbcols=\count293
-\tabu@cnt=\count294
-\tabu@Xcol=\count295
-\tabu@alloc=\count296
-\tabu@nested=\count297
-\tabu@target=\dimen187
-\tabu@spreadtarget=\dimen188
-\tabu@naturalX=\dimen189
-\tabucolX=\dimen190
-\tabu@Xsum=\dimen191
-\extrarowdepth=\dimen192
-\abovetabulinesep=\dimen193
-\belowtabulinesep=\dimen194
-\tabustrutrule=\dimen195
-\tabu@thebody=\toks31
-\tabu@footnotes=\toks32
-\tabu@box=\box60
-\tabu@arstrutbox=\box61
-\tabu@hleads=\box62
-\tabu@vleads=\box63
-\tabu@cellskip=\skip63
-)
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/threeparttable/thr
-eeparttable.sty
-Package: threeparttable 2003/06/13  v 3.0
-\@tempboxb=\box64
-)
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/threeparttablex/th
-reeparttablex.sty
-Package: threeparttablex 2013/07/23 v0.3 by daleif
-
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/environ/environ.st
-y
-Package: environ 2014/05/04 v0.3 A new way to define environments
-
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/trimspaces/trimspa
-ces.sty
-Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
-))
-\TPTL@width=\skip64
-) (c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/ulem/ulem.sty
-\UL@box=\box65
-\UL@hyphenbox=\box66
-\UL@skip=\skip65
-\UL@hook=\toks33
-\UL@height=\dimen196
-\UL@pe=\count298
-\UL@pixel=\dimen197
-\ULC@box=\box67
-Package: ulem 2019/11/18
-\ULdepth=\dimen198
-)
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/makecell/makecell.
-sty
-Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
-\rotheadsize=\dimen199
-\c@nlinenum=\count299
-\TeXr@lab=\toks34
-)
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3backend/l3backen
-d-pdftex.def
-File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
-\l__kernel_color_stack_int=\count300
-\l__pdf_internal_box=\box68
-) (./HCC.aux
-
-LaTeX Warning: Label `tab:unnamed-chunk-13' multiply defined.
+LaTeX Warning: Label `tab:unnamed-chunk-14' multiply defined.
 
 )
 \openout1 = `HCC.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 122.
-LaTeX Font Info:    ... okay on input line 122.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 122.
-LaTeX Font Info:    ... okay on input line 122.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 122.
-LaTeX Font Info:    ... okay on input line 122.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 122.
-LaTeX Font Info:    ... okay on input line 122.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 122.
-LaTeX Font Info:    ... okay on input line 122.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 122.
-LaTeX Font Info:    ... okay on input line 122.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 122.
-LaTeX Font Info:    ... okay on input line 122.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 122.
-LaTeX Font Info:    ... okay on input line 122.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 122.
-LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 144.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 144.
 
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epsto
-pdf-base.sty
-Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-85.
-
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/latexconfig/epstop
-df-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
-Package hyperref Info: Link coloring OFF on input line 122.
-
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.s
-ty
-Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
-
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/refcount/refcount.
-sty
-Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/gettitlestring/g
-ettitlestring.sty
-Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 144.
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-\c@section@level=\count301
-)
-LaTeX Info: Redefining \ref on input line 122.
-LaTeX Info: Redefining \pageref on input line 122.
-LaTeX Info: Redefining \nameref on input line 122.
-(./HCC.out) (./HCC.out)
-\@outlinefile=\write4
-\openout4 = `HCC.out'.
+LaTeX Info: Redefining \microtypecontext on input line 144.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using protrusion set `basicmath'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `basictext'.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
 
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\microtype\mt-cmr.c
+fg"
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+)
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -660,500 +834,871 @@ LaTeX Info: Redefining \nameref on input line 122.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-24.
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
+\AtBeginShipoutBox=\box47
+Package hyperref Info: Link coloring OFF on input line 144.
+
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref.s
+ty"
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\gettitl
+estring.sty"
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count139
+)
+LaTeX Info: Redefining \ref on input line 144.
+LaTeX Info: Redefining \pageref on input line 144.
+LaTeX Info: Redefining \nameref on input line 144.
+(HCC.out) (HCC.out)
+\@outlinefile=\write4
+\openout4 = `HCC.out'.
+
+
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mk
+ii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count140
+\scratchdimen=\dimen165
+\scratchbox=\box48
+\nofMPsegments=\count141
+\nofMParguments=\count142
+\everyMPshowfont=\toks35
+\MPscratchCnt=\count143
+\MPscratchDim=\dimen166
+\MPnumerator=\count144
+\makeMPintoPDFobject=\count145
+\everyMPtoPDFconversion=\toks36
+)
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-
+base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\grfext.st
+y"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+) (HCC.toc
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 2.
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-24.
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 2.
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-124.
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 2.
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-124.
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 2.
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 124.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 124.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 124.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 124
-.
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 124
-.
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (./HCC.toc
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 2.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 2.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 2.
+LaTeX Font Info:    Try loading font information for U+msa on input line 2.
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\microtype\mt-msa.c
+fg"
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 2.
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\microtype\mt-msb.c
+fg"
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+))
 \tf@toc=\write5
 \openout5 = `HCC.toc'.
 
-[1
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 174.
 
-{c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdfte
-x.map}]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-52.
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\ts1lmr.fd"
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [2] [3] [4]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
-86.
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
+) [1
+
+{C:/Users/David/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
+Underfull \hbox (badness 6625) in paragraph at lines 321--326
+[]\T1/lmr/bx/n/10 Performance Sta-tus (PSt)\T1/lmr/m/n/10 (+20) : [0=Ac-tivo;1=
+Restringit;2=Asistencia oca-sional;3=Asistencia
+ []
+
+[3]
+
+Package xcolor Warning: Incompatible color definition on input line 407.
+
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 408.
+
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 388.
-[5]
-LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
-578.
-(c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ts1lmtt.fd
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 442.
+
+Package xcolor Warning: Incompatible color definition on input line 445.
+
+
+Package xcolor Warning: Incompatible color definition on input line 445.
+
+
+Package xcolor Warning: Incompatible color definition on input line 445.
+
+[4]
+
+Package xcolor Warning: Incompatible color definition on input line 445.
+
+
+Package xcolor Warning: Incompatible color definition on input line 445.
+
+
+Package xcolor Warning: Incompatible color definition on input line 450.
+
+
+Package xcolor Warning: Incompatible color definition on input line 454.
+
+
+Package xcolor Warning: Incompatible color definition on input line 454.
+
+LaTeX Font Info:    Try loading font information for TS1+lmtt on input line 601
+.
+("C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\ts1lmtt.fd"
 File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [6] [7] [8] [9pdfTeX warning (ext4): destination with the same identifier (na
-me{table.1}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.692 E
-       studiant la distribució dels valors desconeguts per variable veiem que]
+) [5] [6] [7]
+
+Package xcolor Warning: Incompatible color definition on input line 614.
+
+
+Package xcolor Warning: Incompatible color definition on input line 626.
+
+
+Package xcolor Warning: Incompatible color definition on input line 626.
+
+
+Package xcolor Warning: Incompatible color definition on input line 633.
+
+
+Package xcolor Warning: Incompatible color definition on input line 637.
+
+
+Package xcolor Warning: Incompatible color definition on input line 637.
+
+
+Package xcolor Warning: Incompatible color definition on input line 647.
+
+
+Package xcolor Warning: Incompatible color definition on input line 666.
+
+
+Package xcolor Warning: Incompatible color definition on input line 666.
+
+[8]
+
+Package xcolor Warning: Incompatible color definition on input line 725.
+
+
+Package xcolor Warning: Incompatible color definition on input line 752.
+
+
+Package xcolor Warning: Incompatible color definition on input line 752.
+
+
+Package xcolor Warning: Incompatible color definition on input line 752.
+
+[9pdfTeX warning (ext4): destination with the same identifier (name{table.1}) h
+as been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.752 \end{Shaded}
+                  ]
+
+Package xcolor Warning: Incompatible color definition on input line 752.
+
+
+Package xcolor Warning: Incompatible color definition on input line 752.
+
+
+Package xcolor Warning: Incompatible color definition on input line 802.
+
+
+Package xcolor Warning: Incompatible color definition on input line 810.
+
+
+Package xcolor Warning: Incompatible color definition on input line 810.
+
 [10pdfTeX warning (ext4): destination with the same identifier (name{table.2}) 
 has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.771 \end{itemize}
-                   ] [11]
-<HCC_files/figure-latex/unnamed-chunk-9-1.pdf, id=180, 433.62pt x 289.08pt>
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.827 E
+       s corregeix els errors i s'assigna la mitjana als valors desconeguts]
+
+Package xcolor Warning: Incompatible color definition on input line 829.
+
+
+Package xcolor Warning: Incompatible color definition on input line 842.
+
+
+Package xcolor Warning: Incompatible color definition on input line 842.
+
+
+Package xcolor Warning: Incompatible color definition on input line 852.
+
+
+Package xcolor Warning: Incompatible color definition on input line 904.
+
+
+Package xcolor Warning: Incompatible color definition on input line 904.
+
+
+Package xcolor Warning: Incompatible color definition on input line 904.
+
+[11]
+
+Package xcolor Warning: Incompatible color definition on input line 904.
+
+
+Package xcolor Warning: Incompatible color definition on input line 904.
+
+<HCC_files/figure-latex/unnamed-chunk-9-1.pdf, id=178, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-9-1.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-9-1.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-9-1.pdf  used on 
-input line 881.
+input line 906.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-9-2.pdf, id=181, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-9-2.pdf, id=179, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-9-2.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-9-2.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-9-2.pdf  used on 
-input line 882.
+input line 907.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-9-3.pdf, id=182, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-9-3.pdf, id=180, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-9-3.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-9-3.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-9-3.pdf  used on 
-input line 883.
+input line 908.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-9-4.pdf, id=183, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-9-4.pdf, id=181, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-9-4.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-9-4.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-9-4.pdf  used on 
-input line 884.
+input line 909.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-9-5.pdf, id=184, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-9-5.pdf, id=182, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-9-5.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-9-5.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-9-5.pdf  used on 
-input line 885.
+input line 910.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-9-6.pdf, id=185, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-9-6.pdf, id=183, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-9-6.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-9-6.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-9-6.pdf  used on 
-input line 886.
+input line 911.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-9-7.pdf, id=186, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-9-7.pdf, id=184, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-9-7.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-9-7.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-9-7.pdf  used on 
-input line 887.
+input line 912.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-9-8.pdf, id=187, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-9-8.pdf, id=185, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-9-8.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-9-8.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-9-8.pdf  used on 
-input line 888.
+input line 913.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-9-9.pdf, id=188, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-9-9.pdf, id=186, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-9-9.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-9-9.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-9-9.pdf  used on 
-input line 889.
+input line 914.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-9-10.pdf, id=189, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-9-10.pdf, id=187, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-9-10.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-9-10.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-9-10.pdf  used on
- input line 890.
+ input line 915.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-9-11.pdf, id=190, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-9-11.pdf, id=188, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-9-11.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-9-11.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-9-11.pdf  used on
- input line 891.
+ input line 916.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-9-12.pdf, id=191, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-9-12.pdf, id=189, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-9-12.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-9-12.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-9-12.pdf  used on
- input line 892.
+ input line 917.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 881--893
+Underfull \hbox (badness 10000) in paragraph at lines 906--918
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 881--893
+Underfull \hbox (badness 10000) in paragraph at lines 906--918
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 881--893
+Underfull \hbox (badness 10000) in paragraph at lines 906--918
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 881--893
+Underfull \hbox (badness 10000) in paragraph at lines 906--918
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 881--893
+Underfull \hbox (badness 10000) in paragraph at lines 906--918
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 881--893
+Underfull \hbox (badness 10000) in paragraph at lines 906--918
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 881--893
+Underfull \hbox (badness 10000) in paragraph at lines 906--918
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 881--893
+Underfull \hbox (badness 10000) in paragraph at lines 906--918
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 881--893
+Underfull \hbox (badness 10000) in paragraph at lines 906--918
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 881--893
+Underfull \hbox (badness 10000) in paragraph at lines 906--918
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 881--893
+Underfull \hbox (badness 10000) in paragraph at lines 906--918
 []
  []
 
-[12] [13 <./HCC_files/figure-latex/unnamed-chunk-9-1.pdf> <./HCC_files/figure-l
-atex/unnamed-chunk-9-2.pdf>] [14 <./HCC_files/figure-latex/unnamed-chunk-9-3.pd
-f> <./HCC_files/figure-latex/unnamed-chunk-9-4.pdf>] [15 <./HCC_files/figure-la
-tex/unnamed-chunk-9-5.pdf> <./HCC_files/figure-latex/unnamed-chunk-9-6.pdf>] [1
-6 <./HCC_files/figure-latex/unnamed-chunk-9-7.pdf> <./HCC_files/figure-latex/un
-named-chunk-9-8.pdf>] [17 <./HCC_files/figure-latex/unnamed-chunk-9-9.pdf> <./H
-CC_files/figure-latex/unnamed-chunk-9-10.pdf>] [18 <./HCC_files/figure-latex/un
-named-chunk-9-11.pdf> <./HCC_files/figure-latex/unnamed-chunk-9-12.pdf>] [19]
-<HCC_files/figure-latex/unnamed-chunk-10-1.pdf, id=286, 433.62pt x 289.08pt>
+[12 <./HCC_files/figure-latex/unnamed-chunk-9-1.pdf>] [13 <./HCC_files/figure-l
+atex/unnamed-chunk-9-2.pdf> <./HCC_files/figure-latex/unnamed-chunk-9-3.pdf>] [
+14 <./HCC_files/figure-latex/unnamed-chunk-9-4.pdf> <./HCC_files/figure-latex/u
+nnamed-chunk-9-5.pdf>] [15 <./HCC_files/figure-latex/unnamed-chunk-9-6.pdf> <./
+HCC_files/figure-latex/unnamed-chunk-9-7.pdf>] [16 <./HCC_files/figure-latex/un
+named-chunk-9-8.pdf> <./HCC_files/figure-latex/unnamed-chunk-9-9.pdf>] [17 <./H
+CC_files/figure-latex/unnamed-chunk-9-10.pdf> <./HCC_files/figure-latex/unnamed
+-chunk-9-11.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 945.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1003.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1003.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1003.
+
+[18 <./HCC_files/figure-latex/unnamed-chunk-9-12.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 1003.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1003.
+
+<HCC_files/figure-latex/unnamed-chunk-10-1.pdf, id=279, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-10-1.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-10-1.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-10-1.pdf  used on
- input line 980.
+ input line 1005.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-10-2.pdf, id=287, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-10-2.pdf, id=280, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-10-2.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-10-2.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-10-2.pdf  used on
- input line 981.
+ input line 1006.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-10-3.pdf, id=288, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-10-3.pdf, id=281, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-10-3.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-10-3.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-10-3.pdf  used on
- input line 982.
+ input line 1007.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-10-4.pdf, id=289, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-10-4.pdf, id=282, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-10-4.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-10-4.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-10-4.pdf  used on
- input line 983.
+ input line 1008.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-10-5.pdf, id=290, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-10-5.pdf, id=283, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-10-5.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-10-5.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-10-5.pdf  used on
- input line 984.
+ input line 1009.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 980--985
+Underfull \hbox (badness 10000) in paragraph at lines 1005--1010
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 980--985
+Underfull \hbox (badness 10000) in paragraph at lines 1005--1010
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 980--985
+Underfull \hbox (badness 10000) in paragraph at lines 1005--1010
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 980--985
+Underfull \hbox (badness 10000) in paragraph at lines 1005--1010
 []
  []
 
-[20 <./HCC_files/figure-latex/unnamed-chunk-10-1.pdf>] [21 <./HCC_files/figure-
-latex/unnamed-chunk-10-2.pdf> <./HCC_files/figure-latex/unnamed-chunk-10-3.pdf>
-]
-Overfull \vbox (0.37883pt too high) detected at line 1039
+[19] [20 <./HCC_files/figure-latex/unnamed-chunk-10-1.pdf> <./HCC_files/figure-
+latex/unnamed-chunk-10-2.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 1011.
+
+[21 <./HCC_files/figure-latex/unnamed-chunk-10-3.pdf> <./HCC_files/figure-latex
+/unnamed-chunk-10-4.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 1064.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1064.
+
+
+Underfull \vbox (badness 10000) detected at line 1064
  []
 
-[22 <./HCC_files/figure-latex/unnamed-chunk-10-4.pdf> <./HCC_files/figure-latex
-/unnamed-chunk-10-5.pdf>]
-<HCC_files/figure-latex/unnamed-chunk-11-1.pdf, id=329, 433.62pt x 289.08pt>
+
+Package xcolor Warning: Incompatible color definition on input line 1064.
+
+[22 <./HCC_files/figure-latex/unnamed-chunk-10-5.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 1064.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1064.
+
+<HCC_files/figure-latex/unnamed-chunk-11-1.pdf, id=326, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-11-1.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-11-1.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-11-1.pdf  used on
- input line 1041.
+ input line 1066.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-11-2.pdf, id=330, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-11-2.pdf, id=327, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-11-2.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-11-2.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-11-2.pdf  used on
- input line 1042.
+ input line 1067.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-11-3.pdf, id=331, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-11-3.pdf, id=328, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-11-3.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-11-3.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-11-3.pdf  used on
- input line 1043.
+ input line 1068.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-11-4.pdf, id=332, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-11-4.pdf, id=329, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-11-4.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-11-4.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-11-4.pdf  used on
- input line 1044.
+ input line 1069.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-11-5.pdf, id=333, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-11-5.pdf, id=330, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-11-5.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-11-5.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-11-5.pdf  used on
- input line 1045.
+ input line 1070.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-11-6.pdf, id=334, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-11-6.pdf, id=331, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-11-6.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-11-6.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-11-6.pdf  used on
- input line 1046.
+ input line 1071.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-11-7.pdf, id=335, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-11-7.pdf, id=332, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-11-7.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-11-7.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-11-7.pdf  used on
- input line 1047.
+ input line 1072.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-11-8.pdf, id=336, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-11-8.pdf, id=333, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-11-8.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-11-8.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-11-8.pdf  used on
- input line 1048.
+ input line 1073.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-11-9.pdf, id=337, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-11-9.pdf, id=334, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-11-9.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-11-9.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-11-9.pdf  used on
- input line 1049.
+ input line 1074.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-11-10.pdf, id=338, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-11-10.pdf, id=335, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-11-10.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-11-10.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-11-10.pdf  used o
-n input line 1050.
+n input line 1075.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-11-11.pdf, id=339, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-11-11.pdf, id=336, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-11-11.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-11-11.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-11-11.pdf  used o
-n input line 1051.
+n input line 1076.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-11-12.pdf, id=340, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-11-12.pdf, id=337, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-11-12.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-11-12.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-11-12.pdf  used o
-n input line 1052.
+n input line 1077.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-11-13.pdf, id=341, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-11-13.pdf, id=338, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-11-13.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-11-13.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-11-13.pdf  used o
-n input line 1053.
+n input line 1078.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1041--1054
+Underfull \hbox (badness 10000) in paragraph at lines 1066--1079
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1041--1054
+Underfull \hbox (badness 10000) in paragraph at lines 1066--1079
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1041--1054
+Underfull \hbox (badness 10000) in paragraph at lines 1066--1079
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1041--1054
+Underfull \hbox (badness 10000) in paragraph at lines 1066--1079
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1041--1054
+Underfull \hbox (badness 10000) in paragraph at lines 1066--1079
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1041--1054
+Underfull \hbox (badness 10000) in paragraph at lines 1066--1079
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1041--1054
+Underfull \hbox (badness 10000) in paragraph at lines 1066--1079
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1041--1054
+Underfull \hbox (badness 10000) in paragraph at lines 1066--1079
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1041--1054
+Underfull \hbox (badness 10000) in paragraph at lines 1066--1079
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1041--1054
+Underfull \hbox (badness 10000) in paragraph at lines 1066--1079
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1041--1054
+Underfull \hbox (badness 10000) in paragraph at lines 1066--1079
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1041--1054
+Underfull \hbox (badness 10000) in paragraph at lines 1066--1079
 []
  []
 
-[23] [24 <./HCC_files/figure-latex/unnamed-chunk-11-1.pdf> <./HCC_files/figure-
-latex/unnamed-chunk-11-2.pdf>] [25 <./HCC_files/figure-latex/unnamed-chunk-11-3
-.pdf> <./HCC_files/figure-latex/unnamed-chunk-11-4.pdf>] [26 <./HCC_files/figur
-e-latex/unnamed-chunk-11-5.pdf> <./HCC_files/figure-latex/unnamed-chunk-11-6.pd
-f>] [27 <./HCC_files/figure-latex/unnamed-chunk-11-7.pdf> <./HCC_files/figure-l
-atex/unnamed-chunk-11-8.pdf>] [28 <./HCC_files/figure-latex/unnamed-chunk-11-9.
-pdf> <./HCC_files/figure-latex/unnamed-chunk-11-10.pdf>] [29 <./HCC_files/figur
-e-latex/unnamed-chunk-11-11.pdf> <./HCC_files/figure-latex/unnamed-chunk-11-12.
-pdf>] [30 <./HCC_files/figure-latex/unnamed-chunk-11-13.pdf>] [31pdfTeX warning
- (ext4): destination with the same identifier (name{table.3}) has been already 
-used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.1175 
-       ] [32pdfTeX warning (ext4): destination with the same identifier (name{t
-able.4}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.1233 \begin{Shaded}
-                     pdfTeX warning (ext4): destination with the same identifie
-r (name{table.5}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.1233 \begin{Shaded}
+[23 <./HCC_files/figure-latex/unnamed-chunk-11-1.pdf>] [24 <./HCC_files/figure-
+latex/unnamed-chunk-11-2.pdf> <./HCC_files/figure-latex/unnamed-chunk-11-3.pdf>
+] [25 <./HCC_files/figure-latex/unnamed-chunk-11-4.pdf> <./HCC_files/figure-lat
+ex/unnamed-chunk-11-5.pdf>] [26 <./HCC_files/figure-latex/unnamed-chunk-11-6.pd
+f> <./HCC_files/figure-latex/unnamed-chunk-11-7.pdf>] [27 <./HCC_files/figure-l
+atex/unnamed-chunk-11-8.pdf> <./HCC_files/figure-latex/unnamed-chunk-11-9.pdf>]
+[28 <./HCC_files/figure-latex/unnamed-chunk-11-10.pdf> <./HCC_files/figure-late
+x/unnamed-chunk-11-11.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 1087.
+
+[29 <./HCC_files/figure-latex/unnamed-chunk-11-12.pdf> <./HCC_files/figure-late
+x/unnamed-chunk-11-13.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 1112.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1112.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1150.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/bx/it' in size <10> not available
+(Font)              Font shape `T1/lmtt/b/sl' tried instead on input line 1160.
+
+
+
+Package xcolor Warning: Incompatible color definition on input line 1162.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1162.
+
+
+Overfull \vbox (0.16176pt too high) detected at line 1162
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 1162.
+
+[30pdfTeX warning (ext4): destination with the same identifier (name{table.3}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1162 \end{Shaded}
+                   ]
+
+Package xcolor Warning: Incompatible color definition on input line 1162.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1162.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1189.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1208.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1208.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1228.
+
+[31pdfTeX warning (ext4): destination with the same identifier (name{table.4}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1228 \begin{Shaded}
                      ]
-<HCC_files/figure-latex/unnamed-chunk-14-1.pdf, id=457, 433.62pt x 289.08pt>
-File: HCC_files/figure-latex/unnamed-chunk-14-1.pdf Graphic file (type pdf)
-<use HCC_files/figure-latex/unnamed-chunk-14-1.pdf>
-Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-14-1.pdf  used on
- input line 1249.
-(pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-[33 <./HCC_files/figure-latex/unnamed-chunk-14-1.pdf>]
-<HCC_files/figure-latex/unnamed-chunk-15-1.pdf, id=469, 433.62pt x 289.08pt>
+
+Package xcolor Warning: Incompatible color definition on input line 1248.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1248.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1285.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1316.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1316.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1316.
+
+[32pdfTeX warning (ext4): destination with the same identifier (name{table.5}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1316 \end{Shaded}
+                   ]
+
+Package xcolor Warning: Incompatible color definition on input line 1316.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1316.
+
+<HCC_files/figure-latex/unnamed-chunk-15-1.pdf, id=454, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-15-1.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-15-1.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-15-1.pdf  used on
- input line 1286.
+ input line 1318.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-[34 <./HCC_files/figure-latex/unnamed-chunk-15-1.pdf>] [35]
-Overfull \hbox (18.49356pt too wide) in paragraph at lines 1468--1468
-[]\T1/lmtt/m/n/10 ## glm(formula = \TS1/lmtt/m/n/10 `\T1/lmtt/m/n/10 Class Attr
-ibute\TS1/lmtt/m/n/10 ` \T1/lmtt/m/n/10 ~ \TS1/lmtt/m/n/10 `\T1/lmtt/m/n/10 Per
-formance Status\TS1/lmtt/m/n/10 ` \T1/lmtt/m/n/10 + \TS1/lmtt/m/n/10 `\T1/lmtt/
-m/n/10 log_Alpha-Fetoprotein (ng/mL)\TS1/lmtt/m/n/10 ` \T1/lmtt/m/n/10 +[] 
- []
+
+Package xcolor Warning: Incompatible color definition on input line 1343.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1356.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1356.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1356.
+
+[33 <./HCC_files/figure-latex/unnamed-chunk-15-1.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 1356.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1356.
+
+<HCC_files/figure-latex/unnamed-chunk-16-1.pdf, id=466, 433.62pt x 289.08pt>
+File: HCC_files/figure-latex/unnamed-chunk-16-1.pdf Graphic file (type pdf)
+<use HCC_files/figure-latex/unnamed-chunk-16-1.pdf>
+Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-16-1.pdf  used on
+ input line 1358.
+(pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
+
+Package xcolor Warning: Incompatible color definition on input line 1360.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1367.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1367.
+
+[34 <./HCC_files/figure-latex/unnamed-chunk-16-1.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 1429.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1443.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1443.
+
+[35]
+
+Package xcolor Warning: Incompatible color definition on input line 1503.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1511.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1511.
 
 [36]
-<HCC_files/figure-latex/unnamed-chunk-18-1.pdf, id=488, 433.62pt x 289.08pt>
-File: HCC_files/figure-latex/unnamed-chunk-18-1.pdf Graphic file (type pdf)
-<use HCC_files/figure-latex/unnamed-chunk-18-1.pdf>
-Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-18-1.pdf  used on
- input line 1494.
+
+Package xcolor Warning: Incompatible color definition on input line 1556.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1564.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1564.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1573.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1578.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1578.
+
+<HCC_files/figure-latex/unnamed-chunk-19-1.pdf, id=485, 433.62pt x 289.08pt>
+File: HCC_files/figure-latex/unnamed-chunk-19-1.pdf Graphic file (type pdf)
+<use HCC_files/figure-latex/unnamed-chunk-19-1.pdf>
+Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-19-1.pdf  used on
+ input line 1580.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-[37 <./HCC_files/figure-latex/unnamed-chunk-18-1.pdf>] [38] (./HCC.aux)
+
+Package xcolor Warning: Incompatible color definition on input line 1582.
+
+[37]
+
+Package xcolor Warning: Incompatible color definition on input line 1586.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1586.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1588.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1592.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1592.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1598.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1602.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1602.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1612.
+[38 <./HCC_files/figure-latex/unnamed-chunk-19-1.pdf>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1612.
+(HCC.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1612.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1612.
+
 Package rerunfilecheck Info: File `HCC.out' has not changed.
-(rerunfilecheck)             Checksum: 5EEFFEAA6CA29344DBF90FECE7B6AB02;3748.
+(rerunfilecheck)             Checksum: B22812491B70F8698946C65F5ED9746F;3768.
 
 LaTeX Warning: There were multiply-defined labels.
 
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1612.
  ) 
 Here is how much of TeX's memory you used:
- 12769 strings out of 481311
- 192429 string characters out of 5915833
- 502757 words of memory out of 5000000
- 29228 multiletter control sequences out of 15000+600000
- 454710 words of font info for 72 fonts, out of 8000000 for 9000
- 40 hyphenation exceptions out of 8191
- 66i,10n,72p,489b,468s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.e
-nc}{c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1
-.enc}<c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/l
-mbx10.pfb><c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public
-/lm/lmbx12.pfb><c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/p
-ublic/lm/lmr10.pfb><c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/fonts/typ
-e1/public/lm/lmr12.pfb><c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/fonts
-/type1/public/lm/lmr17.pfb><c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/f
-onts/type1/public/lm/lmri10.pfb><c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-d
-ist/fonts/type1/public/lm/lmtk10.pfb><c:/Users/alvar/AppData/Roaming/TinyTeX/te
-xmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:/Users/alvar/AppData/Roaming/TinyT
-eX/texmf-dist/fonts/type1/public/lm/lmtti10.pfb>
-Output written on HCC.pdf (38 pages, 487931 bytes).
+ 14711 strings out of 492973
+ 222953 string characters out of 3126692
+ 346049 words of memory out of 3000000
+ 18186 multiletter control sequences out of 15000+200000
+ 51134 words of font info for 79 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 32i,10n,38p,593b,457s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/David/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.en
+c}{C:/Users/David/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ts1.e
+nc}<C:/Users/David/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmbx
+10.pfb><C:/Users/David/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/
+lmbx12.pfb><C:/Users/David/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
+/lm/lmr10.pfb><C:/Users/David/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
+lic/lm/lmr17.pfb><C:/Users/David/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
+public/lm/lmri10.pfb><C:/Users/David/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
+pe1/public/lm/lmri12.pfb><C:/Users/David/AppData/Local/Programs/MiKTeX 2.9/font
+s/type1/public/lm/lmtk10.pfb><C:/Users/David/AppData/Local/Programs/MiKTeX 2.9/
+fonts/type1/public/lm/lmtko10.pfb><C:/Users/David/AppData/Local/Programs/MiKTeX
+ 2.9/fonts/type1/public/lm/lmtt10.pfb><C:/Users/David/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/public/lm/lmtti10.pfb>
+Output written on HCC.pdf (38 pages, 563265 bytes).
 PDF statistics:
- 562 PDF objects out of 1000 (max. 8388607)
- 442 compressed objects within 5 object streams
+ 560 PDF objects out of 1000 (max. 8388607)
  85 named destinations out of 1000 (max. 500000)
- 326 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 10566 words of extra memory for PDF output out of 12000 (max. 10000000)
 

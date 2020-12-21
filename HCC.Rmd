@@ -25,6 +25,7 @@ library(VIM)
 library(gridExtra)
 library(nortest)
 library(corrplot)
+library(reshape2)
 ```
 
 ******
@@ -205,13 +206,6 @@ hcc_header<-c("Gender", "Symptoms", "Alcohol", "Hepatitis B Surface Antigen",
               "Direct Bilirubin (mg/dL)", "Iron", "Oxygen Saturation (%)",
               "Ferritin (ng/mL)", "Class Attribute"   )
 
-hcc_header_cortos<-c("Gen", "Sym", "Alc", "HBS", "HBe", "HBC","HCV",  "Cir",
-                     "End","Smo",  "Dia", "Obe", "Hem", "HyA", "CRI", "HIV",
-                     "Ste","Eso", "Spl",  "PHT", "PVT", "Met", "Rad", "Age", "gAl",
-                     "PCi", "PSt", "Enc", "Asc", "INR", "AFe", "Hae", "MCV",	"Leu",
-                     "Pla", "Alb","BiT",  "ALT", "AST","GGT", "ALP","Pro",
-                     "Crea","Nod",  "DiN", "BiD", "Iro", "OxS", "Fer", "Class"   )
-
 colnames(hcc)<-hcc_header
 
 tipVar <- c()
@@ -311,6 +305,9 @@ Corregir aquest valors desconeguts cap a la moda condicionarà un biaix. Per tan
 * A les variables quantitatives s'asignarà la mitjana de la variable. Per tal de no tenir una mitjana condicionada per valors erronis extrems, es corregiran abans de l'asignació del valor mitjà als valors desconguts.
 
 ### Correcció valors nuls de variables categòriques
+
+S'asigna el valor més próxim d'entre k=5 als valor NA de les variables categòriques. 
+
 
 ```{r message= FALSE, warning=FALSE}
 #computem tots els valors NA de variables factor
@@ -535,6 +532,9 @@ for (i in 1:ncols) {
 
 ### Comprobació de la normalitat 
 
+Per la comprobació de la distribució normal dels valors quantitatius utilitzaremos la prova de normalitat de Anderson-Darling.
+
+
 ```{r message= FALSE, warning=FALSE}
 col.names = colnames(hcc)
 tNorm <- tibble()
@@ -544,6 +544,9 @@ for (i in 1:ncol(hcc)) {
     tNorm <- tNorm %>% bind_rows(c("Variable" = col.names[i],"p_value" = p_val))
   }
 }
+
+var_normales<-tNorm$Variable[as.numeric(tNorm$p_value)>0.05]
+
 tau <- tNorm %>% filter(p_val < 0.05) %>% 
   mutate_at(.vars = c("p_value"), as.numeric)
 tau <- cbind(tau[1:12,],tau[13:24,])
@@ -561,7 +564,25 @@ kable(x = tau, format = "latex", caption = "Variables que no segueixen una distr
 Com es pot veure, hi ha moltes variables numériques que es distancien significativament de la distribució normal, per el que s'usaran test no paramétrics (Mann–Whitney–Wilcoxon) per la comparativa en relació a la supervivència. 
 
 
-ATENCIÓN: NO TIENE MUCHO SENTIDO MIRAR HOMOCASTEIDAD DE LAS VARIABLES NO NORMALES!! 
+Només hi ha quatre variables que no es pot asegurar que no segueixin una distribució normal. Comprovarem si aquestes mantenen una variança similar entre els grups formats per la classe amb el test de Levene.
+
+
+```{r}
+library(car)
+tVar <- tibble()
+
+for (i in var_normales){
+  p_val = leveneTest(group=hcc$`Class Attribute`, y=hcc[,i])$`Pr(>F)`[1]
+  tVar <- tVar %>% bind_rows(c("Variable" = i,"p_value" = p_val))
+}
+
+## FALTA PONER LAS TABLAS CON KABLE.
+
+```
+
+Com es por veure, només dues de totes les variables quantitatives ( __Haemoglobin (g/dL)__ i __log_Gamma glutamyl transferase (U/L)__) segueixen una distribució normal i no tenen diferències significatives entre les variances entre la població que sobreviu i la que no. 
+
+
 
 ## Proves estadístiques
 
@@ -620,7 +641,7 @@ Amb respecte a la corrrelació entre les variables seleccionades, veiem la seva 
 
 
 ```{r message= FALSE, warning=FALSE}
-# Correlación variables independientes.
+# Correlació variables independents.
 hcc_norm <- hcc
 atr<-names(hcc)  
 hcc_norm[,hcc_num]<-scale(hcc_norm[,hcc_num])
@@ -652,7 +673,8 @@ corrplot(hcc_cor, cl.pos='n',tl.srt = 45, tl.cex = 0.5, type="upper",method = "c
 
 Per intentar reduïr el número de variables del model, d'entre les que han tingut difències significatives entre els que sobreviuen i els que no, seleccionarem les que tingin poca correlació amb altres variables, i amb les que tenen molta correlació amb d'altres, només seleccionarem una com a representiva. 
 
-__QUINES?__ 
+Com es pot veure, només dues variables tenen una molt alta correlació ( __Iron__ i __Oxygen Saturation (%)__). De les dues, seleccionarem __Iron__ que es la que presenta un menor probabilitat de significació.
+ 
 
 
 ### Creació de noves variables
@@ -696,20 +718,20 @@ Per tant, les variables seleccionades per estudiar amb regressió logística ser
 * Ferritin (ng/mL) (Aquest valor no esta entre les varSig)
 * MELD
 
-Entiendo que los demas que faltan, de varSig, son los que tiene altas correlaciones entre ellas. Son Encephalopathy, Ascites degree, Platelets, Albumin, log_direct y Oxigen Saturation
-
 
 ## Model amb regressió logística
 
 Amb les variables seleccionades, es crearà un model de regressió logística per tal de predir la supervivència a l'any del diagnóstic d'HCC. La variable ordinal es considerarà numérica.  
 
 ```{r message= FALSE, warning=FALSE}
-selecc<-c(2, 21, 22, 24, 27, 31, 32, 39, 40, 45, 47, 49, 51,50)
 
+var_selecc<-varSig$Name[-c(7,10,13,17)]
 
-hcc_sel<-hcc[selecc]
+hcc_sel<-hcc[c(var_selecc, "MELD", "Class Attribute")]
 
-hcc_sel$`Performance Status`<- as.numeric(hcc_sel$`Performance Status`)
+hcc_sel$`Ascites degree`<- as.numeric(hcc_sel$`Ascites degree`)
+hcc_sel$`Encephalopathy degree`<- as.numeric(hcc_sel$`Encephalopathy degree`)
+
 
 
 modelo <- glm(`Class Attribute` ~ ., data = hcc_sel, family = "binomial")
@@ -745,4 +767,4 @@ cat("Exactitut del model:\n")
 
 ```
 
-El model generat te només 6 variables i obté un 82% de precisió en les prediccions. 
+El model generat te només 7 variables i obté un 78% de precisió en les prediccions. 
