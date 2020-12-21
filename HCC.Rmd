@@ -669,15 +669,17 @@ Per tant, les variables seleccionades per estudiar amb regressió logística ser
 * Portal Vein Thrombosis
 * Liver Metastasis
 * Age at diagnosis
-* Performance Status
-* log_Alpha-Fetoprotein (ng/mL)
-* Haemoglobin (g/dL)
+* Performance Status (Aquest valor no esta entre les varSig)
+* log_Alpha-Fetoprotein (ng/mL) (Aquest valor no esta entre les varSig)
+* Haemoglobin (g/dL) (Aquest valor no esta entre les varSig)
 * log_Aspartate transaminase (U/L)
 * log_Gamma glutamyl transferase (U/L)
 * Major dimension of nodule (cm)
 * Iron
-* Ferritin (ng/mL)
+* Ferritin (ng/mL) (Aquest valor no esta entre les varSig)
 * MELD
+
+Entiendo que los demas que faltan, de varSig, son los que tiene altas correlaciones entre ellas. Son Encephalopathy, Ascites degree, Platelets, Albumin, log_direct y Oxigen Saturation
 
 
 ## Model amb regressió logística
