@@ -891,4 +891,7 @@ Per tant, hem construit un model logístic, que ens determina la supervivència 
 
 # Conclusions
 
+Aquest treball s'ha realitzat sobre dades reals sense processar i, com hem pogut comprovar, és necessari un primer pas de neteja per a poder crear models útils. Les dades en brut tenen valors desconeguts, erronis, i extrems els quals s'han de tractar. En el nostre cas, només 8 dels 165 pacients registrats i només 5 dels 49 atributs disposaven de totes les dades. Eliminar atributs o pacients amb valors desconeguts condicionaria una pèrdua molt important de dades, per al que vam decidir corregir els valor desconeguts amb diferents tècniques d'imputació de valors com són kNN i l'assignació de la mitjana. També hem pogut comprovar que conèixer l'àmbit de les dades fa que sigui possible detectar i corregir algunes de les dades introduïdes erròniament.
+
+Amb el contrast d'hipòtesi hem pogut seleccionar les variables que més influeixen en la supervivència d'aquests pacients i amb l'estudi de correlacions entre aquests atributs eliminar els que tenen alta correlació, per finalment crear models de regressió logística per intentar predir la supervivència. Inclús seleccionant un model de només 7 atributs s'aconsegueix una alta precisió en les prediccions.
 
