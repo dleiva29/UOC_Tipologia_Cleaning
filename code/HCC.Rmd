@@ -190,10 +190,11 @@ En el nostre cas, només tenim una base de dades, pel que no farem cap integraci
 ```{r}
 # Importació del dataset
 download.file("https://archive.ics.uci.edu/ml/machine-learning-databases/00423/hcc-survival.zip",
-              "mydata.zip")
-unzip("mydata.zip")
-hcc<-read.csv ("hcc-survival/hcc-data.txt",header = F, dec = ".",
+              "../data/hcc_data.zip")
+unzip("../data/hcc_data.zip",exdir = "../data")
+hcc<-read.csv("../data/hcc-survival/hcc-data.txt",header = F, dec = ".",
                stringsAsFactors = F, na.strings = "?")
+write.csv(hcc, file = "../data/hcc_data.csv")
 
 # Noms de les variables
 hcc_header<-c("Gender", "Symptoms", "Alcohol", "Hepatitis B Surface Antigen",
@@ -368,6 +369,14 @@ for (i in hcc_num){
 
 Per a la resta de valors, com es veurà a continuació en l'anàlisi de les variables numèriques, els valors extrems o outliers, els considerarem factibles, ja que biològicament tenen sentit i no farem cap tractament especial més.
 
+### Exportació del dataset netejat
+Una vegada hem fet la neteja de la nostre base de dades, la guardarem en format csv.
+
+```{r}
+# Exportación de les dades netes en .csv
+hcc_clean <- hcc
+write.csv(hcc_clean, file = "../data/hcc_data_clean.csv")
+```
 
 ## Anàlisi de les dades
 
@@ -429,8 +438,6 @@ for (i in 1:ncols) {
   }
 }
 ```
-
-### Variables logarítmiques
 
 Crida l'atenció diverses variables amb una distribució molt desplaçada cap a valors baixos però amb valors extrems alts. Molts són valors de laboratori, i sembla que s'adapten més a distribucions logarítmiques, pel que es modificaran. Aquestes variables són:
 
