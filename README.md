@@ -16,6 +16,10 @@ Aquesta tasca es realitzarà amb R mitjançant RStudio.
 * HCC.pdf
 * HCC.Rmd
 
+### Carpetes
+* code: On es troba el codi .rmd i el resultat .pdf
+* data: On es descarrega les dades i es desa el dataset processat. 
+
 ## English
 ### Description
 
@@ -26,3 +30,7 @@ This task will be performed with R using RStudio.
 
 * HCC.pdf
 * HCC.Rmd
+
+### Folder
+* code: where is the .rmd code and .pdf file
+* data: where the dataset is downloaded and the processed dataset is saved
