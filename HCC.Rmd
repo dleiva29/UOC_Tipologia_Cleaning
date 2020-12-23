@@ -1,11 +1,12 @@
 ---
 title: 'PRA 2: Neteja, validació i anàlisi de les dades'
 author: "Álvaro Díaz i David Leiva"
-date: "13/12/2020"
+date: "23/12/2020"
 output:
   pdf_document:
     toc: yes
     toc_depth: '3'
+    number_sections: true
   html_document:
     highlight: default
     number_sections: yes
@@ -18,6 +19,8 @@ header-includes:
 
 ```{r setup, include=FALSE,}
 knitr::opts_chunk$set(echo = TRUE, fig.width=6, fig.height=4, message= FALSE, warning=FALSE)
+
+#Librarys a carregar
 library(knitr)
 library(tidyverse)
 library(kableExtra)
@@ -219,6 +222,7 @@ hcc_header<-c("Gender", "Symptoms", "Alcohol", "Hepatitis B Surface Antigen",
 
 colnames(hcc)<-hcc_header
 
+#Mirar de quin tipus son les variables carregades
 tipVar <- c()
 for (i in 1:ncol(hcc))  tipVar <- c(tipVar,is(hcc[,i])[1])
 tipVar <- table(tipVar)
@@ -244,6 +248,7 @@ hcc <- hcc %>% mutate_at(vars(c(1:23,50)), as.factor)
 hcc <- hcc %>% mutate_at(vars(c(27:29)), as.factor)
 ```
 
+\newpage 
 
 ## Neteja de les dades
 
@@ -253,16 +258,19 @@ En aquest apartat ens encarregarem de deteminar la precècncia de valors nuls o 
 
 La distribució de valors desconeguts per cada pacient és:
 ```{r}
+#Valors nuls per pacient
 table(apply(hcc, 1, function(x) sum(is.na(x))))
 ```
 
 El percentatge de valors buits per variable és: 
 ```{r}
+#Funció que calcula percentatge
 funNA <- function(a, n){
   a = round(100*a/n,1)
 }
 
-totNA <- hcc %>% dplyr::select(everything()) %>%  #
+#Calcul dels valors NA per variable
+totNA <- hcc %>% dplyr::select(everything()) %>%
   summarise_all(funs(sum(is.na(.)))) 
 perNA <- totNA %>% mutate_all(funNA, n= nrow(hcc))
 tauNA <- totNA %>% bind_rows(perNA)
@@ -270,8 +278,10 @@ tauNA <- as_tibble(t(tauNA), rownames = "Variable") %>%
   rename(`total NA` = V1, `%NA` = V2) %>% 
   arrange(-`total NA`)
 
+#Taula en dos columnes
 tau <- cbind(tauNA[1:25,],tauNA[26:50,])
 
+#Taula amb resultats
 kable(x = tau, format = "latex", caption = "Variables amb NA",
       booktabs = TRUE, linesep = '') %>% 
   kable_styling(latex_options = c("HOLD_position", "scale_down"))
@@ -300,9 +310,11 @@ for (i in names(hcc[,hcc_factorT])) {
   }
 }
 
+#Filtrar aquelles que rebutjen l'hip nul·la
 testSig <- probTest %>% filter(p_value <= 0.05) %>% 
   mutate_at(.vars = c("p_value", "prob_0","prob_1","numNA_0", "numNA_1"), as.numeric)
 
+#Presentació de resultats
 kable(x = testSig, format = "latex",
       caption = "Variables amb una difència significativa de NA entre els grups de la classe",
       booktabs = TRUE, digits = 4, linesep = '') %>% 
@@ -332,6 +344,8 @@ factorNames<- colnames(hcc[hcc_factorT,])
 hcc <- kNN(hcc, variable = factorNames) %>% subset(select = Gender:`Class Attribute`)
 ```
 
+\newpage
+
 ### Correcció valors  o extrems de variables quantitatives
 
 Existeixen dues variables amb valors extranys, incompatibles amb la vida; son `Leukocytes` i `Platelets`
@@ -339,10 +353,11 @@ La gran majoria dels valors a la variable `Leukocytes` estan per sota de 100, qu
 
 Amb respecte `Platelets`, l'error és similar al trobat a l'anterior variable.
 
-Es corregeix els errors i s'assigna la mitjana als valors desconeguts
+Es corregeix els errors i s'assigna la mediana als valors desconeguts
 
 ```{r message= FALSE, warning=FALSE}
-# Correcció valors leucocitosi i plaquetes + assignació mediana als valors NA de variables numeriques
+# Correcció valors leucocitosi i plaquetes +
+# assignació mediana als valors NA de variables numeriques
 hcc <- hcc %>% 
   mutate(`Leukocytes(G/L)` = ifelse(`Leukocytes(G/L)` > 100,`Leukocytes(G/L)`/100, `Leukocytes(G/L)`),
          Platelets = ifelse(Platelets < 1000,Platelets*1000, Platelets))
@@ -350,12 +365,11 @@ hcc <- hcc %>%
 for (i in hcc_num){
   hcc[,i] <- ifelse(is.na(hcc[,i]),median(hcc[,i], na.rm = T),hcc[,i])
 }
-
-#parlem de mitjana o de mediana? median es mediana, mitjana es mean.
-
 ```
 
 Per a la resta de valors, com es veurà a continuació en l'anàlisi de les variables numèriques, els valors extrems o outliers, els considerarem facttibles ja que biològicament tenen sentit i no farem cap tractament especial més.
+
+
 
 ## Anàlisi de les dades
 
@@ -368,6 +382,9 @@ i el segon es el boxplot. Sempre separant la variable estudiada en dos clases, l
 # Estudi distribució variables Numeriques
 ind_CA <- which(colnames(hcc) == "Class Attribute")
 
+#emparejar els grafics de 2 en 2. Si son senars, deixar una sola
+# grafic 1 - histograma
+# grafic 2 - boxplot
 ncols <- length(hcc_num) 
 if (ncols%%2 == 1){
   last_col = ncols
@@ -375,7 +392,6 @@ if (ncols%%2 == 1){
   last_col = ncols + 1 
 }
 
-#for (i in hcc_num) {
 for (i in 1:ncols) {
   if(i%%2 == 1){
     if ( i != last_col){
@@ -443,6 +459,9 @@ Crida l'atenció vàries variables amb una distribució molt desplaçada cap a v
 ind_CA <- which(colnames(hcc) == "Class Attribute")
 hcc_log<-c(31,37:43, 46)
 
+#emparejar els grafics de 2 en 2. Si son senars, deixar una sola
+# grafic 1 - histograma
+# grafic 2 - boxplot
 ncols <- length(hcc_log) 
 if (ncols%%2 == 1){
   last_col = ncols
@@ -451,7 +470,7 @@ if (ncols%%2 == 1){
 }
 
 for (i in 1:ncols){
-  #transformacio
+  #transformacio logaritimica
   hcc[,hcc_log[i]]<- log(hcc[,hcc_log[i]])
   colnames(hcc)[hcc_log[i]] <- paste("log_", colnames(hcc)[hcc_log[i]], sep = '')
   
@@ -495,13 +514,19 @@ for (i in 1:ncols){
   }
 }
 ```
+\newpage 
 
 ### Variables qualitatives
+
+Fe una primera exploració visual d'aquest tipus de variable:
 
 ```{r message= FALSE, warning=FALSE}
 # Distribució variables quantitatives
 hcc_factorT<-c(1:23,27:29)
 
+#emparejar els grafics de 2 en 2. Si son senars, deixar una sola
+# grafic 1 - diagrama barres
+# grafic 2 - diagrama barres proporció
 ncols <- length(hcc_factorT) 
 if (ncols%%2 == 1){
   last_col = ncols
@@ -509,7 +534,6 @@ if (ncols%%2 == 1){
   last_col = ncols + 1 
 }
 
-#for (i in hcc_num) {
 for (i in 1:ncols) {
   if(i%%2 == 1){
     if ( i != last_col){
@@ -560,6 +584,7 @@ De les variables quantitatives podem veure que entre elles hi ha força diferèn
 Per la comprobació de la distribució normal dels valors quantitatius farem servir la prova de normalitat d'Anderson-Darling.
 
 ```{r message= FALSE, warning=FALSE}
+#Test Anderson-Darling per a la normalitat
 col.names = colnames(hcc)
 tNorm <- tibble()
 for (i in 1:ncol(hcc)) {
@@ -569,8 +594,8 @@ for (i in 1:ncol(hcc)) {
   }
 }
 
+#Filtrar les que no rebutgen l'hipotesis de normalitat
 var_normales<- tNorm %>% filter(as.numeric(p_value)>0.05) %>% pull(Variable)
-
 tau <- tNorm %>% filter(p_val < 0.05) %>% 
   mutate_at(.vars = c("p_value"), as.numeric)
 tau <- cbind(tau[1:12,],tau[13:24,])
@@ -579,6 +604,7 @@ tau <- cbind(tau[1:12,],tau[13:24,])
 tau[12,3 ] <- ""
 tau[12,4 ] <- 0
 
+#Presentacio resultats
 kable(x = tau, format = "latex", caption = "Variables que no segueixen una distribució normal",
       booktabs = TRUE, digits = 4, linesep = '') %>% 
   kable_styling(latex_options = c("HOLD_position", "scale_down"))
@@ -590,6 +616,7 @@ Com es pot veure, hi ha moltes variables numériques que és distancien signific
 Només hi ha quatre variables que no es pot asegurar que no segueixin una distribució normal. Comprovarem si aquestes mantenen una variança similar entre els grups formats per la classe amb el test de Levene.
 
 ```{r}
+#Test Levene per homogeneïtat de la variància
 tVar <- tibble()
 
 for (i in var_normales){
@@ -599,6 +626,7 @@ for (i in var_normales){
 
 tVar <- tVar %>%mutate_at(.vars = c("p_value"), as.numeric)
 
+#presentacio de resultats
 kable(x = tVar, format = "latex", caption = "Homogeneitat de la varinça a partir del test de Levene.",
       booktabs = TRUE, digits = 4, linesep = '') %>% 
   kable_styling(latex_options = c("HOLD_position"))
@@ -618,38 +646,48 @@ Per tal de valorar quines variables es comporten diferents entre en que sobreviu
 * Per les variables quantititatives, donada les seves distribucións majoritària diferent a la normalitat, es realitzara el test no paramètric de Mann–Whitney–Wilcoxon
 
 ```{r message= FALSE, warning=FALSE}
-testChi <- tibble()
 
+#Test chi-quadrat per a variables qualitatives
+testChi <- tibble()
 for (i in hcc_factorT) {
   tau=table(hcc[,i], hcc$`Class Attribute`)
   chi=chisq.test(tau)
   testChi <- testChi %>% bind_rows(c(Clase = i, Name=names(hcc[i]),Categorica="1",p_value = chi$p.value))
 }
 
+#Filtrar les que rebutgen hipotesis nul·la
 tau <- testChi %>% filter(p_value < 0.1) %>% 
   mutate_at(.vars = c("p_value"), as.numeric)
 
+#Guardar vairables significatives
 varSig <- tau
 
+#Presentacio de resultats
 kable(x = tau, format = "latex", caption = "Variables categóriques amb p<0.10 entre la classe",
       booktabs = TRUE, digits = 4, linesep = '') %>% 
   kable_styling(latex_options = c("HOLD_position"))
 
-
+#Test Mann–Whitney–Wilcoxon per a variables quantitatives
 testWil <- tibble()
 for (i in hcc_num) {
-  wil=wilcox.test(hcc[hcc$`Class Attribute`==1,i],hcc[hcc$`Class Attribute`==0,i], mu = 0,paired = FALSE, conf.int = 0.95)
-  testWil <- testWil %>% bind_rows(c(Clase = i, Name=names(hcc[i]),Categorica="0",p_value = wil$p.value))
+  wil=wilcox.test(hcc[hcc$`Class Attribute`==1,i],
+                  hcc[hcc$`Class Attribute`==0,i],
+                  mu = 0,paired = FALSE, conf.int = 0.95)
+  testWil <- testWil %>%
+    bind_rows(c(Clase = i, Name=names(hcc[i]),Categorica="0",p_value = wil$p.value))
 }
 
+#Filtrar les que rebutgen hipotesis nul·la
 tau <- testWil %>% filter(p_value < 0.1) %>% 
   mutate_at(.vars = c("p_value"), as.numeric)
 
+#Guardar vairables significatives
 varSig <- varSig %>% bind_rows(tau)
 
+#Resultats en dos columnes
 tau <- cbind(tau[1:6,],tau[7:12,])
 
-
+#Presentacio de resultats
 kable(x = tau, format = "latex", caption = "Variables numériques amb p<0.10 entre la classe",
       booktabs = TRUE, digits = 4, linesep = '') %>% 
   kable_styling(latex_options = c("HOLD_position", "scale_down"))
@@ -662,7 +700,7 @@ Aquestes variables seran les que es seleccionarà per a la creació d'un model d
 
 Amb respecte a la correlació entre les variables seleccionades, veiem la seva matriu de correlacions. Donada l'existència de variables categóriques, aquestes es consideradan numériques i usarem la correlació no paramétrica de Spearman per a la seva valoració. Previament es normalitzaran totes les variables quantitatives.
 
-```{r message= FALSE, warning=FALSE,fig.width=12,fig.height=9}
+```{r message= FALSE, warning=FALSE,fig.width=16,fig.height=12}
 # Correlació variables independents.
 hcc_norm <- hcc
 atr<-names(hcc) 
@@ -674,7 +712,7 @@ hcc_norm[,hcc_num]<-scale(hcc_norm[,hcc_num])
 hcc2<-as.data.frame(lapply(hcc_norm,as.numeric))
 names(hcc2)<-atr
 
-#correlacio Spearman
+#correlacio Spearman + filtrar alta correlació
 hcc_cor<-cor(hcc2[,varSig$Name], method = "spearman")
 col.names <- colnames(hcc_cor)
 hcc_corTop <- as.tibble(hcc_cor) %>% melt()
@@ -690,19 +728,20 @@ hcc_corTop <- hcc_corTop %>%
   dplyr::select(vars, corr) %>% 
   unique()
 
-kable(x = hcc_corTop, format = "latex", caption = "Correlació entre variables, valors entre -1 i -08 o 0-8 i 1.",
+#Presentació variables altament correlades
+kable(x = hcc_corTop, format = "latex",
+      caption = "Correlació entre variables, valors entre -1 i -08 o 0-8 i 1.",
       booktabs = TRUE, digits = 4, linesep = '') %>% 
   kable_styling(latex_options = c("HOLD_position"))
 
+#Grafica de totes les correlacions
 corrplot(hcc_cor, cl.pos='n',tl.srt = 45,
-         tl.cex = 0.5, type="upper",method = "circle",
+         tl.cex = 1.25, type="upper",method = "circle",
          order="FPC", diag=FALSE)
 ```
 
-<--Per intentar reduïr el número de variables del model, d'entre les que han tingut difències significatives entre els que sobreviuen i els que no, seleccionarem les que tingin poca correlació amb altres variables, i amb les que tenen molta correlació amb d'altres, només seleccionarem una com a representiva. -->
-
 Com es pot veure, només dues variables tenen una molt alta correlació ( __Iron__ i __Oxygen Saturation (%)__). De les dues, seleccionarem __Iron__ que es la que presenta un menor probabilitat de significació.
- 
+
 ### Creació de noves variables
 
 Hi ha un valor extès per a valorar la probabilitat de mort als tres mesos de pacients amb hepatopatia que depend de la creatinina, la bilirrubina total i del INR, amb un valor calculat denominat [MELD](https://es.wikipedia.org/wiki/Escala_MELD). Aquest valor és una estimació de probabilitat de fallida hepàtica. A majors valors major probabilitat de mort. Aquest valor està validat pels 3 mesos, no per a l'any, com es el nostre cas. 
@@ -714,11 +753,14 @@ hcc <- hcc %>%
            11.2*log(`International Normalised Ratio`)+
            9.57*hcc$`log_Creatinine (mg/dL)`+
            6.43 )
+
+#Boxplot per veure la distribució repsecte clase
 hcc %>%
   ggplot(aes(x=`Class Attribute`,y=MELD)) +
-        geom_boxplot() +
-        labs(x = "Clase",  y = "MELD")
+  geom_boxplot() +
+  labs(x = "Clase",  y = "MELD")
 
+#Test Mann–Whitney–Wilcoxon
 x = hcc %>% filter(`Class Attribute`==1) %>% pull(MELD)
 y = hcc %>% filter(`Class Attribute`==0) %>% pull(MELD)
 wilcox.test(x,y, mu = 0,paired = FALSE, conf.int = 0.95)
@@ -744,43 +786,46 @@ Per tant, les variables seleccionades per estudiar amb regressió logística ser
 * Ferritin (ng/mL) (Aquest valor no esta entre les varSig)
 * MELD
 
-
-\newpage
-
 ## Resolució del problema, model amb regressió logística
 
 Amb les variables seleccionades, es crearà un model de regressió logística per tal de predir la supervivència a l'any del diagnóstic d'HCC. La variable ordinal es considerarà numérica.  
 
 ```{r message= FALSE, warning=FALSE}
-
+#Model logit
 varElim <- c("Oxygen Saturation (%)","log_Total Bilirubin(mg/dL)",
              "International Normalised Ratio","log_Creatinine (mg/dL)")
 
+#Variables seleccionades
 var_selecc<- setdiff(varSig$Name, varElim)
 
+#Afegir les que falten
 hcc_sel <- hcc[c(var_selecc, "MELD", "Class Attribute")] %>% 
   mutate_at(vars("Ascites degree","Encephalopathy degree"), as.numeric)
 
+#Model logistic
 modelo <- glm(`Class Attribute` ~ ., data = hcc_sel, family = "binomial")
 summary(modelo)
 
+#Prediccions de resultats + matriu de confusió
 pred1 <- ifelse(test = modelo$fitted.values > 0.50, yes = 1, no = 0)
 matConf <- table(hcc_sel$`Class Attribute`, pred1,
-                          dnn = c("observacions", "prediccions"))
+                 dnn = c("observacions", "prediccions"))
 matConf
 
+#Grafic de matriu de confusió
 mosaic(matConf, shade = T, colorize = T,
        main = "Matriu de confusió del primer model",
        gp = gpar(fill = matrix(c("green3", "red2", "red2", "green3"), 2, 2)))
 
+#Èxit del model 
 presPred <- 100*(matConf[1]+matConf[4])/nrow(hcc_sel)
-
 ```
 
 Aquest model amb totes les variables té un `r round(presPred,1)`\% de d'èxit en la predicció de la supervivència del pacient.
 Pintem la corba ROC i auc del model:
 
 ```{r}
+#Predir els valors del model
 prob <- predict(modelo,type = "response")
 hcc$prob <- prob
 
@@ -798,6 +843,7 @@ El nostre objectiu es construir un segon model de regressió logística fent ser
 Per tal de seleccionar un model amb menys atributs sense disminuir excesivament l'error del model, es realitzarà un estudi iteratiu eliminant a cada pas la variable menys significativa ("backward").
 
 ```{r message= FALSE, warning=FALSE}
+#Model logit mètode backward
 modback <- stepAIC(modelo, trace=FALSE, direction="backward")
 summary(modback)
 ```
@@ -805,21 +851,26 @@ summary(modback)
 Podem veure com aquest model selecciona fins a 7 variables. Podem veure com l'AIC es menor en aquest model. Calculem la matriu de confusió i el percentatge d'encert en la predicció:
 
 ```{r message= FALSE, warning=FALSE}
+#prediccio resultat + matriu de confusió
 pred2 <- ifelse(test = modback$fitted.values > 0.50, yes = 1, no = 0)
 matConf<- table(hcc_sel$`Class Attribute`, pred2,
-                          dnn = c("observacions", "prediccions"))
+                dnn = c("observacions", "prediccions"))
 matConf
+
+#grafica matriu de confusió
 mosaic(matConf, shade = T, colorize = T,
        main = "Matriu de confusió del primer model",
        gp = gpar(fill = matrix(c("green3", "red2", "red2", "green3"), 2, 2)))
 
-presPred2 <- (matConf[1]+matConf[4])/nrow(hcc_sel)
+#Èxit del model 
+presPred2 <- 100*(matConf[1]+matConf[4])/nrow(hcc_sel)
 ```
 
 El model generat te només 7 variables i obté un `r round(presPred2,1)`\% de precisió en les prediccions. 
 Pel que fa a la especifitat i sensibilitat del model:
 
 ```{r}
+#predicció variables
 prob2 <- predict(modback,type = "response")
 hcc$prob2 <- prob2
 
@@ -828,7 +879,6 @@ plot.roc(`Class Attribute` ~ prob2,data = hcc,legacy.axes = TRUE)
 
 #Area sota la corba
 auc(roc(`Class Attribute` ~ prob2,data = hcc))
-
 ```
 
 Podem veure com el valor de AUC es també una mica pitjor.
@@ -836,4 +886,9 @@ Podem veure com el valor de AUC es també una mica pitjor.
 Si poguessim tenir totes les dades possibles, ens quedariem amb el primer model, ja que té una millor predicció de les dades i un valor AUC més elevat. No obstant, reduint quasi a la meitat el número de variables podem obtenir un resultats molt bons. 
 
 Per tant, hem construit un model logístic, que ens determina la supervivència o no d'un pacient en base a uns indicadors mèdics amb un 80\% aproximadament d'èxit. Es un molt bon punt per anar refinant el model i millorar el seu ajust.
+
+\newpage 
+
+# Conclusions
+
 

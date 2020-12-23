@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.12.14)  23 DEC 2020 02:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.12.14)  23 DEC 2020 15:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -722,442 +722,444 @@ File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 391.
-[5]
+[5] [6]
 LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
-502.
+508.
 (c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [6] [7pdfTeX warning (ext4): destination with the same identifier (name{table
+) [7] [8pdfTeX warning (ext4): destination with the same identifier (name{table
 .1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.565 
-      ] [8pdfTeX warning (ext4): destination with the same identifier (name{tab
-le.2}) has been already used, duplicate ignored
+l.603 \end{Shaded}
+                  ] [9pdfTeX warning (ext4): destination with the same identifi
+er (name{table.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.643 \begin{Shaded}
-                    ] [9]
-<HCC_files/figure-latex/unnamed-chunk-8-1.pdf, id=199, 433.62pt x 289.08pt>
+l.663 \newpage
+              ] [10]
+<HCC_files/figure-latex/unnamed-chunk-8-1.pdf, id=209, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-8-1.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-8-1.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-8-1.pdf  used on 
-input line 755.
+input line 768.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-8-2.pdf, id=200, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-8-2.pdf, id=210, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-8-2.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-8-2.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-8-2.pdf  used on 
-input line 756.
+input line 769.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-8-3.pdf, id=201, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-8-3.pdf, id=211, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-8-3.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-8-3.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-8-3.pdf  used on 
-input line 757.
+input line 770.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-8-4.pdf, id=202, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-8-4.pdf, id=212, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-8-4.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-8-4.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-8-4.pdf  used on 
-input line 758.
+input line 771.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-8-5.pdf, id=203, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-8-5.pdf, id=213, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-8-5.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-8-5.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-8-5.pdf  used on 
-input line 759.
+input line 772.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-8-6.pdf, id=204, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-8-6.pdf, id=214, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-8-6.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-8-6.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-8-6.pdf  used on 
-input line 760.
+input line 773.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-8-7.pdf, id=205, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-8-7.pdf, id=215, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-8-7.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-8-7.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-8-7.pdf  used on 
-input line 761.
+input line 774.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-8-8.pdf, id=206, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-8-8.pdf, id=216, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-8-8.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-8-8.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-8-8.pdf  used on 
-input line 762.
+input line 775.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-8-9.pdf, id=207, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-8-9.pdf, id=217, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-8-9.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-8-9.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-8-9.pdf  used on 
-input line 763.
+input line 776.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-8-10.pdf, id=208, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-8-10.pdf, id=218, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-8-10.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-8-10.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-8-10.pdf  used on
- input line 764.
+ input line 777.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-8-11.pdf, id=209, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-8-11.pdf, id=219, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-8-11.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-8-11.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-8-11.pdf  used on
- input line 765.
+ input line 778.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-8-12.pdf, id=210, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-8-12.pdf, id=220, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-8-12.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-8-12.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-8-12.pdf  used on
- input line 766.
+ input line 779.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 755--767
+Underfull \hbox (badness 10000) in paragraph at lines 768--780
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 755--767
+Underfull \hbox (badness 10000) in paragraph at lines 768--780
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 755--767
+Underfull \hbox (badness 10000) in paragraph at lines 768--780
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 755--767
+Underfull \hbox (badness 10000) in paragraph at lines 768--780
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 755--767
+Underfull \hbox (badness 10000) in paragraph at lines 768--780
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 755--767
+Underfull \hbox (badness 10000) in paragraph at lines 768--780
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 755--767
+Underfull \hbox (badness 10000) in paragraph at lines 768--780
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 755--767
+Underfull \hbox (badness 10000) in paragraph at lines 768--780
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 755--767
+Underfull \hbox (badness 10000) in paragraph at lines 768--780
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 755--767
+Underfull \hbox (badness 10000) in paragraph at lines 768--780
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 755--767
+Underfull \hbox (badness 10000) in paragraph at lines 768--780
 []
  []
 
-[10] [11 <./HCC_files/figure-latex/unnamed-chunk-8-1.pdf> <./HCC_files/figure-l
-atex/unnamed-chunk-8-2.pdf>] [12 <./HCC_files/figure-latex/unnamed-chunk-8-3.pd
-f> <./HCC_files/figure-latex/unnamed-chunk-8-4.pdf>] [13 <./HCC_files/figure-la
+[11] [12 <./HCC_files/figure-latex/unnamed-chunk-8-1.pdf> <./HCC_files/figure-l
+atex/unnamed-chunk-8-2.pdf>] [13 <./HCC_files/figure-latex/unnamed-chunk-8-3.pd
+f> <./HCC_files/figure-latex/unnamed-chunk-8-4.pdf>] [14 <./HCC_files/figure-la
 tex/unnamed-chunk-8-5.pdf> <./HCC_files/figure-latex/unnamed-chunk-8-6.pdf>] [1
-4 <./HCC_files/figure-latex/unnamed-chunk-8-7.pdf> <./HCC_files/figure-latex/un
-named-chunk-8-8.pdf>] [15 <./HCC_files/figure-latex/unnamed-chunk-8-9.pdf> <./H
-CC_files/figure-latex/unnamed-chunk-8-10.pdf>] [16 <./HCC_files/figure-latex/un
-named-chunk-8-11.pdf> <./HCC_files/figure-latex/unnamed-chunk-8-12.pdf>] [17]
-<HCC_files/figure-latex/unnamed-chunk-9-1.pdf, id=306, 433.62pt x 289.08pt>
+5 <./HCC_files/figure-latex/unnamed-chunk-8-7.pdf> <./HCC_files/figure-latex/un
+named-chunk-8-8.pdf>] [16 <./HCC_files/figure-latex/unnamed-chunk-8-9.pdf> <./H
+CC_files/figure-latex/unnamed-chunk-8-10.pdf>] [17 <./HCC_files/figure-latex/un
+named-chunk-8-11.pdf> <./HCC_files/figure-latex/unnamed-chunk-8-12.pdf>] [18]
+<HCC_files/figure-latex/unnamed-chunk-9-1.pdf, id=316, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-9-1.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-9-1.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-9-1.pdf  used on 
-input line 858.
+input line 874.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-9-2.pdf, id=307, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-9-2.pdf, id=317, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-9-2.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-9-2.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-9-2.pdf  used on 
-input line 859.
+input line 875.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-9-3.pdf, id=308, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-9-3.pdf, id=318, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-9-3.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-9-3.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-9-3.pdf  used on 
-input line 860.
+input line 876.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-9-4.pdf, id=309, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-9-4.pdf, id=319, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-9-4.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-9-4.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-9-4.pdf  used on 
-input line 861.
+input line 877.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-9-5.pdf, id=310, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-9-5.pdf, id=320, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-9-5.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-9-5.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-9-5.pdf  used on 
-input line 862.
+input line 878.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 858--863
+Underfull \hbox (badness 10000) in paragraph at lines 874--878
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 858--863
+Underfull \hbox (badness 10000) in paragraph at lines 874--878
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 858--863
+Underfull \hbox (badness 10000) in paragraph at lines 874--878
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 858--863
+Underfull \hbox (badness 10000) in paragraph at lines 874--878
 []
  []
 
-[18 <./HCC_files/figure-latex/unnamed-chunk-9-1.pdf>] [19 <./HCC_files/figure-l
+[19 <./HCC_files/figure-latex/unnamed-chunk-9-1.pdf>] [20 <./HCC_files/figure-l
 atex/unnamed-chunk-9-2.pdf> <./HCC_files/figure-latex/unnamed-chunk-9-3.pdf>] [
-20 <./HCC_files/figure-latex/unnamed-chunk-9-4.pdf> <./HCC_files/figure-latex/u
-nnamed-chunk-9-5.pdf>]
-<HCC_files/figure-latex/unnamed-chunk-10-1.pdf, id=350, 433.62pt x 289.08pt>
+21 <./HCC_files/figure-latex/unnamed-chunk-9-4.pdf> <./HCC_files/figure-latex/u
+nnamed-chunk-9-5.pdf>] [22]
+<HCC_files/figure-latex/unnamed-chunk-10-1.pdf, id=364, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-10-1.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-10-1.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-10-1.pdf  used on
- input line 922.
+ input line 942.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-10-2.pdf, id=351, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-10-2.pdf, id=365, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-10-2.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-10-2.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-10-2.pdf  used on
- input line 923.
+ input line 943.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-10-3.pdf, id=352, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-10-3.pdf, id=366, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-10-3.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-10-3.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-10-3.pdf  used on
- input line 924.
+ input line 944.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-10-4.pdf, id=353, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-10-4.pdf, id=367, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-10-4.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-10-4.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-10-4.pdf  used on
- input line 925.
+ input line 945.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-10-5.pdf, id=354, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-10-5.pdf, id=368, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-10-5.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-10-5.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-10-5.pdf  used on
- input line 926.
+ input line 946.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-10-6.pdf, id=355, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-10-6.pdf, id=369, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-10-6.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-10-6.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-10-6.pdf  used on
- input line 927.
+ input line 947.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-10-7.pdf, id=356, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-10-7.pdf, id=370, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-10-7.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-10-7.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-10-7.pdf  used on
- input line 928.
+ input line 948.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-10-8.pdf, id=357, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-10-8.pdf, id=371, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-10-8.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-10-8.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-10-8.pdf  used on
- input line 929.
+ input line 949.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-10-9.pdf, id=358, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-10-9.pdf, id=372, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-10-9.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-10-9.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-10-9.pdf  used on
- input line 930.
+ input line 950.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-10-10.pdf, id=359, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-10-10.pdf, id=373, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-10-10.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-10-10.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-10-10.pdf  used o
-n input line 931.
+n input line 951.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-10-11.pdf, id=360, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-10-11.pdf, id=374, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-10-11.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-10-11.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-10-11.pdf  used o
-n input line 932.
+n input line 952.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-10-12.pdf, id=361, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-10-12.pdf, id=375, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-10-12.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-10-12.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-10-12.pdf  used o
-n input line 933.
+n input line 953.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<HCC_files/figure-latex/unnamed-chunk-10-13.pdf, id=362, 433.62pt x 289.08pt>
+<HCC_files/figure-latex/unnamed-chunk-10-13.pdf, id=376, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-10-13.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-10-13.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-10-13.pdf  used o
-n input line 934.
+n input line 954.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 922--935
+Underfull \hbox (badness 10000) in paragraph at lines 942--955
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 922--935
+Underfull \hbox (badness 10000) in paragraph at lines 942--955
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 922--935
+Underfull \hbox (badness 10000) in paragraph at lines 942--955
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 922--935
+Underfull \hbox (badness 10000) in paragraph at lines 942--955
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 922--935
+Underfull \hbox (badness 10000) in paragraph at lines 942--955
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 922--935
+Underfull \hbox (badness 10000) in paragraph at lines 942--955
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 922--935
+Underfull \hbox (badness 10000) in paragraph at lines 942--955
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 922--935
+Underfull \hbox (badness 10000) in paragraph at lines 942--955
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 922--935
+Underfull \hbox (badness 10000) in paragraph at lines 942--955
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 922--935
+Underfull \hbox (badness 10000) in paragraph at lines 942--955
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 922--935
+Underfull \hbox (badness 10000) in paragraph at lines 942--955
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 922--935
+Underfull \hbox (badness 10000) in paragraph at lines 942--955
 []
  []
 
-[21] [22 <./HCC_files/figure-latex/unnamed-chunk-10-1.pdf> <./HCC_files/figure-
-latex/unnamed-chunk-10-2.pdf>] [23 <./HCC_files/figure-latex/unnamed-chunk-10-3
-.pdf> <./HCC_files/figure-latex/unnamed-chunk-10-4.pdf>] [24 <./HCC_files/figur
-e-latex/unnamed-chunk-10-5.pdf> <./HCC_files/figure-latex/unnamed-chunk-10-6.pd
-f>] [25 <./HCC_files/figure-latex/unnamed-chunk-10-7.pdf> <./HCC_files/figure-l
-atex/unnamed-chunk-10-8.pdf>] [26 <./HCC_files/figure-latex/unnamed-chunk-10-9.
-pdf> <./HCC_files/figure-latex/unnamed-chunk-10-10.pdf>] [27 <./HCC_files/figur
-e-latex/unnamed-chunk-10-11.pdf> <./HCC_files/figure-latex/unnamed-chunk-10-12.
-pdf>] [28 <./HCC_files/figure-latex/unnamed-chunk-10-13.pdf>] [29pdfTeX warning
- (ext4): destination with the same identifier (name{table.3}) has been already 
-used, duplicate ignored
+[23 <./HCC_files/figure-latex/unnamed-chunk-10-1.pdf> <./HCC_files/figure-latex
+/unnamed-chunk-10-2.pdf>] [24 <./HCC_files/figure-latex/unnamed-chunk-10-3.pdf>
+ <./HCC_files/figure-latex/unnamed-chunk-10-4.pdf>] [25 <./HCC_files/figure-lat
+ex/unnamed-chunk-10-5.pdf> <./HCC_files/figure-latex/unnamed-chunk-10-6.pdf>] [
+26 <./HCC_files/figure-latex/unnamed-chunk-10-7.pdf> <./HCC_files/figure-latex/
+unnamed-chunk-10-8.pdf>] [27 <./HCC_files/figure-latex/unnamed-chunk-10-9.pdf> 
+<./HCC_files/figure-latex/unnamed-chunk-10-10.pdf>] [28 <./HCC_files/figure-lat
+ex/unnamed-chunk-10-11.pdf> <./HCC_files/figure-latex/unnamed-chunk-10-12.pdf>]
+[29 <./HCC_files/figure-latex/unnamed-chunk-10-13.pdf>] [30pdfTeX warning (ext4
+): destination with the same identifier (name{table.3}) has been already used, 
+duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.1049 
-       pdfTeX warning (ext4): destination with the same identifier (name{table.
-4}) has been already used, duplicate ignored
+l.1067 
+       ] [31pdfTeX warning (ext4): destination with the same identifier (name{t
+able.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.1049 
-       ] [30pdfTeX warning (ext4): destination with the same identifier (name{t
+l.1133 
+       ] [32pdfTeX warning (ext4): destination with the same identifier (name{t
 able.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.1127 \end{Shaded}
-                   ] [31pdfTeX warning (ext4): destination with the same identi
-fier (name{table.6}) has been already used, duplicate ignored
+l.1197 \begin{Shaded}
+                     pdfTeX warning (ext4): destination with the same identifie
+r (name{table.6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.1196 \end{Shaded}
-                   ]
-<HCC_files/figure-latex/unnamed-chunk-14-1.pdf, id=484, 867.24pt x 650.43pt>
+l.1197 \begin{Shaded}
+                     ]
+<HCC_files/figure-latex/unnamed-chunk-14-1.pdf, id=493, 1156.32pt x 867.24pt>
 File: HCC_files/figure-latex/unnamed-chunk-14-1.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-14-1.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-14-1.pdf  used on
- input line 1219.
-(pdftex.def)             Requested size: 469.75827pt x 352.31868pt.
-[32pdfTeX warning (ext4): destination with the same identifier (name{table.7}) 
+ input line 1256.
+(pdftex.def)             Requested size: 469.75385pt x 352.31538pt.
+[33pdfTeX warning (ext4): destination with the same identifier (name{table.7}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.1234 ...s}\label{creaciuxf3-de-noves-variables}}
-                                                   <./HCC_files/figure-latex/un
-named-chunk-14-1.pdf>]
-<HCC_files/figure-latex/unnamed-chunk-15-1.pdf, id=496, 216.81pt x 216.81pt>
+l.1258 C
+        om es pot veure, només dues variables tenen una molt alta correlaci...
+]
+<HCC_files/figure-latex/unnamed-chunk-15-1.pdf, id=500, 216.81pt x 216.81pt>
 File: HCC_files/figure-latex/unnamed-chunk-15-1.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-15-1.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-15-1.pdf  used on
- input line 1259.
+ input line 1292.
 (pdftex.def)             Requested size: 216.81938pt x 216.81938pt.
-[33 <./HCC_files/figure-latex/unnamed-chunk-15-1.pdf>] [34] [35]
-<HCC_files/figure-latex/unnamed-chunk-16-1.pdf, id=517, 433.62pt x 289.08pt>
+[34 <./HCC_files/figure-latex/unnamed-chunk-14-1.pdf>] [35 <./HCC_files/figure-
+latex/unnamed-chunk-15-1.pdf>] [36]
+<HCC_files/figure-latex/unnamed-chunk-16-1.pdf, id=526, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-16-1.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-16-1.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-16-1.pdf  used on
- input line 1428.
+ input line 1466.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-[36 <./HCC_files/figure-latex/unnamed-chunk-16-1.pdf>]
-<HCC_files/figure-latex/unnamed-chunk-17-1.pdf, id=528, 433.62pt x 289.08pt>
+[37]
+<HCC_files/figure-latex/unnamed-chunk-17-1.pdf, id=532, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-17-1.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-17-1.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-17-1.pdf  used on
- input line 1450.
+ input line 1490.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-[37 <./HCC_files/figure-latex/unnamed-chunk-17-1.pdf>]
-<HCC_files/figure-latex/unnamed-chunk-19-1.pdf, id=539, 433.62pt x 289.08pt>
+[38 <./HCC_files/figure-latex/unnamed-chunk-16-1.pdf>] [39 <./HCC_files/figure-
+latex/unnamed-chunk-17-1.pdf>]
+<HCC_files/figure-latex/unnamed-chunk-19-1.pdf, id=552, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-19-1.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-19-1.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-19-1.pdf  used on
- input line 1542.
+ input line 1585.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-[38]
-<HCC_files/figure-latex/unnamed-chunk-20-1.pdf, id=544, 433.62pt x 289.08pt>
+[40]
+<HCC_files/figure-latex/unnamed-chunk-20-1.pdf, id=557, 433.62pt x 289.08pt>
 File: HCC_files/figure-latex/unnamed-chunk-20-1.pdf Graphic file (type pdf)
 <use HCC_files/figure-latex/unnamed-chunk-20-1.pdf>
 Package pdftex.def Info: HCC_files/figure-latex/unnamed-chunk-20-1.pdf  used on
- input line 1563.
+ input line 1608.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-[39 <./HCC_files/figure-latex/unnamed-chunk-19-1.pdf>] [40 <./HCC_files/figure-
-latex/unnamed-chunk-20-1.pdf>] (./HCC.aux)
+[41 <./HCC_files/figure-latex/unnamed-chunk-19-1.pdf>] [42 <./HCC_files/figure-
+latex/unnamed-chunk-20-1.pdf>] [43] (./HCC.aux)
 Package rerunfilecheck Info: File `HCC.out' has not changed.
-(rerunfilecheck)             Checksum: 7090479B01C9E21E419B6B414AC0CCAA;5262.
+(rerunfilecheck)             Checksum: C2694C26FD1F09C717357F8F6A07EAC1;5530.
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 12815 strings out of 481311
- 193998 string characters out of 5915833
- 494819 words of memory out of 5000000
- 29256 multiletter control sequences out of 15000+600000
+ 12822 strings out of 481311
+ 194339 string characters out of 5915833
+ 494727 words of memory out of 5000000
+ 29258 multiletter control sequences out of 15000+600000
  455017 words of font info for 73 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
- 66i,10n,72p,489b,468s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 66i,10n,72p,478b,468s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.
 enc}{c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec
 .enc}<c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/l
@@ -1170,10 +1172,10 @@ onts/type1/public/lm/lmri10.pfb><c:/Users/alvar/AppData/Roaming/TinyTeX/texmf-d
 ist/fonts/type1/public/lm/lmtk10.pfb><c:/Users/alvar/AppData/Roaming/TinyTeX/te
 xmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:/Users/alvar/AppData/Roaming/TinyT
 eX/texmf-dist/fonts/type1/public/lm/lmtti10.pfb>
-Output written on HCC.pdf (40 pages, 507874 bytes).
+Output written on HCC.pdf (43 pages, 514823 bytes).
 PDF statistics:
- 625 PDF objects out of 1000 (max. 8388607)
- 497 compressed objects within 5 object streams
- 99 named destinations out of 1000 (max. 500000)
- 381 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 646 PDF objects out of 1000 (max. 8388607)
+ 514 compressed objects within 6 object streams
+ 104 named destinations out of 1000 (max. 500000)
+ 389 words of extra memory for PDF output out of 10000 (max. 10000000)
 
