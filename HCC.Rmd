@@ -41,13 +41,13 @@ library(pROC)
 
 ## Presentació
 En aquesta pràctica s’elabora un cas pràctic orientat a aprendre a identificar les dades rellevants
-per un projecte analític i usar les eines d’integració, neteja, validació i anàlisi de les mateixes
+per un projecte analític i usar les eines d’integració, neteja, validació i anàlisi d'aquestes.
 
 ## Competències
 En aquesta pràctica es desenvolupen les següents competències del Màster de Data Science:
 
 * Capacitat d'analitzar un problema en el nivell d'abstracció adequat a cada situació i aplicar les habilitats i coneixements adquirits per abordar-lo i resoldre'l.
-* Capacitat per aplicar les tècniques específiques de tractament de dades (integració,transformació, neteja i validació) per al seu posterior anàlisi.
+* Capacitat per aplicar les tècniques específiques de tractament de dades (integració, transformació, neteja i validació) per al seu posterior anàlisi.
 
 ## Objectius
 Els objectius concrets d’aquesta pràctica són:
@@ -68,7 +68,7 @@ Els objectius concrets d’aquesta pràctica són:
 ## Descripció del dataset
 Es realitzarà l'anàlisi exploratori (EDA) del dataset https://archive.ics.uci.edu/ml/datasets/HCC+Survival on es recopila informació de pacients amb carcinoma hepatocelullar (HCC) i la seva supervivència a l'any. 
 
-L'HCC és el tumor hepàtic més comú en els pacients amb hepatopatia crónica. La supervivència d'aquests pacients no només depen de l'estadi tumoral si no que també depen de l'estat funcional del fetge. 
+L'HCC és el tumor hepàtic més comú en els pacients amb hepatopatia crònica. La supervivència d'aquests pacients no només depèn de l'estadi tumoral sinó que també depèn de l'estat funcional del fetge. 
 
 El conjunt de dades HCC es va obtenir en l´Hospital Universitari de Coïmbra (Portugal) i contenia diversos factors demogràfics, de risc, de laboratori i de supervivència global de 165 pacients reals diagnosticats de HCC. El conjunt de dades conté 49 funcions seleccionades segons les directrius de pràctica clínica EASL-EORTC (Associació Europea per a l’Estudi del Fetge - Organització Europea per a la Recerca i el Tractament del Càncer), que són els habituals en la gestió de HCC.
 
@@ -78,7 +78,7 @@ Les variables del dataset són:
 
 * **Gender (Gen)**: [1=Home;0=Dona] Sexe del pacient
 
-* **Symptoms (Sym)**:[1=Si;0=No] Sintomàtic
+* **Symptoms (Sym)**:[1=Si;0=No] Simptomàtic
 
 * **Alcohol (Alc)**: [1=Si;0=No] Hepatopatia alcohòlica
 
@@ -90,7 +90,7 @@ Les variables del dataset són:
 
 * **Hepatitis C Virus Antibody (HCV)**: [1=Si;0=No] Anticòs per l'hepatitis C present a la sang
 
-* **Cirrhosis (Cir)**: [1=Si;0=No] Estadio avançat d'hepatopatia crónica
+* **Cirrhosis (Cir)**: [1=Si;0=No] Estadi avançat d'hepatopatia crònica
 
 * **Endemic Countries (End)**: [1=Si;0=No] Pacient procedent de països amb alta prevalença d'hepatitis vírica
 
@@ -110,7 +110,7 @@ Les variables del dataset són:
 
 * **Nonalcoholic Steatohepatitis (Ste)**: [1=Si;0=No] Esteatosis hepàtica de origen no alcohòlic
 
-* **Esophageal Varices (Eso)**: [1=Si;0=No] Presència de varius esofàgiges com indicador d'hipertensió portal
+* **Esophageal Varices (Eso)**: [1=Si;0=No] Presència de varis esofàgiges com indicador d'hipertensió portal
 
 * **Splenomegaly (Spl)**: [1=Si;0=No] Augment del tamany de la melsa com indicador d'hipertensió portal
 
@@ -120,7 +120,7 @@ Les variables del dataset són:
 
 * **Liver Metastasis (Met)**: [1=Si;0=No] Metàstasi hepàtica
 
-* **Radiological Hallmark (Rad)**: [1=Si;0=No]Comportament radiològic típic per HCC
+* **Radiological Hallmark (Rad)**: [1=Si;0=No] Comportament radiològic típic per HCC
 
 * **Age at diagnosis (Age)**: Anys d'edat al moment del diagnóstic de HCC
 
@@ -128,11 +128,11 @@ Les variables del dataset són:
 
 * **Packs of cigarets per year (PCi)**: Número de paquets de cigarrets consumits per any
 
-* **Performance Status (PSt)**: [0=Activo;1=Restringit;2=Asistencia ocasional;3=Asistencia parcial;4=Asistencia total;5=Mort] Escala de l'estat general del pacient oncològic
+* **Performance Status (PSt)**: [0=Actiu;1=Restringit;2=Asistència ocasional;3=Asistència parcial;4=Asistència total;5=Mort] Escala de l'estat general del pacient oncològic
 
 * **Encephalopathy degree (Enc)**: [1=Cap;2=Grau I/II; 3=Grau III/IV] Grau d'afectació mental de l'hepatopatia
 
-* **Ascites degree (Asc)**: [1=Cap;2=Lleu;3=Moderada a Severa] Grau d'ascitis com a indicador indirecte d'hipertensió  portal
+* **Ascites degree (Asc)**: [1=Cap;2=Lleu;3=Moderada a Severa] Grau d'ascitis com a indicador indirecte d'hipertensió portal
 
 * **International Normalised Ratio (INR)**: Temps de protrombina
 
@@ -142,11 +142,11 @@ Les variables del dataset són:
 
 * **Mean Corpuscular Volume (MCV)**: Volum corpuscular mig dels eritrocits
 
-* **Leukocytes(G/L) (Leu)**: Concentració de cél.lules blanques en sang
+* **Leukocytes(G/L) (Leu)**: Concentració de cél·lules blanques en sang
 
 * **Platelets (Pla)**: Concentració de plaquestes en sang
 
-* **Albumin (mg/dL) (Alb)**: Nivelss d'albumina en sang
+* **Albumin (mg/dL) (Alb)**: Nivells d'albumina en sang
 
 * **Total Bilirubin(mg/dL) (BiT)**: Nivells de Bilirrubina Total en sang
 
@@ -156,13 +156,13 @@ Les variables del dataset són:
 
 * **Gamma glutamyl transferase (U/L) (GGT)**: Nivells gamma-GT en sang
 
-* **Alkaline phosphatase (U/L) (ALP)**: Nivelss de fosfatasa alcalina en sang
+* **Alkaline phosphatase (U/L) (ALP)**: Nivells de fosfatasa alcalina en sang
 
 * **Total Proteins (g/dL) (Pro)**: Concentració total de proteïnes en sang
 
 * **Creatinine (mg/dL) (Crea)**: Concentració de creatinina en sang
 
-* **Number of Nodules (Nod)**: Número de nóduls d'HCC visualitzats
+* **Number of Nodules (Nod)**: Número de nòduls d'HCC visualitzats
 
 * **Major dimension of nodule (cm) (DiN)**: Tamany major dels nóduls d'HCC
 
@@ -174,16 +174,16 @@ Les variables del dataset són:
 
 * **Ferritin (ng/mL) (Fer)**: Nivells de ferritina en sang
 
-* **Class Attribute (Class)**:[0=Mort; 1=Viu] Supervivent a l'any del diagnóstic d'HCC
+* **Class Attribute (Class)**:[0=Mort; 1=Viu] Supervivent a l'any del diagnòstic d'HCC
 
 ## Importància i objectius de l'anàlisi
 Amb les dades recopilades al dataset podem intentar saber quines variables estan més relacionades amb la supervivència a l'any. Podem conèixer el grau de correlació entre les variables independents per finalment definir un model de regressió logística per tal d'intentar predir la mortalitat a l'any amb les variables seleccionades.
 
-Poder conèixer la probabilitat de supervivència d'un pacient amb diagnóstic recent d'HCC podrà fer que s'adaptin millors les opcions de tractament, sent més agressius en pacients amb alta probilitat de sobreviure, i en canvi, optant per terapies pal·liatives o de confort per pacients amb pitjor prosnóstic.
+Poder conèixer la probabilitat de supervivència d'un pacient amb diagnòstic recent d'HCC podrà fer que s'adaptin millors les opcions de tractament, sent més agressius en pacients amb alta probabilitat de sobreviure, i en canvi, optant per teràpies pal·liatives o de confort per pacients amb pitjor pronòstic
 
 ## Integració i selecció de les dades d’interès a analitzar
 
-En el nostre cas, només tenim una base de dades, pel que no farem cap integració amb altres fonts i seleccionarem totes les dades a analitzar ja que a priori totes en son importants. Quan fem l'anàlisi de les dades ja seleccionarem aquelles que considerem més importants per tal de donar resposta a l'objectiu d'aquest anàlisi.
+En el nostre cas, només tenim una base de dades, pel que no farem cap integració amb altres fonts i seleccionarem totes les dades a analitzar, ja que a priori totes en són importants. Quan fem l'anàlisi de les dades ja seleccionarem aquelles que considerem més importants per tal de donar resposta a l'objectiu d'aquest anàlisi.
 
 ### Preparació del dataset
 
@@ -233,8 +233,7 @@ Al nostre dataset, tenim `r tipVar[1]` variables de tipus `r names(tipVar)[1]` i
 
 ### Descripció del dataset
 
-
-El dataset està compost de 165 observacions de 49 atributs de pacients amb una variable de classe que registra la supervivència a l'any del diagnóstic. Dels atributs dels pacients, existeixen 26 categorics, 3 dels quals són ordinals ( _Performance Status_, _Encephalopathy degree_, _Ascites degree_), sent la resta numérics. És pot veure que existeixen valors nuls codificats com _NA_.
+El dataset està compost de 165 observacions de 49 atributs de pacients amb una variable de classe que registra la supervivència a l'any del diagnòstic. Dels atributs dels pacients, existeixen 26 categòrics, 3 dels quals són ordinals ( _Performance Status_, _Encephalopathy degree_, _Ascites degree_), sent la resta numèrics. Es pot veure que existeixen valors nuls codificats com _NA_.
 
 ```{r}
 # Definició de tipus de dades per columna
@@ -252,7 +251,7 @@ hcc <- hcc %>% mutate_at(vars(c(27:29)), as.factor)
 
 ## Neteja de les dades
 
-En aquest apartat ens encarregarem de deteminar la precècncia de valors nuls o buits i com els tractem 
+En aquest apartat ens encarregarem de deteminar la presència de valors nuls o buits i com els tractem. 
 
 ### Valors nuls o buits
 
@@ -290,7 +289,7 @@ kable(x = tau, format = "latex", caption = "Variables amb NA",
 
 Només hi ha 8 pacients amb les dades completes, faltant a la majoria de pacients entre 2 i 9 dades. Fins i tot hi ha pacients 13 pacients amb més de 10 dades desconegudes.
 
-Estudiant la distribució dels valors desconeguts per variable veiem que només hi ha 6 variables amb totes les dades íntegres. Amb més de l'10% de dades desconegudes hi ha 16 de les 50 varibles (un 32%), destacant 9 varibles amb entre el 20 i el 50% de les seves dades desconegudes, com són la saturació d'oxigen o els nivells de ferritina en sang. Els valors NA poden seguir una distribució a l'atzar de manera que la proporció dels esperats en cada classe hauria de ser similar. En cas contrari, la correcció dels valors desconeguts podria provocar un biaix cap a un dels dos grups. Vegem com es distribueixen en les variables els valors missing i si hi ha difrències significatives depenent de la clase.
+Estudiant la distribució dels valors desconeguts per variable veiem que només hi ha 6 variables amb totes les dades íntegres. Amb més de l'10% de dades desconegudes hi ha 16 de les 50 variables (un 32%), destacant 9 variables amb entre el 20 i el 50% de les seves dades desconegudes, com són la saturació d'oxigen o els nivells de ferritina en sang. Els valors NA poden seguir una distribució a l'atzar de manera que la proporció dels esperats en cada classe hauria de ser similar. En cas contrari, la correcció dels valors desconeguts podria provocar un biaix cap a un dels dos grups. Vegem com es distribueixen en les variables els valors missing i si hi ha diferències significatives depenent de la classe.
 
 ```{r message= FALSE, warning=FALSE}
 # Valoració de la distribució dels NA a les variables amb respecte la variable classe 
@@ -321,20 +320,20 @@ kable(x = testSig, format = "latex",
   kable_styling(latex_options = c("HOLD_position"))
 
 ```
-A la variable `Symptoms` s'observen molts NA entre els pacients que sobreviuen. Els pacients que no sobreviuen solen presentar molta simptomatologia i aquesta es registra. En canvi, els pacients que no presenten símptomes, poden no registrar-se com a negatiu a aquesta variable, existint un biaix d'informació. 
 
-Igualment succeix a les variables `Hemochromatosis` i `Esophageal Varices`. Els pacients afectats es registren i probablement presenten tases mes altes de mortalitat. En canvi, molts pacients es desconeixerà si presenten hemocromatosis o varius, però probablement no la patiran, i tindran tases de supervivència superiors. 
+A la variable 'Symptoms' s'observen molts NA entre els pacients que sobreviuen. Els pacients que no sobreviuen solen presentar molta simptomatologia i aquesta es registra. En canvi, els pacients que no presenten símptomes, poden no registrar-se com a negatiu a aquesta variable, existint un biaix d'informació.
 
-Corregir aquest valors desconeguts cap a la moda condicionarà un biaix. Per tant, per corregir els valors NA es farà:
+Igualment succeïx a les variables 'Hemochromatosis' i 'Esophageal Varices'. Els pacients afectats es registren i probablement presenten tasses més altes de mortalitat. En canvi, molts pacients es desconeixerà si presenten hemocromatosis o varius, però probablement no la patiran, i tindran tasses de supervivència superior.
 
-* A totes les variables qualitatives s'asignarà el valor més pròxim utilitzant l'algoritme kNN
+Corregir aquests valors desconeguts cap a la moda condicionarà un biaix. Per tant, per corregir els valors NA es farà:
 
-* A les variables quantitatives s'asignarà la mitjana de la variable. Per tal de no tenir una mitjana condicionada per valors erronis extrems, es corregiran abans de l'asignació del valor mitjà als valors desconguts.
+* A totes les variables qualitatives s'assignarà el valor més pròxim utilitzant l'algoritme kNN
+
+* A les variables quantitatives s'assignarà la mitjana de la variable. Per tal de no tenir una mitjana condicionada per valors erronis extrems, es corregiran abans de l'assignació del valor mitjà als valors desconeguts.
 
 ### Correcció valors nuls de variables categòriques
 
-S'asigna el valor més próxim d'entre k=5 als valor NA de les variables categòriques. 
-
+S'assigna el valor més pròxim d'entre k=5 als valor NA de les variables categòriques. 
 
 ```{r message= FALSE, warning=FALSE}
 #computem tots els valors NA de variables factor
@@ -348,12 +347,12 @@ hcc <- kNN(hcc, variable = factorNames) %>% subset(select = Gender:`Class Attrib
 
 ### Correcció valors  o extrems de variables quantitatives
 
-Existeixen dues variables amb valors extranys, incompatibles amb la vida; son `Leukocytes` i `Platelets`
-La gran majoria dels valors a la variable `Leukocytes` estan per sota de 100, que és l'esperat. Valors majors son pràcticament impossibles. Els valors d'aquesta variable es solen expressar sobre mm3 pel que solen tenir valors múltiples de 1000, d'aquí la probable confusió amb els valors extrems trobats. Es corregiran modificant les unitats d'aquest valors.
+Existeixen dues variables amb valors estranys, incompatibles amb la vida; són `Leukocytes` i `Platelets`
+La gran majoria dels valors a la variable `Leukocytes` estan per sota de 100, que és l'esperat. Valors majors són pràcticament impossibles. Els valors d'aquesta variable es solen expressar sobre mm3 pel que solen tenir valors múltiples de 1000, d'aquí la probable confusió amb els valors extrems trobats. Es corregiran modificant les unitats d'aquests valors.
 
 Amb respecte `Platelets`, l'error és similar al trobat a l'anterior variable.
 
-Es corregeix els errors i s'assigna la mediana als valors desconeguts
+Es corregeix els errors i s'assigna la mediana als valors desconeguts.
 
 ```{r message= FALSE, warning=FALSE}
 # Correcció valors leucocitosi i plaquetes +
@@ -367,16 +366,15 @@ for (i in hcc_num){
 }
 ```
 
-Per a la resta de valors, com es veurà a continuació en l'anàlisi de les variables numèriques, els valors extrems o outliers, els considerarem facttibles ja que biològicament tenen sentit i no farem cap tractament especial més.
-
+Per a la resta de valors, com es veurà a continuació en l'anàlisi de les variables numèriques, els valors extrems o outliers, els considerarem factibles, ja que biològicament tenen sentit i no farem cap tractament especial més.
 
 
 ## Anàlisi de les dades
 
 ### Variables numèriques
 
-Per fer l'anàlisi de les dades numèriques, farem 2 plots per a cada variable. El primer correspon a un análisi dels dels valors numèrics 
-i el segon es el boxplot. Sempre separant la variable estudiada en dos clases, les que moren i les que sobreviveixen.
+Per fer l'anàlisi de les dades numèriques, farem 2 plots per a cada variable. El primer correspon a una anàlisi dels valors numèrics
+i el segon és el boxplot. Sempre separant la variable estudiada en dues classes, les que moren i les que sobreviuen.
 
 ```{r message=FALSE, warning=FALSE}
 # Estudi distribució variables Numeriques
@@ -434,7 +432,7 @@ for (i in 1:ncols) {
 
 ### Variables logarítmiques
 
-Crida l'atenció vàries variables amb una distribució molt desplaçada cap a valors baixos però amb valors extrems alts. Molts son valors de laboratori, i sembla que s'adapten més a distribucions logarítmiques, per el que es modificaran. Aquestes variables son:
+Crida l'atenció diverses variables amb una distribució molt desplaçada cap a valors baixos però amb valors extrems alts. Molts són valors de laboratori, i sembla que s'adapten més a distribucions logarítmiques, pel que es modificaran. Aquestes variables són:
 
 * Alpha-Fetoprotein (ng/mL)
 
@@ -518,7 +516,7 @@ for (i in 1:ncols){
 
 ### Variables qualitatives
 
-Fe una primera exploració visual d'aquest tipus de variable:
+Fem una primera exploració visual d'aquest tipus de variable:
 
 ```{r message= FALSE, warning=FALSE}
 # Distribució variables quantitatives
@@ -576,12 +574,12 @@ for (i in 1:ncols) {
 
 ```
 
-De les variables quantitatives podem veure que entre elles hi ha força diferència en la proporció de persones que sobreviveixen segons els valor de la variable. Per exemple, per a la variable Smoking aquesta diferència no es notable però per Ascites degree si que ho és. 
-És a dir, podem preveure que si que hi haurà variables que influiran en la mortalitat d'aquest pacients i d'altres que semblen que no.
+De les variables quantitatives podem veure que entre elles hi ha força diferència en la proporció de persones que sobreviuen segons el valor de la variable. Per exemple, per a la variable Smoking aquesta diferència no és notable, però per Ascites degree sí que ho és.
+És a dir, podem preveure que sí que hi haurà variables que influiran en la mortalitat d'aquests pacients i d'altres que semblen que no.
 
 ### Comprobació de la normalitat i homogeneïtat de la variància
 
-Per la comprobació de la distribució normal dels valors quantitatius farem servir la prova de normalitat d'Anderson-Darling.
+Per la comprovació de la distribució normal dels valors quantitatius farem servir la prova de normalitat d'Anderson-Darling.
 
 ```{r message= FALSE, warning=FALSE}
 #Test Anderson-Darling per a la normalitat
@@ -611,9 +609,9 @@ kable(x = tau, format = "latex", caption = "Variables que no segueixen una distr
 
 ```
 
-Com es pot veure, hi ha moltes variables numériques que és distancien significativament de la distribució normal, per el que es faran servir test no paramétrics (Mann–Whitney–Wilcoxon) per la comparativa en relació a la supervivència. 
+Com es pot veure, hi ha moltes variables numèriques que es distancien significativament de la distribució normal, pel que es faran servir test no paramètrics (Mann–Whitney–Wilcoxon) per la comparativa amb relació a la supervivència.
 
-Només hi ha quatre variables que no es pot asegurar que no segueixin una distribució normal. Comprovarem si aquestes mantenen una variança similar entre els grups formats per la classe amb el test de Levene.
+Només hi ha quatre variables que no es pot assegurar que no segueixin una distribució normal. Comprovarem si aquestes mantenen una variància similar entre els grups formats per la classe amb el test de Levene.
 
 ```{r}
 #Test Levene per homogeneïtat de la variància
@@ -633,17 +631,17 @@ kable(x = tVar, format = "latex", caption = "Homogeneitat de la varinça a parti
 
 ```
 
-Com es pot veure, només dues de totes les variables quantitatives ( __Haemoglobin (g/dL)__ i __log_Gamma glutamyl transferase (U/L)__) segueixen una distribució normal i no tenen diferències significatives entre les variances entre la població que sobreviu i la que no. 
+Com es pot veure, només dues de totes les variables quantitatives ( __Haemoglobin (g/dL)__ i __log_Gamma glutamyl transferase (U/L)__) segueixen una distribució normal i no tenen diferències significatives entre les variàncies entre la població que sobreviu i la que no.
 
 ## Proves estadístiques
 
 ### Comparació entre grups de la classe
 
-Per tal de valorar quines variables es comporten diferents entre en que sobreviuen i els que no, es realitzarà els diferents test estadístics:
+Per tal de valorar quines variables es comporten diferents entre en què sobreviuen i els que no, es realitzarà els diferents tests estadístics:
 
 * Per les variables qualitatives es realitzarà un test chi-quadrat.
 
-* Per les variables quantititatives, donada les seves distribucións majoritària diferent a la normalitat, es realitzara el test no paramètric de Mann–Whitney–Wilcoxon
+* Per les variables quantitatives, donada les seves distribucions majoritària diferent de la normalitat, es realitzarà el test no paramètric de Mann–Whitney–Wilcoxon
 
 ```{r message= FALSE, warning=FALSE}
 
@@ -693,12 +691,12 @@ kable(x = tau, format = "latex", caption = "Variables numériques amb p<0.10 ent
   kable_styling(latex_options = c("HOLD_position", "scale_down"))
 ```
 
-Aquestes variables seran les que es seleccionarà per a la creació d'un model de regressió logística, però abans, valorarem les correlacions entre elles per tal de seleccionar variables que estiguin poc relacionades entre elles.
+Aquestes variables seran les que se seleccionarà per a la creació d'un model de regressió logística, però abans, valorarem les correlacions entre elles per tal de seleccionar variables que estiguin poc relacionades entre elles.
 
 
 ### Correlació entre les variables seleccionades
 
-Amb respecte a la correlació entre les variables seleccionades, veiem la seva matriu de correlacions. Donada l'existència de variables categóriques, aquestes es consideradan numériques i usarem la correlació no paramétrica de Spearman per a la seva valoració. Previament es normalitzaran totes les variables quantitatives.
+Respecte a la correlació entre les variables seleccionades, veiem la seva matriu de correlacions. Donada l'existència de variables categòriques, aquestes és consideraran numèriques i usarem la correlació no paramètrica de Spearman per a la seva valoració. Prèviament es normalitzaran totes les variables quantitatives.
 
 ```{r message= FALSE, warning=FALSE,fig.width=16,fig.height=12}
 # Correlació variables independents.
@@ -740,11 +738,11 @@ corrplot(hcc_cor, cl.pos='n',tl.srt = 45,
          order="FPC", diag=FALSE)
 ```
 
-Com es pot veure, només dues variables tenen una molt alta correlació ( __Iron__ i __Oxygen Saturation (%)__). De les dues, seleccionarem __Iron__ que es la que presenta un menor probabilitat de significació.
+Com es pot veure, només dues variables tenen una molt alta correlació ( __Iron__ i __Oxygen Saturation (%)__). De les dues, seleccionarem __Iron__ que és la que presenta una menor probabilitat de significació.
 
 ### Creació de noves variables
 
-Hi ha un valor extès per a valorar la probabilitat de mort als tres mesos de pacients amb hepatopatia que depend de la creatinina, la bilirrubina total i del INR, amb un valor calculat denominat [MELD](https://es.wikipedia.org/wiki/Escala_MELD). Aquest valor és una estimació de probabilitat de fallida hepàtica. A majors valors major probabilitat de mort. Aquest valor està validat pels 3 mesos, no per a l'any, com es el nostre cas. 
+Hi ha un valor conegut per a valorar la probabilitat de mort al cap de tres mesos de pacients amb hepatopatia que depèn de la creatinina, la bilirubina total i de l'INR, amb un valor calculat denominat [MELD](https://es.wikipedia.org/wiki/Escala_MELD). Aquest valor és una estimació de probabilitat de fallida hepàtica. A majors valors major probabilitat de mort. Aquest valor està validat pels tres mesos, no per a l'any, com és el nostre cas.
 
 ```{r message= FALSE, warning=FALSE, fig.width=3,fig.height=3}
 # MELC calculat vs clase
@@ -766,7 +764,7 @@ y = hcc %>% filter(`Class Attribute`==0) %>% pull(MELD)
 wilcox.test(x,y, mu = 0,paired = FALSE, conf.int = 0.95)
 ```
 
-És pot veure que els valors de MELD són significativament diferents entre el grup de pacients que sobreviuen i els que no. Amb aquesta combinació lineal agrupem en una única varible la bilirrubina total, l'INR i la creatinina.
+Es pot veure que els valors de MELD són significativament diferents entre el grup de pacients que sobreviuen i els que no. Amb aquesta combinació lineal agrupem en una única variable la bilirubina total, l'INR i la creatinina.
 
 ### Selecció de variables significatives
 
@@ -788,7 +786,7 @@ Per tant, les variables seleccionades per estudiar amb regressió logística ser
 
 ## Resolució del problema, model amb regressió logística
 
-Amb les variables seleccionades, es crearà un model de regressió logística per tal de predir la supervivència a l'any del diagnóstic d'HCC. La variable ordinal es considerarà numérica.  
+Amb les variables seleccionades, es crearà un model de regressió logística per tal de predir la supervivència a l'any del diagnòstic d'HCC. La variable ordinal es considerarà numèrica.  
 
 ```{r message= FALSE, warning=FALSE}
 #Model logit
@@ -821,7 +819,7 @@ mosaic(matConf, shade = T, colorize = T,
 presPred <- 100*(matConf[1]+matConf[4])/nrow(hcc_sel)
 ```
 
-Aquest model amb totes les variables té un `r round(presPred,1)`\% de d'èxit en la predicció de la supervivència del pacient.
+Aquest model amb totes les variables té un `r round(presPred,1)`\% d'èxit en la predicció de la supervivència del pacient.
 Pintem la corba ROC i auc del model:
 
 ```{r}
@@ -839,8 +837,8 @@ auc(roc(`Class Attribute` ~ prob,data = hcc))
 
 Podem veure que tenen valors molts bons.
 
-El nostre objectiu es construir un segon model de regressió logística fent servir menys variables, eviatant així haver de conèixer moltes variables d'un pacient i amb unes miques menys poder també fer la predicció.
-Per tal de seleccionar un model amb menys atributs sense disminuir excesivament l'error del model, es realitzarà un estudi iteratiu eliminant a cada pas la variable menys significativa ("backward").
+El nostre objectiu és construir un segon model de regressió logística fent servir menys variables, evitant així haver de conèixer moltes variables d'un pacient i amb unes miques menys poder també fer la predicció.
+Per tal de seleccionar un model amb menys atributs sense disminuir excessivament l'error del model, es realitzarà un estudi iteratiu eliminant a cada pas la variable menys significativa ("backward").
 
 ```{r message= FALSE, warning=FALSE}
 #Model logit mètode backward
@@ -848,7 +846,7 @@ modback <- stepAIC(modelo, trace=FALSE, direction="backward")
 summary(modback)
 ```
 
-Podem veure com aquest model selecciona fins a 7 variables. Podem veure com l'AIC es menor en aquest model. Calculem la matriu de confusió i el percentatge d'encert en la predicció:
+Podem veure com aquest model selecciona fins a 7 variables. Podem veure com l'AIC és menor en aquest model. Calculem la matriu de confusió i el percentatge d'encert en la predicció:
 
 ```{r message= FALSE, warning=FALSE}
 #prediccio resultat + matriu de confusió
@@ -867,7 +865,7 @@ presPred2 <- 100*(matConf[1]+matConf[4])/nrow(hcc_sel)
 ```
 
 El model generat te només 7 variables i obté un `r round(presPred2,1)`\% de precisió en les prediccions. 
-Pel que fa a la especifitat i sensibilitat del model:
+Pel que fa a l'especifitat i sensibilitat del model:
 
 ```{r}
 #predicció variables
@@ -881,11 +879,11 @@ plot.roc(`Class Attribute` ~ prob2,data = hcc,legacy.axes = TRUE)
 auc(roc(`Class Attribute` ~ prob2,data = hcc))
 ```
 
-Podem veure com el valor de AUC es també una mica pitjor.
+Podem veure com el valor de AUC és també una mica pitjor.
 
-Si poguessim tenir totes les dades possibles, ens quedariem amb el primer model, ja que té una millor predicció de les dades i un valor AUC més elevat. No obstant, reduint quasi a la meitat el número de variables podem obtenir un resultats molt bons. 
+Si poguéssim tenir totes les dades possibles, ens quedaríem amb el primer model, ja que té una millor predicció de les dades i un valor AUC més elevat. Tanmateix, reduint quasi a la meitat el nombre de variables podem obtenir uns resultats molt bons.
 
-Per tant, hem construit un model logístic, que ens determina la supervivència o no d'un pacient en base a uns indicadors mèdics amb un 80\% aproximadament d'èxit. Es un molt bon punt per anar refinant el model i millorar el seu ajust.
+Per tant, hem construït un model logístic, que ens determina la supervivència o no d'un pacient d'acord amb uns indicadors mèdics amb un 80\% aproximadament d'èxit. És un molt bon punt per anar refinant el model i millorar el seu ajust.
 
 \newpage 
 
