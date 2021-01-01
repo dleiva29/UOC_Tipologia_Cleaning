@@ -7,6 +7,7 @@ output:
     toc: yes
     toc_depth: '3'
     number_sections: true
+    extra_dependencies: "subfig"
   html_document:
     highlight: default
     number_sections: yes
@@ -15,7 +16,12 @@ output:
     toc_depth: 3
 header-includes:
 - \usepackage{float}
+- \usepackage{subfig}
 ---
+
+\listoffigures
+
+\listoftables
 
 ```{r setup, include=FALSE,}
 knitr::opts_chunk$set(echo = TRUE, fig.width=6, fig.height=4, message= FALSE, warning=FALSE)
@@ -193,7 +199,7 @@ download.file("https://archive.ics.uci.edu/ml/machine-learning-databases/00423/h
               "../data/hcc_data.zip")
 unzip("../data/hcc_data.zip",exdir = "../data")
 hcc<-read.csv("../data/hcc-survival/hcc-data.txt",header = F, dec = ".",
-               stringsAsFactors = F, na.strings = "?")
+              stringsAsFactors = F, na.strings = "?")
 write.csv(hcc, file = "../data/hcc_data.csv")
 
 # Noms de les variables
@@ -433,7 +439,7 @@ for (i in 1:ncols) {
       
       grid.arrange(a1,a2,a3,a4,nrow=2)
     } else{
-      grid.arrange(a1,a2,nrow=1)
+      grid.arrange(a1,a2,nrow=1 )
     }
   }
 }
@@ -524,6 +530,91 @@ for (i in 1:ncols){
 ### Variables qualitatives
 
 Fem una primera exploració visual d'aquest tipus de variable:
+
+\newpage
+
+# Versio Prova
+
+```{r}
+captions <- c("Caption 1",
+              "Caption 2", 
+              "Caption 3",
+              "Caption 4: a very very very very very very very very very long one")
+
+hcc_factorT<-c(1:2)
+
+listOfPlots <- list()
+name_plot <- names(hcc)[hcc_factorT]
+name_plot2 <- c()
+for( i in 1:length(name_plot)){
+  np <- c(paste(name_plot[i], "Frequencia", sep = ' '),paste(name_plot[i], "Proporcio", sep = ' '))
+  name_plot2 <- c(name_plot2, np)
+}
+
+```
+
+```{r fig.width=3, fig.height=2, results='asis', fig.ncol = 2, fig.cap=name_plot, fig.subcap=name_plot2}
+
+#hcc_factorT<-c(1:23,27:29)
+hcc_factorT<-c(1:2)
+
+listOfPlots <- list()
+name_plot <- names(hcc)[hcc_factorT]
+
+#emparejar els grafics de 2 en 2. Si son senars, deixar una sola
+# grafic 1 - diagrama barres
+# grafic 2 - diagrama barres proporció
+for (i in 1:length(hcc_factorT) ) {
+  data <- hcc[,c(hcc_factorT[i],ind_CA )]
+  name_var <- names(data)
+  
+  a1<-data %>% 
+    ggplot(aes(x=data[,1],fill=`Class Attribute`))+ 
+    geom_bar() +
+    labs(fill="Clase", x = name_var[1], y = "Frequencia") + 
+    theme(legend.position = "bottom",
+          plot.caption = element_text(hjust = 0.5))
+  
+  a2<- data %>% 
+    ggplot(aes(x=data[,1],fill=`Class Attribute`))+ 
+    geom_bar(position = "fill") +
+    labs(fill="Clase", x = name_var[1], y = "Proporcio") +
+    theme(legend.position = "bottom",
+          plot.caption = element_text(hjust = 0.5))
+  
+   print(a1)
+   print(a2)
+   
+   cat('\n\n')
+  
+  
+  
+  # grid.arrange(a1, a2, ncol=2,
+  #            top = textGrob("Figure 2: this time with no bottom caption",
+  #                           x = 0, y = 0.5,
+  #                           just = "left",
+  #                           gp = gpar(fontsize = 14)))
+  
+  name1 <- paste(name_var[1],1, sep = "")
+  name2 <- paste(name_var[1],2, sep = "")
+  listOfPlots[[name1]] <- a1
+  listOfPlots[[name2]] <- a2
+}
+```
+
+```{r  fig-sub,message=FALSE, warning=FALSE, fig.width=3, fig.height=2, results="asis" , fig.ncol = 2, fig.cap= name_plot, fig.subcap=name_plot2}
+
+len <- length(listOfPlots)/2
+
+for(i in 1:len){
+  print(listOfPlots[[(2*i-1)]])
+  print(listOfPlots[[2*i]])
+  cat('\n\n')
+}
+
+```
+
+\newpage
 
 ```{r message= FALSE, warning=FALSE}
 # Distribució variables quantitatives
