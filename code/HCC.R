@@ -12,7 +12,7 @@ library(MASS)
 library(vcd)
 library(pROC)
 
-# Importació del dataset
+# ImportaciÃ³ del dataset
 download.file("https://archive.ics.uci.edu/ml/machine-learning-databases/00423/hcc-survival.zip",
               "../data/hcc_data.zip")
 unzip("../data/hcc_data.zip",exdir = "../data")
@@ -57,13 +57,13 @@ kable(x = tipVar, format = "latex", caption = "Tipus de dades carregades",
   kable_styling(latex_options = c("HOLD_position")) %>% 
   row_spec(row=0, bold = TRUE)
 
-# Definició de tipus de dades per columna
+# DefiniciÃ³ de tipus de dades per columna
 hcc_factor <-c(1:23,50)
 hcc_order <- c(27:29)
 hcc_factorT<-c(1:23,27:29,50)
 hcc_num<-c(24:26,30:49)
 
-# Factorització de les columnes categóriques
+# FactoritzaciÃ³ de les columnes categÃ²riques
 hcc <- hcc %>% mutate_at(vars(c(1:23,50)), as.factor)
 hcc <- hcc %>% mutate_at(vars(c(27:29)), as.factor)
 
@@ -74,7 +74,7 @@ kable(x = tauNuls, format = "latex", caption = "Valors nuls per pacient",
   kable_styling(latex_options = c("HOLD_position")) %>% 
   row_spec(row=0, bold = TRUE)
 
-#Funció que calcula percentatge
+#FunciÃ³ que calcula percentatge
 funNA <- function(a, n){
   a = round(100*a/n,1)
 }
@@ -96,7 +96,7 @@ kable(x = tau, format = "latex", caption = "Variables amb NA",
       booktabs = TRUE, linesep = '') %>% 
   kable_styling(latex_options = c("HOLD_position", "scale_down")) %>% 
   row_spec(row=0, bold = TRUE)
-# Valoració de la distribució dels NA a les variables amb respecte la variable classe 
+# ValoraciÃ³ de la distribuciÃ³ dels NA a les variables amb respecte la variable classe 
 cero  <- hcc %>% filter(`Class Attribute` == 0)
 uno  <- hcc %>% filter(`Class Attribute` == 1)
 
@@ -113,13 +113,13 @@ for (i in names(hcc[,hcc_factorT])) {
   }
 }
 
-#Filtrar aquelles que rebutjen l'hip nul·la
+#Filtrar aquelles que rebutjen l'hip nulÂ·la
 testSig <- probTest %>% filter(p_value <= 0.05) %>% 
   mutate_at(.vars = c("p_value", "prob_0","prob_1","numNA_0", "numNA_1"), as.numeric)
 
-#Presentació de resultats
+#PresentaciÃ³ de resultats
 kable(x = testSig, format = "latex",
-      caption = "Variables amb una difència significativa de NA entre els grups de la classe",
+      caption = "Variables amb una diferÃ¨ncia significativa de NA entre els grups de la classe",
       booktabs = TRUE, digits = 4, linesep = '') %>% 
   kable_styling(latex_options = c("HOLD_position")) %>% 
   row_spec(row=0, bold = TRUE)
@@ -130,8 +130,8 @@ factorNames<- colnames(hcc[hcc_factorT,])
 # Computar per kNN, abm valors standars, k = 5
 hcc <- kNN(hcc, variable = factorNames) %>% subset(select = Gender:`Class Attribute`)
 
-# Correcció valors leucocitosi i plaquetes +
-# assignació mediana als valors NA de variables numeriques
+# CorrecciÃ³ valors leucocitosi i plaquetes +
+# assignaciÃ³ mediana als valors NA de variables numeriques
 hcc <- hcc %>% 
   mutate(`Leukocytes(G/L)` = ifelse(`Leukocytes(G/L)` > 100,`Leukocytes(G/L)`/100, `Leukocytes(G/L)`),
          Platelets = ifelse(Platelets < 1000,Platelets*1000, Platelets))
@@ -140,11 +140,11 @@ for (i in hcc_num){
   hcc[,i] <- ifelse(is.na(hcc[,i]),median(hcc[,i], na.rm = T),hcc[,i])
 }
 
-# Exportación de les dades netes en .csv
+# ExportaciÃ³ de les dades netes en .csv
 hcc_clean <- hcc
 write.csv(hcc_clean, file = "../data/hcc_data_clean.csv")
 
-# Estudi distribució variables Numeriques
+# Estudi distribuciÃ³ variables Numeriques
 ind_CA <- which(colnames(hcc) == "Class Attribute")
 figCapsNum <- names(hcc)[hcc_num]
 
@@ -169,7 +169,7 @@ for (i in 1:length(hcc_num)) {
   cat('\n\n')
 }
 
-# Transformació logarítmica de variables numériques
+# TransformaciÃ³ logarÃ­tmica de variables numÃ¨riques
 ind_CA <- which(colnames(hcc) == "Class Attribute")
 hcc_log<-c(31,37:43,46)
 figCapsLog <- names(hcc)[hcc_log]
@@ -199,12 +199,12 @@ for (i in 1:length(hcc_log)){
   cat('\n\n')
 }
 
-# Distribució variables quantitatives
+# DistribuciÃ³ variables quantitatives
 hcc_factorT<-c(1:23,27:29)
 figCapsFac <- names(hcc)[hcc_factorT]
 
 # grafic 1 - diagrama barres
-# grafic 2 - diagrama barres proporció
+# grafic 2 - diagrama barres proporciÃ³
 for (i in 1:length(hcc_factorT) ) {
   data <- hcc[,c(hcc_factorT[i],ind_CA )]
   name_var <- names(data)
@@ -227,7 +227,7 @@ for (i in 1:length(hcc_factorT) ) {
   cat('\n\n')
 }
 
-#Test Levene per homogeneïtat de la variància
+#Test Levene per homogeneÃ¯tat de la variÃ ncia
 tVar <- tibble()
 
 for (i in var_normales){
@@ -238,7 +238,7 @@ for (i in var_normales){
 tVar <- tVar %>%mutate_at(.vars = c("p_value"), as.numeric)
 
 #presentacio de resultats
-kable(x = tVar, format = "latex", caption = "Homogeneitat de la varinça a partir del test de Levene.",
+kable(x = tVar, format = "latex", caption = "Homogeneitat de la variÃ ncia a partir del test de Levene.",
       booktabs = TRUE, digits = 4, linesep = '') %>% 
   kable_styling(latex_options = c("HOLD_position")) %>% 
   row_spec(row=0, bold = TRUE)
@@ -251,7 +251,7 @@ for (i in hcc_factorT) {
   testChi <- testChi %>% bind_rows(c(Variable=names(hcc[i]),p_value = chi$p.value))
 }
 
-#Filtrar les que rebutgen hipotesis nul·la
+#Filtrar les que rebutgen hipotesis nulÂ·la
 tau <- testChi %>% filter(p_value < 0.1) %>% 
   mutate_at(.vars = c("p_value"), as.numeric)
 
@@ -259,7 +259,7 @@ tau <- testChi %>% filter(p_value < 0.1) %>%
 varSig <- tau
 
 #Presentacio de resultats
-kable(x = tau, format = "latex", caption = "Variables categóriques amb p<0.10 entre la classe",
+kable(x = tau, format = "latex", caption = "Variables categÃ²riques amb p<0.10 entre la classe",
       booktabs = TRUE, digits = 4, linesep = '') %>% 
   kable_styling(latex_options = c("HOLD_position")) %>% 
   row_spec(row=0, bold = TRUE)
@@ -274,7 +274,7 @@ for (i in hcc_num) {
     bind_rows(c(Variable=names(hcc[i]),p_value = wil$p.value))
 }
 
-#Filtrar les que rebutgen hipotesis nul·la
+#Filtrar les que rebutgen hipotesis nulÂ·la
 tau <- testWil %>% filter(p_value < 0.1) %>% 
   mutate_at(.vars = c("p_value"), as.numeric)
 
@@ -285,12 +285,12 @@ varSig <- varSig %>% bind_rows(tau)
 tau <- cbind(tau[1:6,],tau[7:12,])
 
 #Presentacio de resultats
-kable(x = tau, format = "latex", caption = "Variables numériques amb p<0.10 entre la classe",
+kable(x = tau, format = "latex", caption = "Variables numÃ¨riques amb p<0.10 entre la classe",
       booktabs = TRUE, digits = 4, linesep = '') %>% 
   kable_styling(latex_options = c("HOLD_position", "scale_down")) %>% 
   row_spec(row=0, bold = TRUE)
 
-# Correlació variables independents.
+# CorrelaciÃ³ variables independents.
 hcc_norm <- hcc
 atr<-names(hcc) 
 
@@ -301,7 +301,7 @@ hcc_norm[,hcc_num]<-scale(hcc_norm[,hcc_num])
 hcc2<-as.data.frame(lapply(hcc_norm,as.numeric))
 names(hcc2)<-atr
 
-#correlacio Spearman + filtrar alta correlació
+#correlacio Spearman + filtrar alta correlaciÃ³
 hcc_cor<-cor(hcc2[,varSig$Variable], method = "spearman")
 col.names <- colnames(hcc_cor)
 hcc_corTop <- as.tibble(hcc_cor) %>% melt()
@@ -317,9 +317,9 @@ hcc_corTop <- hcc_corTop %>%
   dplyr::select(Variables, corr) %>% 
   unique()
 
-#Presentació variables altament correlades
+#PresentaciÃ³ variables altament correlades
 kable(x = hcc_corTop, format = "latex",
-      caption = "Correlació entre variables, valors entre -1 i -08 o 0-8 i 1.",
+      caption = "CorrelaciÃ³ entre variables, valors entre -1 i -08 o 0-8 i 1.",
       booktabs = TRUE, digits = 4, linesep = '') %>% 
   kable_styling(latex_options = c("HOLD_position")) %>% 
   row_spec(row=0, bold = TRUE)
@@ -336,7 +336,7 @@ hcc <- hcc %>%
            9.57*hcc$`log_Creatinine (mg/dL)`+
            6.43 )
 
-#Boxplot per veure la distribució repsecte clase
+#Boxplot per veure la distribuciÃ³ repsecte clase
 hcc %>%
   ggplot(aes(x=`Class Attribute`,y=MELD)) +
   geom_boxplot() +
@@ -362,22 +362,22 @@ hcc_sel <- hcc[c(var_selecc, "MELD", "Class Attribute")] %>%
 modelo <- glm(`Class Attribute` ~ ., data = hcc_sel, family = "binomial")
 summary(modelo)
 
-#Prediccions de resultats + matriu de confusió
+#Prediccions de resultats + matriu de confusiÃ³
 pred1 <- ifelse(test = modelo$fitted.values > 0.50, yes = 1, no = 0)
 matConf <- table(hcc_sel$`Class Attribute`, pred1,
                  dnn = c("observacions", "prediccions"))
 
 kable(x = matConf, format = "latex",
-      caption = "Matriu de confusió model general, prediccions per columna, observacions per files",
+      caption = "Matriu de confusiÃ³ model general, prediccions per columna, observacions per files",
       booktabs = TRUE, linesep = '') %>% 
   kable_styling(latex_options = c("HOLD_position")) %>% 
   row_spec(row=0, bold = TRUE)
 
-#Grafic de matriu de confusió
+#Grafic de matriu de confusiÃ³
 mosaic(matConf, shade = T, colorize = T,
        gp = gpar(fill = matrix(c("green3", "red2", "red2", "green3"), 2, 2)))
 
-#Èxit del model 
+#Ãˆxit del model 
 presPred <- 100*(matConf[1]+matConf[4])/nrow(hcc_sel)
 
 #Predir els valors del model
@@ -390,29 +390,29 @@ plot.roc(`Class Attribute` ~ prob,data = hcc,legacy.axes = TRUE)
 #Area sota la corba
 auc(roc(`Class Attribute` ~ prob,data = hcc))
 
-#Model logit mètode backward
+#Model logit mÃ¨tode backward
 modback <- stepAIC(modelo, trace=FALSE, direction="backward")
 summary(modback)
 
-#prediccio resultat + matriu de confusió
+#prediccio resultat + matriu de confusiÃ³
 pred2 <- ifelse(test = modback$fitted.values > 0.50, yes = 1, no = 0)
 matConf<- table(hcc_sel$`Class Attribute`, pred2,
                 dnn = c("observacions", "prediccions"))
 
 kable(x = matConf, format = "latex",
-      caption = "Matriu de confusió model reduit, prediccions per columna, observacions per files",
+      caption = "Matriu de confusiÃ³ model reduit, prediccions per columna, observacions per files",
       booktabs = TRUE, linesep = '') %>% 
   kable_styling(latex_options = c("HOLD_position")) %>% 
   row_spec(row=0, bold = TRUE)
 
-#grafica matriu de confusió
+#grafica matriu de confusiÃ³
 mosaic(matConf, shade = T, colorize = T,
        gp = gpar(fill = matrix(c("green3", "red2", "red2", "green3"), 2, 2)))
 
-#Èxit del model 
+#Ãˆxit del model 
 presPred2 <- 100*(matConf[1]+matConf[4])/nrow(hcc_sel)
 
-#predicció variables
+#predicciÃ³ variables
 prob2 <- predict(modback,type = "response")
 hcc$prob2 <- prob2
 
@@ -423,8 +423,8 @@ plot.roc(`Class Attribute` ~ prob2,data = hcc,legacy.axes = TRUE)
 auc(roc(`Class Attribute` ~ prob2,data = hcc))
 
 
-tauContribucions <- tibble(Contribucions = c("Investigació previa", 
-                                             "Redacció de les respostes", 
+tauContribucions <- tibble(Contribucions = c("InvestigaciÃ³ previa", 
+                                             "RedacciÃ³ de les respostes", 
                                              "Desenvolupament del codi"),
                            Firma = c("A.D - D-L","A.D - D-L","A.D - D-L"))
 
