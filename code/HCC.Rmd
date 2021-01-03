@@ -14,6 +14,7 @@ output:
     theme: cosmo
     toc: yes
     toc_depth: 3
+ 
 header-includes:
 - \usepackage{float}
 - \usepackage{subfig}
@@ -351,6 +352,8 @@ Corregir aquests valors desconeguts cap a la moda condicionarà un biaix. Per ta
 
 * A les variables quantitatives s'assignarà la mitjana de la variable. Per tal de no tenir una mitjana condicionada per valors erronis extrems, es corregiran abans de l'assignació del valor mitjà als valors desconeguts.
 
+\newpage 
+
 ### Correcció valors nuls de variables categòriques
 
 S'assigna el valor més pròxim d'entre k=5 als valor NA de les variables categòriques. 
@@ -436,23 +439,23 @@ for (i in 1:length(hcc_num)) {
 
 Crida l'atenció diverses variables amb una distribució molt desplaçada cap a valors baixos però amb valors extrems alts. Molts són valors de laboratori, i sembla que s'adapten més a distribucions logarítmiques, pel que es modificaran. Aquestes variables són:
 
-* Alpha-Fetoprotein (ng/mL)
+* Alpha-Fetoprotein (ng/mL) (fig.5)`
 
-* Total Bilirubin(mg/dL)
+* Total Bilirubin(mg/dL) (fig.11)
 
-* Alanine transaminase (U/L)
+* Alanine transaminase (U/L) (fig.12)
 
-* Aspartate transaminase (U/L)
+* Aspartate transaminase (U/L) (fig.13)
 
-* Gamma glutamyl transferase (U/L)
+* Gamma glutamyl transferase (U/L) (fig.14)
 
-* Alkaline phosphatase (U/L)
+* Alkaline phosphatase (U/L) (fig.15)
 
-* Total Proteins (g/dL)
+* Total Proteins (g/dL) (fig.16)
 
-* Creatinine (mg/dL)
+* Creatinine (mg/dL) (fig.17)
 
-* Direct Bilirubin (mg/dL)
+* Direct Bilirubin (mg/dL) (fig.20)
 
 ```{r message= FALSE, warning=FALSE, results='asis', fig.cap= figCapsLog}
 # Transformació logarítmica de variables numériques
@@ -525,7 +528,7 @@ for (i in 1:length(hcc_factorT) ) {
 
 \newpage
 
-De les variables quantitatives podem veure que entre elles hi ha força diferència en la proporció de persones que sobreviuen segons el valor de la variable. Per exemple, per a la variable Smoking aquesta diferència no és notable, però per Ascites degree sí que ho és.
+De les variables quantitatives podem veure que entre elles hi ha força diferència en la proporció de persones que sobreviuen segons el valor de la variable. Per exemple, per a la variable Smoking (fig.41) aquesta diferència no és notable, però per Ascites degree (fig.57) sí que ho és.
 És a dir, podem preveure que sí que hi haurà variables que influiran en la mortalitat d'aquests pacients i d'altres que semblen que no.
 
 ### Comprobació de la normalitat i homogeneïtat de la variància
@@ -693,10 +696,12 @@ corrplot(hcc_cor, cl.pos='n',tl.srt = 45,
          tl.cex = 1.25, type="upper",method = "circle",
          order="FPC", diag=FALSE)
 ```
-
 \newpage
 
+
 Com es pot veure, només dues variables tenen una molt alta correlació ( __Iron__ i __Oxygen Saturation (%)__). De les dues, seleccionarem __Iron__ que és la que presenta una menor probabilitat de significació.
+
+
 
 ### Creació de noves variables
 
@@ -722,7 +727,7 @@ y = hcc %>% filter(`Class Attribute`==0) %>% pull(MELD)
 wilcox.test(x,y, mu = 0,paired = FALSE, conf.int = 0.95)
 ```
 
-Es pot veure que els valors de MELD són significativament diferents entre el grup de pacients que sobreviuen i els que no. Amb aquesta combinació lineal agrupem en una única variable la bilirubina total, l'INR i la creatinina.
+Es pot veure (fig.59) que els valors de MELD són significativament diferents entre el grup de pacients que sobreviuen i els que no. Amb aquesta combinació lineal agrupem en una única variable la bilirubina total, l'INR i la creatinina.
 
 ### Selecció de variables significatives
 
@@ -851,13 +856,15 @@ Si poguéssim tenir totes les dades possibles, ens quedaríem amb el primer mode
 
 Per tant, hem construït un model logístic, que ens determina la supervivència o no d'un pacient d'acord amb uns indicadors mèdics amb un 80\% aproximadament d'èxit. És un molt bon punt per anar refinant el model i millorar el seu ajust.
 
-
+\newpage
 
 # Conclusions
 
 Aquest treball s'ha realitzat sobre dades reals sense processar i, com hem pogut comprovar, és necessari un primer pas de neteja per a poder crear models útils. Les dades en brut tenen valors desconeguts, erronis, i extrems els quals s'han de tractar. En el nostre cas, només 8 dels 165 pacients registrats i només 5 dels 49 atributs disposaven de totes les dades. Eliminar atributs o pacients amb valors desconeguts condicionaria una pèrdua molt important de dades, per al que vam decidir corregir els valor desconeguts amb diferents tècniques d'imputació de valors com són kNN i l'assignació de la mitjana. També hem pogut comprovar que conèixer l'àmbit de les dades fa que sigui possible detectar i corregir algunes de les dades introduïdes erròniament.
 
 Amb el contrast d'hipòtesi hem pogut seleccionar les variables que més influeixen en la supervivència d'aquests pacients i amb l'estudi de correlacions entre aquests atributs eliminar els que tenen alta correlació, per finalment crear models de regressió logística per intentar predir la supervivència. Inclús seleccionant un model de només 7 atributs s'aconsegueix una alta precisió en les prediccions.
+
+\newpage
 
 # Taula de contribucions
 
